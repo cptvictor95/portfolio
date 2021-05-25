@@ -1,10 +1,15 @@
-import { Flex, Text } from '@chakra-ui/layout';
+import React from 'react';
 import Main from '../layouts/Main';
+import Hero from '../sections/Hero';
 
 const Home: React.FC = () => {
   return (
     <Main title="Victor">
-      <Text>hello world!</Text>
+      <Hero
+        title="Victor"
+        subtitle="Full Stack Web Developer"
+        ctaText="Lorem ipsum dolor sit amet."
+      />
     </Main>
   );
 };

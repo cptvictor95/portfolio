@@ -14,7 +14,7 @@ const Main: React.FC<{ title: string; children: React.ReactNode }> = ({
       as="main"
       m="0 auto"
       direction="column"
-      maxW={{ base: 'auto', xl: '1200px' }}
+      maxW={{ base: 'auto', md: '768px', lg: '1024px', xl: '1280px' }}
       minH="70vh"
       {...mainProps}
     >
