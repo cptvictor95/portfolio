@@ -1,5 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 import { colors } from './colors';
+import { Button } from './components/Button';
 
 export const theme = extendTheme({
   styles: {
@@ -9,9 +10,12 @@ export const theme = extendTheme({
         margin: 0,
         boxSizing: 'border-box',
         bg: 'black',
-        color: 'white',
+        color: 'purple.50',
       },
     },
   },
   colors,
+  components: {
+    Button,
+  },
 });
