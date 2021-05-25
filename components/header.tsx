@@ -33,7 +33,7 @@ const Header: React.FC = (props) => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      mb={8}
+      mb={12}
       p={8}
       {...props}
     >

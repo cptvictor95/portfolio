@@ -10,25 +10,28 @@ const Hero: React.FC<{
     <Flex
       as="section"
       minH="70vh"
-      maxW={{ base: 'auto', lg: '768px', xl: '1280px' }}
+      maxW={{ base: 'auto', md: '768px', lg: '1024px', xl: '1280px' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
-      justify={{ base: 'center', md: 'left', xl: 'left' }}
-      px={{ base: 4, md: 20, lg: 24, xl: 32 }}
-      mb={8}
+      justify={['center', 'space-around', 'space-around', 'space-around']}
+      pb={8}
+      mb={16}
     >
+      <Flex as="article" align={['center', 'center', 'flex-end', 'flex-start']}>
+        <Stack>
+          <Text as="h1" fontSize="6xl" fontWeight="bold">
+            {title}
+          </Text>
+          <Text as="h3" fontSize="2xl">
+            {subtitle}
+          </Text>
+          <Text>{ctaText}</Text>
+        </Stack>
+      </Flex>
       <Stack
         as="article"
         align={['center', 'center', 'flex-start', 'flex-start']}
-      >
-        <Text as="h1" fontSize="6xl" fontWeight="bold">
-          {title}
-        </Text>
-        <Text as="h3" fontSize="2xl">
-          {subtitle}
-        </Text>
-        <Text>{ctaText}</Text>
-      </Stack>
+      ></Stack>
     </Flex>
   );
 };
