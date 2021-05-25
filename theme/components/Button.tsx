@@ -4,8 +4,9 @@ export const Button = {
       position: 'static',
       color: 'purple.50',
       textTransform: 'uppercase',
-      'border-radius': '0',
-      padding: '4 0',
+      borderRadius: '0',
+      paddingX: 8,
+      paddingY: 4,
       _hover: {
         color: 'green.200',
         textDecoration: 'none',

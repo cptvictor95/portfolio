@@ -10,7 +10,7 @@ const Hero: React.FC<{
     <Flex
       as="section"
       minH="70vh"
-      maxW={{ base: 'auto', md: '768px', lg: '1024px', xl: '1280px' }}
+      maxW={{ base: 'auto', md: '768px' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['center', 'space-around', 'space-around', 'space-around']}
@@ -18,7 +18,7 @@ const Hero: React.FC<{
       mb={16}
     >
       <Flex as="article" align={['center', 'center', 'flex-end', 'flex-start']}>
-        <Stack>
+        <Stack ml={12}>
           <Text as="h1" fontSize="6xl" fontWeight="bold">
             {title}
           </Text>

@@ -28,17 +28,20 @@ const Header: React.FC = (props) => {
 
   return (
     <Flex
-      as="nav"
+      as="header"
       w="100%"
       align="center"
       justify="space-between"
       wrap="wrap"
       mb={12}
-      p={8}
+      py={4}
+      px={8}
       {...props}
     >
       <Flex align="center">
-        <Text w="100px">Victor</Text>
+        <Text as="h4" fontSize="2xl">
+          Victor
+        </Text>
       </Flex>
       <Box as="aside" display={{ base: 'block', md: 'none' }}>
         {show ? (
@@ -59,6 +62,7 @@ const Header: React.FC = (props) => {
       </Box>
 
       <Box
+        as="nav"
         display={{ base: show ? 'block' : 'none', md: 'block' }}
         flexBasis={{ base: '100%', md: 'auto' }}
       >
@@ -67,7 +71,6 @@ const Header: React.FC = (props) => {
           w="100%"
           justify={['center', 'space-between', 'flex-end', 'flex-end']}
           direction={['column', 'row', 'row', 'row']}
-          pt={[8, 8, 0, 0]}
         >
           <>
             <MenuItems to="/">

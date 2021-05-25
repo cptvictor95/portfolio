@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <Main title="Victor">
       <Hero
-        title="Victor"
+        title="Victor Torres"
         subtitle="Full Stack Web Developer"
         ctaText="Lorem ipsum dolor sit amet."
       />
