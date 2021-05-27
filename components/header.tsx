@@ -4,6 +4,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import React from 'react';
 import { Button, IconButton } from '@chakra-ui/button';
 import Link from 'next/link';
+import { Link as SLink } from 'react-scroll';
 
 const Header: React.FC = (props) => {
   const [show, setShow] = React.useState<boolean>(false);
@@ -79,19 +80,46 @@ const Header: React.FC = (props) => {
               </Button>
             </MenuItems>
             <MenuItems>
-              <Button size="md" variant="link">
-                Sobre
-              </Button>
+              <SLink
+                activeClass="active"
+                className="about"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button size="md" variant="link">
+                  Sobre
+                </Button>
+              </SLink>
             </MenuItems>
             <MenuItems>
-              <Button size="md" variant="link">
-                Projetos
-              </Button>
+              <SLink
+                activeClass="active"
+                className="projects"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button size="md" variant="link">
+                  Projetos
+                </Button>
+              </SLink>
             </MenuItems>
             <MenuItems>
-              <Button size="md" variant="link">
-                Contato
-              </Button>
+              <SLink
+                activeClass="active"
+                className="projects"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button size="md" variant="link">
+                  Contato
+                </Button>
+              </SLink>
             </MenuItems>
           </>
         </Flex>

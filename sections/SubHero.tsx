@@ -7,11 +7,12 @@ const SubHero: React.FC = () => {
   return (
     <Flex
       as="section"
+      id="about"
       maxW={{ base: 'auto', md: '100%', lg: '100%' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['center', 'space-around', 'space-evenly', 'space-around']}
-      py={16}
+      py={8}
       px={8}
       bg="green.400"
       color="purple.900"

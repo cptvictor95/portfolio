@@ -4,7 +4,7 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <Stack as="section" py={8}>
+    <Stack as="section" py={4} id="skills">
       <Text as="h1" fontSize="4xl" textAlign="center" pt={8}>
         Minhas habilidades
       </Text>
@@ -14,12 +14,11 @@ const Skills = () => {
         direction={{ base: 'column', md: 'row' }}
         align="center"
         justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
-        py={8}
+        py={4}
       >
         <Flex
           as="article"
           maxW={{ base: '80%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-          py={4}
         >
           <Stack px={8}>
             <Text as="h2" fontSize="5xl" fontWeight="semibold">

@@ -5,7 +5,7 @@ import { Button } from './components/Button';
 export const theme = extendTheme({
   styles: {
     global: {
-      body: {
+      'html, body': {
         padding: 0,
         margin: 0,
         boxSizing: 'border-box',

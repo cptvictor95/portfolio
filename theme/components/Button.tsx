@@ -12,5 +12,13 @@ export const Button = {
         textDecoration: 'none',
       },
     },
+    outline: {
+      borderColor: 'purple.900',
+      bg: 'transparent',
+      _hover: {
+        bg: 'green.500',
+        borderColor: 'purple.900',
+      },
+    },
   },
 };
