@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from '../layouts/Main';
 import Hero from '../sections/Hero';
+import Skills from '../sections/Skills';
 import SubHero from '../sections/SubHero';
 
 const Home: React.FC = () => {
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
         ctaText="Lorem ipsum dolor sit amet."
       />
       <SubHero />
+      <Skills />
     </Main>
   );
 };

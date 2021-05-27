@@ -10,18 +10,27 @@ const SubHero: React.FC = () => {
       maxW={{ base: 'auto', md: '100%', lg: '100%' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
-      justify={['center', 'space-around', 'space-around', 'space-around']}
+      justify={['center', 'space-around', 'space-evenly', 'space-around']}
       py={16}
-      my={8}
+      px={8}
       bg="green.400"
       color="purple.900"
     >
-      <Flex as="article" justify={['center', 'center', 'center', 'flex-start']}>
-        <Image src="avatar.jpeg" maxH="300px" borderRadius="full" />
+      <Flex
+        as="article"
+        justify={['center', 'center', 'center', 'flex-start']}
+        py={4}
+      >
+        <Image
+          src="avatar.jpeg"
+          maxW={{ base: '300px', sm: '250px', md: '300px' }}
+          borderRadius="full"
+        />
       </Flex>
       <Flex
         as="aside"
-        maxW={{ base: '50%', md: '40%', lg: '40%', xl: '40%' }}
+        maxW={{ base: '80%', sm: '60%', md: '40%', lg: '40%', xl: '30%' }}
+        pt={4}
         align={['center', 'center', 'space-between', 'space-between']}
       >
         <Stack px={8}>
