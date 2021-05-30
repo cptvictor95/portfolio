@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollToTop from '../components/ScrollToTop';
 import Main from '../layouts/Main';
 import Contact from '../sections/Contact';
 import Hero from '../sections/Hero';
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <Skills />
       <Projects />
       <Contact />
+      <ScrollToTop />
     </Main>
   );
 };

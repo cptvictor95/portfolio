@@ -1,6 +1,6 @@
 import { Image } from '@chakra-ui/image';
-import { Flex, List, Text } from '@chakra-ui/layout';
-import { Button, ListItem, Stack } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/layout';
+import { Button, Stack } from '@chakra-ui/react';
 import React from 'react';
 
 const SubHero: React.FC = () => {

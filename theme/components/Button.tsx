@@ -20,5 +20,20 @@ export const Button = {
         borderColor: 'purple.900',
       },
     },
+    scrollToTop: {
+      position: 'fixed',
+      bottom: 8,
+      right: 8,
+      zIndex: '99',
+      color: 'black',
+      bg: 'green.400',
+      fontSize: 'xl',
+      fontWeight: 'bold',
+      border: '1px solid',
+      borderColor: 'black',
+      _hover: {
+        bg: 'green.500',
+      },
+    },
   },
 };
