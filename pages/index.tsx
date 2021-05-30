@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from '../layouts/Main';
+import Contact from '../sections/Contact';
 import Hero from '../sections/Hero';
 import Projects from '../sections/Projects';
 import Skills from '../sections/Skills';
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <SubHero />
       <Skills />
       <Projects />
+      <Contact />
     </Main>
   );
 };

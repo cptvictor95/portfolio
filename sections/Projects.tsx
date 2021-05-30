@@ -24,10 +24,10 @@ const Projects = () => {
         </Flex>
         <Flex as="article" maxW={{ base: 'auto' }}>
           <Stack px={8}>
-            <Text as="h2" fontSize="4xl" fontWeight="bold">
+            <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
               Title 1
             </Text>
-            <Text as="h4" fontSize="2xl">
+            <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
               Subtitle
             </Text>
             <Text maxW="350px">
@@ -56,10 +56,10 @@ const Projects = () => {
         py={{ base: 4, sm: 4, md: 4 }}
       >
         <Stack px={8} align="flex-end">
-          <Text as="h2" fontSize="4xl" fontWeight="bold">
+          <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
             Title 2
           </Text>
-          <Text as="h4" fontSize="2xl">
+          <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
             Subtitle
           </Text>
           <Text textAlign="end" maxW="350px">
@@ -102,10 +102,10 @@ const Projects = () => {
         </Flex>
         <Flex as="article" maxW={{ base: 'auto' }}>
           <Stack px={8}>
-            <Text as="h2" fontSize="4xl" fontWeight="bold">
-              Title 1
+            <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
+              Title 3
             </Text>
-            <Text as="h4" fontSize="2xl">
+            <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
               Subtitle
             </Text>
             <Text maxW="350px">
@@ -120,8 +120,8 @@ const Projects = () => {
           </Stack>
         </Flex>
       </Flex>
-      <Button alignSelf="center" mt={12}>
-        Mais projetos
+      <Button alignSelf="center" mt={16} size="lg" textTransform="uppercase">
+        ver mais
       </Button>
     </Stack>
   );

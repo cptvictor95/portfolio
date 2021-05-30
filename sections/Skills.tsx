@@ -5,20 +5,26 @@ import React from 'react';
 const Skills = () => {
   return (
     <Stack as="section" py={4} id="skills">
-      <Text as="h1" fontSize="4xl" textAlign="center" pt={8}>
+      <Text
+        as="h1"
+        fontSize={{ base: '3xl', md: '4xl', lg: '4xl', xl: '4xl' }}
+        textAlign="center"
+        pt={8}
+        py={4}
+      >
         Minhas habilidades
       </Text>
       <Flex
         as="section"
-        maxW={{ base: 'auto', md: '100%', lg: '100%', xl: '100%' }}
+        maxW={{ base: '100%', md: '100%', lg: '100%', xl: '100%' }}
         direction={{ base: 'column', md: 'row' }}
         align="center"
         justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
-        py={4}
+        px={4}
       >
         <Flex
           as="article"
-          maxW={{ base: '80%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
+          maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
         >
           <Stack px={8}>
             <Text as="h2" fontSize="5xl" fontWeight="semibold">
@@ -33,7 +39,7 @@ const Skills = () => {
         </Flex>
         <Flex
           as="article"
-          maxW={{ base: '80%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
+          maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
           py={8}
         >
           <Stack px={8}>

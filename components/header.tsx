@@ -110,8 +110,8 @@ const Header: React.FC = (props) => {
             <MenuItems>
               <SLink
                 activeClass="active"
-                className="projects"
-                to="projects"
+                className="contact"
+                to="contact"
                 spy={true}
                 smooth={true}
                 duration={500}

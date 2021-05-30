@@ -12,12 +12,11 @@ const Hero: React.FC<{
       as="section"
       minH={{ base: '75vh', md: '70vh' }}
       maxW={{
-        base: 'auto',
-        xl: '1280px',
+        base: '100%',
       }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
-      justify={['center', 'space-around', 'space-around', 'space-evenly']}
+      justify={['space-evenly', 'space-around', 'space-around', 'space-evenly']}
       pb={8}
       px={8}
       mb={24}
@@ -25,13 +24,17 @@ const Hero: React.FC<{
       <Flex
         as="article"
         maxW={{ base: '100%' }}
-        align={['flex-end', 'center', 'center', 'center']}
+        align={['flex-start', 'center', 'center', 'center']}
       >
-        <Stack ml={12}>
-          <Text as="h1" fontSize="6xl" fontWeight="bold">
+        <Stack ml={{ base: 0, md: 12, lg: 12, xl: 12 }}>
+          <Text
+            as="h1"
+            fontSize={{ base: '4xl', lg: '6xl', xl: '6xl' }}
+            fontWeight="bold"
+          >
             {title}
           </Text>
-          <Text as="h3" fontSize="2xl">
+          <Text as="h3" fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}>
             {subtitle}
           </Text>
           <Text>{ctaText}</Text>
@@ -41,7 +44,7 @@ const Hero: React.FC<{
         as="article"
         maxW={{ base: '100%', sm: '70%', md: '60%', lg: '50%' }}
         minW={{ base: '80%', sm: '350px', md: '400px' }}
-        justify={['flex-end', 'flex-end', 'flex-end', 'flex-end']}
+        justify={['center', 'flex-end', 'flex-end', 'flex-end']}
         align={['flex-start', 'center', 'center', 'center']}
         px={8}
       >
