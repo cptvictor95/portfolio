@@ -2,6 +2,7 @@ import { Image } from '@chakra-ui/image';
 import { Flex, Text } from '@chakra-ui/layout';
 import { Button, Stack } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const SubHero: React.FC = () => {
   return (
@@ -30,22 +31,52 @@ const SubHero: React.FC = () => {
       </Flex>
       <Flex
         as="aside"
-        maxW={{ base: '100%', sm: '70%', md: '40%', lg: '40%', xl: '30%' }}
+        maxW={{ base: '100%', sm: '70%', md: '40%', lg: '40%', xl: '40%' }}
         pt={4}
         align={['center', 'center', 'space-between', 'space-between']}
       >
-        <Stack px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
+        <Stack as="article" px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
           <Text as="h2" fontSize="4xl" fontWeight="semibold">
             Sobre mim
           </Text>
           <Text pb={6}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            cupiditate quis nostrum tempora, aliquam quibusdam alias. Sequi
-            explicabo rem cupiditate.
+            Apaixonado pela ideia de mudar o mundo ao meu redor, escolhi a área
+            da tecnologia da informação para contribuir com a evolução da
+            sociedade. Acredito que posso atingir cada vez mais vidas usando a
+            tecnologia ao meu favor, e trazer um pouco mais do meu amor pela
+            vida para outras pessoas.
           </Text>
-          <Button variant="outline" alignSelf="flex-end">
-            Ver Contatos
-          </Button>
+          <Flex as="section" flexWrap="wrap">
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              NodeJS
+            </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              JavaScript
+            </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              TypeScript
+            </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              SQL
+            </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              MongoDB
+            </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              Firebase
+            </Text>
+          </Flex>
+          <Flex as="section" alignSelf="flex-end">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button variant="outline">Ver Contatos</Button>
+            </Link>
+          </Flex>
         </Stack>
       </Flex>
     </Flex>

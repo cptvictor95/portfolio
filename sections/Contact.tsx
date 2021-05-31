@@ -1,11 +1,9 @@
-import { Center, Flex, IconButton, Stack, Text } from '@chakra-ui/react';
+import { Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
-
-import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai';
-import { FaFacebook } from 'react-icons/fa';
-import { FiInstagram, FiPhone } from 'react-icons/fi';
+import HorizontalBar from '../components/HorizontalBar';
+import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
-import { TiSocialLinkedinCircular } from 'react-icons/ti';
+import Footer from '../components/footer';
 
 const Contact = () => {
   return (
@@ -47,67 +45,24 @@ const Contact = () => {
             <Text as="h2" fontSize="3xl" fontWeight="semibold">
               Contatos adicionais
             </Text>
-            <Text>
-              <IconButton
-                icon={<HiOutlineMail />}
+            <Link href="mailto:cpt.victor@hotmail.com">
+              <Icon
+                as={HiOutlineMail}
                 aria-label="email"
-                colorScheme="black"
                 fontSize="2xl"
+                mr={2}
               />
               cpt.victor@hotmail.com
-            </Text>
-            <Text>
-              <IconButton
-                icon={<FiPhone />}
-                aria-label="phone"
-                colorScheme="black"
-                fontSize="2xl"
-              />
+            </Link>
+            <Link href="tel:+5511947006135">
+              <Icon as={FiPhone} aria-label="phone" fontSize="2xl" mr={2} />
               (11) 94700-6135
-            </Text>
+            </Link>
           </Stack>
         </Flex>
       </Flex>
-      <Center py={8}>
-        <Flex w="30vw" justify="space-around">
-          <IconButton
-            icon={<TiSocialLinkedinCircular />}
-            aria-label="linkedin"
-            colorScheme="black"
-            fontSize="5xl"
-          />
-          <IconButton
-            icon={<AiOutlineWhatsApp />}
-            aria-label="whatsapp"
-            colorScheme="black"
-            fontSize="4xl"
-          />
-          <IconButton
-            icon={<AiFillGithub />}
-            aria-label="github"
-            colorScheme="black"
-            fontSize="4xl"
-          />
-
-          <IconButton
-            icon={<FaFacebook />}
-            aria-label="facebook"
-            colorScheme="black"
-            fontSize="4xl"
-          />
-          <IconButton
-            icon={<FiInstagram />}
-            aria-label="instagram"
-            colorScheme="black"
-            fontSize="4xl"
-          />
-        </Flex>
-      </Center>
-      <Flex p={8} bg="purple.900">
-        <Text>
-          © 2021 Victor Cardoso Pudo Torres - Todos os direitos reservados
-        </Text>
-      </Flex>
+      <HorizontalBar />
+      <Footer />
     </Stack>
   );
 };

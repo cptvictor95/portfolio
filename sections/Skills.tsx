@@ -4,7 +4,7 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <Stack as="section" py={4} id="skills">
+    <Stack as="section" py={8} id="skills">
       <Text
         as="h1"
         fontSize={{ base: '3xl', md: '4xl', lg: '4xl', xl: '4xl' }}
@@ -25,31 +25,48 @@ const Skills = () => {
         <Flex
           as="article"
           maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
+          pb={8}
         >
           <Stack px={8}>
             <Text as="h2" fontSize="5xl" fontWeight="semibold">
               Front-end
             </Text>
             <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              cupiditate quis nostrum tempora, aliquam quibusdam alias. Sequi
-              explicabo rem cupiditate.
+              Desenvolvimento de aplicações web com HTML, CSS e JavaScript.
+            </Text>
+            <Text>
+              Atualmente trabalho com a biblioteca ReactJS, mais especificamente
+              utilizando o framework NextJS, em conjunto com a linguagem
+              TypeScript.
+            </Text>
+            <Text>
+              Toda a parte gráfica e componentização desenvolvida por mim são
+              realizadas utilizando o princípio Mobile First, com responsividade
+              para todos os tamanhos de dispositivos.
             </Text>
           </Stack>
         </Flex>
         <Flex
           as="article"
           maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-          py={8}
+          pb={8}
         >
           <Stack px={8}>
             <Text as="h2" fontSize="5xl" fontWeight="semibold">
               Back-end
             </Text>
             <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              cupiditate quis nostrum tempora, aliquam quibusdam alias. Sequi
-              explicabo rem cupiditate.
+              Desenvolvimento de APIs utilizando NodeJS, TypeScript e MySQL /
+              MongoDB.
+            </Text>
+            <Text>
+              Também possuo conhecimento em Firebase, mais especificamente na
+              stack NextJS + Firestore
+            </Text>
+            <Text>
+              Toda a estrutura de código é realizada utilizando os princípios
+              Clean Code e/ou SOLID. Também possuo conhecimento em testes
+              automatizados com o framework Jest.
             </Text>
           </Stack>
         </Flex>

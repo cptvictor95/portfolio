@@ -1,6 +1,7 @@
 import { Image } from '@chakra-ui/image';
 import { Flex, Stack, Text } from '@chakra-ui/layout';
 import React from 'react';
+import VerticalBar from '../components/VerticalBar';
 
 const Hero: React.FC<{
   title: string;
@@ -18,9 +19,10 @@ const Hero: React.FC<{
       align="center"
       justify={['space-evenly', 'space-around', 'space-around', 'space-evenly']}
       pb={8}
-      px={8}
+      px={12}
       mb={24}
     >
+      <VerticalBar />
       <Flex
         as="article"
         maxW={{ base: '100%' }}
