@@ -20,7 +20,9 @@ const ScrollToTop = () => {
     return scroll.scrollToTop();
   };
 
-  window.addEventListener('scroll', checkScrollTop);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', checkScrollTop);
+  }
 
   return (
     <IconButton
