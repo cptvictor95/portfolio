@@ -74,15 +74,9 @@ const Header: React.FC = (props) => {
           direction={['column', 'row', 'row', 'row']}
         >
           <>
-            <MenuItems to="/">
-              <Button size="md" variant="link">
-                Home
-              </Button>
-            </MenuItems>
             <MenuItems>
               <SLink
                 activeClass="active"
-                className="about"
                 to="about"
                 spy={true}
                 smooth={true}
@@ -96,7 +90,6 @@ const Header: React.FC = (props) => {
             <MenuItems>
               <SLink
                 activeClass="active"
-                className="projects"
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -110,7 +103,6 @@ const Header: React.FC = (props) => {
             <MenuItems>
               <SLink
                 activeClass="active"
-                className="contact"
                 to="contact"
                 spy={true}
                 smooth={true}
