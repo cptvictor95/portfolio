@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import ScrollToTop from '../components/ScrollToTop';
 import Main from '../layouts/Main';
 import Contact from '../sections/Contact';
@@ -10,6 +11,7 @@ import SubHero from '../sections/SubHero';
 const Home: React.FC = () => {
   return (
     <Main title="Victor">
+      <Header />
       <Hero
         title="Victor Torres"
         subtitle="Full Stack Web Developer"

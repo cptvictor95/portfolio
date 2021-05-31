@@ -3,7 +3,7 @@ import React from 'react';
 import HorizontalBar from '../components/HorizontalBar';
 import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 const Contact = () => {
   return (
