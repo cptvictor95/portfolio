@@ -22,7 +22,7 @@ const Header: React.FC = (props) => {
         display="block"
         {...rest}
       >
-        <Link href={to}>{children}</Link>
+        {children}
       </Text>
     );
   };
