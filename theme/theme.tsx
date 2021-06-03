@@ -14,6 +14,11 @@ export const theme = extendTheme({
       },
     },
   },
+  fonts: {
+    heading: 'Barlow Condensed',
+    body: 'Inconsolata',
+    button: 'Barlow Condensed',
+  },
   colors,
   components: {
     Button,

@@ -15,8 +15,8 @@ const SubHero: React.FC = () => {
       justify={['center', 'space-around', 'space-evenly', 'space-around']}
       py={8}
       px={8}
-      bg="green.400"
-      color="purple.900"
+      bg="green.500"
+      color="black"
     >
       <Flex
         as="article"
@@ -39,7 +39,7 @@ const SubHero: React.FC = () => {
           <Text as="h2" fontSize="4xl" fontWeight="semibold">
             Sobre mim
           </Text>
-          <Text pb={6}>
+          <Text pb={6} textAlign="justify">
             Apaixonado pela ideia de mudar o mundo ao meu redor, escolhi a área
             da tecnologia da informação para contribuir com a evolução da
             sociedade. Acredito que posso atingir cada vez mais vidas usando a

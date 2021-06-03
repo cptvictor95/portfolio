@@ -1897,6 +1897,21 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/barlow-condensed@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/barlow-condensed/-/barlow-condensed-4.4.2.tgz#359bdf9a1ba118b3ffa505a19a1abe397611f283"
+  integrity sha512-726pIHLuYZEbyJsCAeCAOk6TCRVoOHee4XuRQeSrNi5oGj6FbCY6e6lMxmLibiAp/qAfKydcUJSdGg0cu4CZvg==
+
+"@fontsource/barlow@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/barlow/-/barlow-4.4.2.tgz#7c3dd31c9310761a038be64697b0c8ab17bce106"
+  integrity sha512-AlAEvNClm8onO9I10q4BrHDR5L+DMhMdn9CE8KBv1qYMlDLUK7EOU/FW608artwYymPYr09zuWi2t/fCsSz5yg==
+
+"@fontsource/inconsolata@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/inconsolata/-/inconsolata-4.4.2.tgz#7d53991091195b747da9210baef57c89b429d612"
+  integrity sha512-Q4e0WZ7PUSW582ma3kwA4mWA679KeNd8arLW19URJAuK+/FemguEMkC9nsjjBheRDtvxdhZRY+oPdclYSZnj4A==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -5915,6 +5930,11 @@ focus-lock@^0.8.1:
   integrity sha512-/LFZOIo82WDsyyv7h7oc0MJF9ACOvDRdx9rWPZ2pgMfNWu/z8hQDBtOchuB/0BVLmuFOZjV02YwUVzNsWx/EzA==
   dependencies:
     tslib "^1.9.3"
+
+focus-visible@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/focus-visible/-/focus-visible-5.2.0.tgz#3a9e41fccf587bd25dcc2ef045508284f0a4d6b3"
+  integrity sha512-Rwix9pBtC1Nuy5wysTmKy+UjbDJpIfg8eHjw0rjZ1mX4GNLz1Bmd16uDpI3Gk1i70Fgcs8Csg2lPm8HULFg9DQ==
 
 follow-redirects@^1.0.0:
   version "1.14.1"

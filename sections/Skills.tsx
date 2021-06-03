@@ -18,7 +18,7 @@ const Skills = () => {
         as="section"
         maxW={{ base: '100%', md: '100%', lg: '100%', xl: '100%' }}
         direction={{ base: 'column', md: 'row' }}
-        align="center"
+        align="flex-start"
         justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
         px={4}
       >
@@ -27,7 +27,7 @@ const Skills = () => {
           maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
           pb={8}
         >
-          <Stack px={8}>
+          <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="5xl" fontWeight="semibold">
               Front-end
             </Text>
@@ -51,7 +51,7 @@ const Skills = () => {
           maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
           pb={8}
         >
-          <Stack px={8}>
+          <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="5xl" fontWeight="semibold">
               Back-end
             </Text>

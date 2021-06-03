@@ -20,7 +20,7 @@ const HorizontalBar = () => {
           <IconButton
             icon={<TiSocialLinkedinCircular />}
             aria-label="linkedin"
-            colorScheme="black"
+            variant="socialIcon"
             fontSize={{
               base: '4xl',
               sm: '5xl',
@@ -39,7 +39,7 @@ const HorizontalBar = () => {
           <IconButton
             icon={<AiOutlineWhatsApp />}
             aria-label="whatsapp"
-            colorScheme="black"
+            variant="socialIcon"
             fontSize={{
               base: '3xl',
               sm: '4xl',
@@ -53,7 +53,7 @@ const HorizontalBar = () => {
           <IconButton
             icon={<AiFillGithub />}
             aria-label="github"
-            colorScheme="black"
+            variant="socialIcon"
             fontSize={{
               base: '3xl',
               sm: '4xl',
@@ -70,7 +70,7 @@ const HorizontalBar = () => {
           <IconButton
             icon={<FaFacebook />}
             aria-label="facebook"
-            colorScheme="black"
+            variant="socialIcon"
             fontSize={{
               base: '3xl',
               sm: '4xl',
@@ -84,7 +84,7 @@ const HorizontalBar = () => {
           <IconButton
             icon={<FiInstagram />}
             aria-label="instagram"
-            colorScheme="black"
+            variant="socialIcon"
             fontSize={{
               base: '3xl',
               sm: '4xl',

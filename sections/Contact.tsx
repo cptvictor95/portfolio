@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const Contact = () => {
   return (
-    <Stack as="section" id="contact" bg="green.900">
+    <Stack as="section" id="contact" bg="green.700">
       <Text as="h1" fontSize="5xl" textAlign="center" pt={8} fontWeight="bold">
         Contatos
       </Text>

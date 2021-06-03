@@ -8,6 +8,7 @@ import { TiSocialLinkedinCircular } from 'react-icons/ti';
 const VerticalBar = () => {
   return (
     <Flex
+      as="aside"
       direction="column"
       justify="space-evenly"
       h="40vh"
@@ -22,7 +23,7 @@ const VerticalBar = () => {
         <IconButton
           icon={<TiSocialLinkedinCircular />}
           aria-label="linkedin"
-          colorScheme="black"
+          variant="socialIcon"
           fontSize={{ base: '3xl', sm: '5xl', md: '5xl', lg: '5xl', xl: '5xl' }}
           maxH="42px"
           maxW="42px"
@@ -32,7 +33,7 @@ const VerticalBar = () => {
         <IconButton
           icon={<AiOutlineWhatsApp />}
           aria-label="whatsapp"
-          colorScheme="black"
+          variant="socialIcon"
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>
@@ -40,7 +41,7 @@ const VerticalBar = () => {
         <IconButton
           icon={<AiFillGithub />}
           aria-label="github"
-          colorScheme="black"
+          variant="socialIcon"
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>
@@ -51,7 +52,7 @@ const VerticalBar = () => {
         <IconButton
           icon={<FaFacebook />}
           aria-label="facebook"
-          colorScheme="black"
+          variant="socialIcon"
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>
@@ -59,7 +60,7 @@ const VerticalBar = () => {
         <IconButton
           icon={<FiInstagram />}
           aria-label="instagram"
-          colorScheme="black"
+          variant="socialIcon"
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>

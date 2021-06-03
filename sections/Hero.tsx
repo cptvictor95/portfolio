@@ -1,56 +1,75 @@
 import { Image } from '@chakra-ui/image';
-import { Flex, Stack, Text } from '@chakra-ui/layout';
+import { Flex, Heading, Stack, Text } from '@chakra-ui/layout';
 import React from 'react';
 import VerticalBar from '../components/VerticalBar';
 
 const Hero: React.FC<{
   title: string;
   subtitle: string;
-  ctaText: string;
-}> = ({ title, subtitle, ctaText }) => {
+}> = ({ title, subtitle }) => {
   return (
     <Flex
       as="section"
       minH={{ base: '75vh', md: '70vh' }}
-      maxW={{
-        base: '100%',
-      }}
+      maxW={{ base: '100%' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['space-evenly', 'space-around', 'space-around', 'space-evenly']}
       pb={8}
-      px={12}
+      pl={{ base: 16, sm: 16, md: 16, lg: 8, xl: 8 }}
+      pr={{ base: 8, sm: 8, md: 8, lg: 4, xl: 8 }}
       mb={24}
     >
       <VerticalBar />
       <Flex
         as="article"
         maxW={{ base: '100%' }}
-        align={['flex-start', 'center', 'center', 'center']}
+        justify={['flex-end']}
+        align={['flex-start', 'flex-end', 'center', 'center']}
       >
-        <Stack ml={{ base: 0, md: 12, lg: 12, xl: 12 }}>
-          <Text
-            as="h1"
-            fontSize={{ base: '4xl', lg: '6xl', xl: '6xl' }}
-            fontWeight="bold"
+        <Stack as="section" ml={{ base: 0, md: 12, lg: 12, xl: 12 }}>
+          <Heading
+            fontSize={{ base: '5xl', md: '5xl', lg: '6xl', xl: '6xl' }}
+            letterSpacing={{
+              base: '2px',
+              md: '2.5px',
+              lg: '2.2px',
+              xl: '2.2px',
+            }}
+            lineHeight={{
+              base: '90%',
+              md: '85%',
+              lg: '90%',
+              xl: '90%',
+            }}
           >
             {title}
-          </Text>
-          <Text as="h3" fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}>
+          </Heading>
+          <Text
+            as="h3"
+            fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}
+            lineHeight={{
+              base: '100%',
+              md: '85%',
+              lg: '90%',
+              xl: '90%',
+            }}
+          >
             {subtitle}
           </Text>
-          <Text>{ctaText}</Text>
         </Stack>
       </Flex>
       <Stack
         as="article"
-        maxW={{ base: '100%', sm: '70%', md: '60%', lg: '50%' }}
-        minW={{ base: '80%', sm: '350px', md: '400px' }}
-        justify={['center', 'flex-end', 'flex-end', 'flex-end']}
-        align={['flex-start', 'center', 'center', 'center']}
-        px={8}
+        maxW={{ base: '80%', sm: '60%', md: '40%', lg: '50%' }}
+        minW={{ base: '80%', sm: '60%', md: '350px' }}
+        justify={['flex-end', 'flex-end', 'flex-end', 'flex-end']}
+        align={{ base: 'center', md: 'center', lg: 'center', xl: 'center' }}
       >
-        <Image src={'./heroSVG.svg'} />
+        <Image
+          src={'./heroSVG.svg'}
+          maxW={{ base: '250px', sm: '250px', md: '60%', lg: '50%' }}
+        />
       </Stack>
     </Flex>
   );

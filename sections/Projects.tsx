@@ -30,7 +30,7 @@ const Projects = () => {
             <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
               Subtitle
             </Text>
-            <Text maxW="350px">
+            <Text maxW="350px" textAlign="justify">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
               totam tempore sit tenetur vitae aperiam ullam exercitationem qui
               quibusdam tempora officiis, nemo nobis omnis magnam ut iusto
@@ -62,7 +62,7 @@ const Projects = () => {
           <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
             Subtitle
           </Text>
-          <Text textAlign="end" maxW="350px">
+          <Text maxW="350px" textAlign="justify">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga totam
             tempore sit tenetur vitae aperiam ullam exercitationem qui quibusdam
             tempora officiis, nemo nobis omnis magnam ut iusto incidunt expedita
@@ -108,7 +108,7 @@ const Projects = () => {
             <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
               Subtitle
             </Text>
-            <Text maxW="350px">
+            <Text maxW="350px" textAlign="justify">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
               totam tempore sit tenetur vitae aperiam ullam exercitationem qui
               quibusdam tempora officiis, nemo nobis omnis magnam ut iusto
