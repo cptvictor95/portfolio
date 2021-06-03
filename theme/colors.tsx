@@ -1,5 +1,11 @@
 export const colors = {
-  black: '#070311',
+  black: '#141712',
+  white: '#F5F5F4',
+  'light-gray': '#DADDD8',
+  'light-green': '#C7D59F',
+  limegreen: '#B7CE63',
+  'dark-green': '#8FB339',
+  'green-camo': '#4B5842',
   purple: {
     50: '#EBE6F5',
     600: '#40189E',

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Projects = () => {
   return (
-    <Stack as="section" py={12} id="projects" bg="green.400" color="purple.900">
+    <Stack as="section" py={12} id="projects" bg="limegreen" color="purple.900">
       <Text as="h1" fontSize="4xl" fontWeight="semibold" textAlign="center">
         Meus Projetos
       </Text>

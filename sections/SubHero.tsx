@@ -15,7 +15,7 @@ const SubHero: React.FC = () => {
       justify={['center', 'space-around', 'space-evenly', 'space-around']}
       py={8}
       px={8}
-      bg="green.500"
+      bg="limegreen"
       color="black"
     >
       <Flex

@@ -7,15 +7,16 @@ export const Button = {
   },
   variants: {
     solid: {
-      bg: 'green.500',
+      color: 'black',
+      bg: 'light-green',
       _hover: {
-        bg: 'red.300',
+        bg: 'dark-green',
       },
       _focus: {
-        bg: 'green.700',
+        bg: 'green-camo',
       },
       _active: {
-        bg: 'green.700',
+        bg: 'green-camo',
       },
     },
     link: {
@@ -25,14 +26,14 @@ export const Button = {
       paddingX: 8,
       paddingY: 4,
       _hover: {
-        color: 'red.300',
+        color: 'light-green',
         textDecoration: 'none',
       },
       _focus: {
-        color: 'red.700',
+        color: 'dark-green',
       },
       _active: {
-        color: 'red.700',
+        color: 'dark-green',
       },
     },
     outline: {
@@ -40,18 +41,18 @@ export const Button = {
       bg: 'transparent',
       _hover: {
         bg: 'transparent',
-        color: 'red.700',
-        borderColor: 'red.700',
+        color: 'green-camo',
+        borderColor: 'green-camo',
       },
       _focus: {
         bg: 'transparent',
-        color: 'red.700',
-        borderColor: 'red.700',
+        color: 'green-camo',
+        borderColor: 'green-camo',
       },
       _active: {
         bg: 'transparent',
-        color: 'red.700',
-        borderColor: 'red.700',
+        color: 'green-camo',
+        borderColor: 'green-camo',
       },
     },
     scrollToTop: {
@@ -59,26 +60,26 @@ export const Button = {
       bottom: 8,
       right: 8,
       zIndex: '99',
-      color: 'red.300',
+      color: 'green-camo',
       bg: 'transparent',
       fontSize: 'xl',
       fontWeight: 'bold',
       border: '1px solid',
-      borderColor: 'red.300',
+      borderColor: 'green-camo',
       _hover: {
-        borderColor: 'red.700',
-        color: 'red.700',
-        bg: 'red.300',
+        borderColor: 'dark-green',
+        color: 'dark-green',
+        bg: 'light-green',
       },
       _focus: {
-        borderColor: 'red.700',
-        color: 'red.700',
-        bg: 'red.300',
+        borderColor: 'dark-green',
+        color: 'dark-green',
+        bg: 'light-green',
       },
       _active: {
-        borderColor: 'red.700',
-        color: 'red.700',
-        bg: 'red.300',
+        borderColor: 'dark-green',
+        color: 'dark-green',
+        bg: 'light-green',
       },
     },
     socialIcon: {
@@ -87,13 +88,13 @@ export const Button = {
       fontSize: 'xl',
       fontWeight: 'bold',
       _hover: {
-        color: 'red.300',
+        color: 'light-green',
       },
       _focus: {
-        color: 'red.700',
+        color: 'dark-green',
       },
       _active: {
-        color: 'red.700',
+        color: 'dark-green',
       },
     },
   },
