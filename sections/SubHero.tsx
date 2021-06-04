@@ -40,11 +40,12 @@ const SubHero: React.FC = () => {
             Sobre mim
           </Text>
           <Text pb={6} textAlign="justify">
-            Apaixonado pela ideia de mudar o mundo ao meu redor, escolhi a área
+            Fascinado pela ideia de mudar o mundo ao meu redor, escolhi a área
             da tecnologia da informação para contribuir com a evolução da
             sociedade. Acredito que posso atingir cada vez mais vidas usando a
             tecnologia ao meu favor, e trazer um pouco mais do meu amor pela
-            vida para outras pessoas.
+            vida para outras pessoas. Sou apaixonado por ensinar, e mais ainda
+            por aprender!
           </Text>
           <Flex as="section" flexWrap="wrap">
             <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>

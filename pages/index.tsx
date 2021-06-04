@@ -10,7 +10,7 @@ import SubHero from '../sections/SubHero';
 
 const Home: React.FC = () => {
   return (
-    <Main title="Victor">
+    <Main title="Victor Torres">
       <Header />
       <Hero title="Victor Torres" subtitle="Full Stack Web Developer" />
       <SubHero />

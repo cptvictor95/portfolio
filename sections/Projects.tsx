@@ -1,5 +1,6 @@
-import { Stack, Text, Flex, Button, Image } from '@chakra-ui/react';
+import { Stack, Text, Flex, Button, Image, Link } from '@chakra-ui/react';
 import React from 'react';
+import { AiFillGithub } from 'react-icons/ai';
 
 const Projects = () => {
   return (
@@ -15,30 +16,59 @@ const Projects = () => {
         justify={['center', 'center', 'center', 'center']}
         py={{ base: 8 }}
       >
-        <Flex as="aside" maxW={{ base: 'auto' }} justify="flex-end" px={4}>
-          <Image
-            src={'./placeholder.png'}
-            maxW={{ base: '100%', lg: '350px' }}
-            px={{ base: 0, sm: 8 }}
-          />
+        <Flex
+          as="aside"
+          maxW={{ base: '100%', md: '50%', lg: '50%' }}
+          justify="flex-end"
+          px={4}
+        >
+          <Link
+            href="./projects/exampleBrav.png"
+            isExternal
+            px={{ base: 0, sm: 8, md: 4 }}
+          >
+            <Image
+              src={'./projects/exampleBrav.png'}
+              maxW={{ base: '100%', lg: '350px' }}
+            />
+            <Text>Clique na imagem para ampliar</Text>
+          </Link>
         </Flex>
         <Flex as="article" maxW={{ base: 'auto' }}>
           <Stack px={8}>
             <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
-              Title 1
+              BRAV
             </Text>
             <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
-              Subtitle
+              Full Stack
             </Text>
             <Text maxW="350px" textAlign="justify">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-              totam tempore sit tenetur vitae aperiam ullam exercitationem qui
-              quibusdam tempora officiis, nemo nobis omnis magnam ut iusto
-              incidunt expedita excepturi.
+              Projeto pessoal realizado a fins de estudo da stack NextJS +
+              MongoDB utilizando Typescript, com o intuito de catalogar
+              exercícios de calistenia e yoga realizados por mim na minha rotina
+              de cuidado físico e mental. O projeto ainda não foi hospedado pois
+              está em desenvolvimento em fase inicial.
             </Text>
-            <Button variant="outline" alignSelf="flex-start">
-              Link to project
-            </Button>
+            <Flex minW="100%" justifyContent="space-between">
+              <Link
+                href="https://github.com/cptvictor95/brav/tree/main/frontend"
+                isExternal
+                variant="nostyle"
+              >
+                <Button variant="outline" leftIcon={<AiFillGithub />}>
+                  Front-End
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/cptvictor95/brav/tree/main/backend"
+                isExternal
+                variant="nostyle"
+              >
+                <Button variant="outline" leftIcon={<AiFillGithub />}>
+                  Back-End
+                </Button>
+              </Link>
+            </Flex>
           </Stack>
         </Flex>
       </Flex>
@@ -57,32 +87,52 @@ const Projects = () => {
       >
         <Stack px={8} align="flex-end">
           <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
-            Title 2
+            Labenu System
           </Text>
           <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
-            Subtitle
+            Back-end
           </Text>
           <Text maxW="350px" textAlign="justify">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga totam
-            tempore sit tenetur vitae aperiam ullam exercitationem qui quibusdam
-            tempora officiis, nemo nobis omnis magnam ut iusto incidunt expedita
-            excepturi.
+            Projeto realizado durante o curso Labenu, feito com intuito de
+            treinar lógica de programação e criação de APIs com TypeScript e
+            SQL, utilizando frameworks ExpressJS e Knex. O projeto foi
+            documentado inteiramente por mim em Markdown Language e padronizado
+            de maneira concisa baseado com a complexidade necessária para
+            atingir os requisitos mínimos pedidos no projeto. Ao todo foram
+            criados 16 endpoints ao longo do projeto.
           </Text>
-          <Button variant="outline" alignSelf="flex-end">
-            Link to project
-          </Button>
+
+          <Link
+            href="https://github.com/future4code/Victor-Cardoso/tree/master/semana17/labenu-system"
+            isExternal
+            variant="nostyle"
+          >
+            <Button
+              variant="outline"
+              alignSelf="flex-end"
+              leftIcon={<AiFillGithub />}
+            >
+              Ver Projeto
+            </Button>
+          </Link>
         </Stack>
         <Flex
           as="aside"
-          maxW={{ base: '100%', lg: '50%' }}
+          maxW={{ base: '100%', md: '50%', lg: '50%' }}
           justify="flex-start"
           px={4}
         >
-          <Image
-            src={'./placeholder.png'}
-            maxW={{ base: '100%', lg: '350px' }}
-            px={{ base: 0, sm: 8 }}
-          />
+          <Link
+            href="./projects/systemExample.png"
+            isExternal
+            px={{ base: 0, sm: 8, md: 4 }}
+          >
+            <Image
+              src={'./projects/systemExample.png'}
+              maxW={{ base: '100%', lg: '350px' }}
+            />
+            <Text>Clique na imagem para ampliar</Text>
+          </Link>
         </Flex>
       </Flex>
       <Flex
@@ -93,36 +143,86 @@ const Projects = () => {
         justify={['center', 'center', 'center', 'center']}
         py={{ base: 8 }}
       >
-        <Flex as="aside" maxW={{ base: 'auto' }} justify="flex-end" px={4}>
-          <Image
-            src={'./placeholder.png'}
-            maxW={{ base: '100%', lg: '350px' }}
-            px={{ base: 0, sm: 8 }}
-          />
+        <Flex
+          as="aside"
+          maxW={{ base: '100%', md: '50%', lg: '50%' }}
+          justify="flex-end"
+          px={4}
+        >
+          <Link
+            href="./projects/systemExample.png"
+            isExternal
+            px={{ base: 0, sm: 8, md: 4 }}
+          >
+            <Image
+              src={'./projects/exampleSkibiddy.png'}
+              maxW={{ base: '100%', lg: '350px' }}
+            />
+            <Text>Clique na imagem para ampliar</Text>
+          </Link>
         </Flex>
         <Flex as="article" maxW={{ base: 'auto' }}>
           <Stack px={8}>
             <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
-              Title 3
+              Skibiddy
             </Text>
             <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
-              Subtitle
+              Full Stack
             </Text>
             <Text maxW="350px" textAlign="justify">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-              totam tempore sit tenetur vitae aperiam ullam exercitationem qui
-              quibusdam tempora officiis, nemo nobis omnis magnam ut iusto
-              incidunt expedita excepturi.
+              Projeto final do curso feito com o intuito de replicar uma
+              plataforma para publicação de músicas autorais e desenvolvido com
+              ReactJS puro com TypeScript tanto no front-end como no back-end e
+              MySQL, também foram criados testes automatizados em toda a parte
+              de autenticação e autorização do back-end com Jest. Você pode
+              encontrar o back-end para testes hospedado na EC2-AWS{' '}
+              <Link
+                href="https://ec2-34-234-95-127.compute-1.amazonaws.com:3002"
+                isExternal
+                fontWeight="bold"
+              >
+                neste link
+              </Link>
+              .
             </Text>
-            <Button variant="outline" alignSelf="flex-start">
-              Link to project
-            </Button>
+            <Flex minW="100%" justifyContent="space-between">
+              <Link
+                href="https://github.com/cptvictor95/skibiddy-front"
+                isExternal
+                variant="nostyle"
+              >
+                <Button variant="outline" leftIcon={<AiFillGithub />}>
+                  Front-End
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/cptvictor95/skibiddy-back"
+                isExternal
+                variant="nostyle"
+              >
+                <Button variant="outline" leftIcon={<AiFillGithub />}>
+                  Back-End
+                </Button>
+              </Link>
+            </Flex>
           </Stack>
         </Flex>
       </Flex>
-      <Button alignSelf="center" mt={16} size="lg" textTransform="uppercase">
-        ver mais
-      </Button>
+      <Link
+        href="https://github.com/cptvictor95?tab=repositories"
+        isExternal
+        variant="nostyle"
+        alignSelf="center"
+      >
+        <Button
+          mt={16}
+          size="lg"
+          textTransform="uppercase"
+          leftIcon={<AiFillGithub />}
+        >
+          ver mais projetos
+        </Button>
+      </Link>
     </Stack>
   );
 };

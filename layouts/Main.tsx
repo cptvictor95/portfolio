@@ -19,6 +19,8 @@ const Main: React.FC<{ title: string; children: React.ReactNode }> = ({
     >
       <Head>
         <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       {children}
     </Flex>

@@ -1,6 +1,7 @@
 export const Button = {
   baseStyle: {
     fontFamily: 'Barlow',
+    textTransform: 'uppercase',
     _focus: {
       outline: 'none',
     },
@@ -61,7 +62,7 @@ export const Button = {
       right: 8,
       zIndex: '99',
       color: 'green-camo',
-      bg: 'transparent',
+      bg: 'light-green',
       fontSize: 'xl',
       fontWeight: 'bold',
       border: '1px solid',

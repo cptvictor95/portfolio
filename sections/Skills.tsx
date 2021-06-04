@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/layout';
-import { Stack, Text } from '@chakra-ui/react';
+import { Link, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const Skills = () => {
@@ -35,9 +35,23 @@ const Skills = () => {
               Desenvolvimento de aplicações web com HTML, CSS e JavaScript.
             </Text>
             <Text>
-              Atualmente trabalho com a biblioteca ReactJS, mais especificamente
-              utilizando o framework NextJS, em conjunto com a linguagem
-              TypeScript.
+              Atualmente trabalho com a biblioteca{' '}
+              <Link href="https://reactjs.org" isExternal>
+                ReactJS
+              </Link>
+              , mais especificamente utilizando o framework{' '}
+              <Link href="https://nextjs.org" isExternal>
+                NextJS
+              </Link>
+              , em conjunto com a linguagem{' '}
+              <Link href="https://www.typescriptlang.org" isExternal>
+                Typescript
+              </Link>{' '}
+              e a biblioteca de componentes{' '}
+              <Link href="https://chakra-ui.com" isExternal>
+                Chakra-UI
+              </Link>
+              .
             </Text>
             <Text>
               Toda a parte gráfica e componentização desenvolvida por mim são
@@ -56,17 +70,49 @@ const Skills = () => {
               Back-end
             </Text>
             <Text>
-              Desenvolvimento de APIs utilizando NodeJS, TypeScript e MySQL /
-              MongoDB.
+              Desenvolvimento de APIs utilizando{' '}
+              <Link href="https://nodejs.org/en/" isExternal>
+                NodeJS
+              </Link>
+              ,{' '}
+              <Link href="https://www.typescriptlang.org" isExternal>
+                Typescript
+              </Link>{' '}
+              e{' '}
+              <Link href="https://www.mysql.com" isExternal>
+                MySQL
+              </Link>{' '}
+              ou{' '}
+              <Link href="https://www.mongodb.com" isExternal>
+                MongoDB
+              </Link>
+              .
             </Text>
             <Text>
-              Também possuo conhecimento em Firebase, mais especificamente na
-              stack NextJS + Firestore
+              Também possuo conhecimento em{' '}
+              <Link href="https://firebase.google.com" isExternal>
+                Firebase
+              </Link>
+              , mais especificamente na stack{' '}
+              <Link href="https://nextjs.org" isExternal>
+                NextJS
+              </Link>{' '}
+              +{' '}
+              <Link
+                href="https://firebase.google.com/docs/firestore"
+                isExternal
+              >
+                Firestore
+              </Link>
             </Text>
             <Text>
               Toda a estrutura de código é realizada utilizando os princípios
               Clean Code e/ou SOLID. Também possuo conhecimento em testes
-              automatizados com o framework Jest.
+              automatizados com o framework{' '}
+              <Link href="https://jestjs.io/pt-BR/" isExternal>
+                Jest
+              </Link>
+              .
             </Text>
           </Stack>
         </Flex>
