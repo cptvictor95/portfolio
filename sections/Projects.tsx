@@ -123,12 +123,12 @@ const Projects = () => {
           px={4}
         >
           <Link
-            href="./projects/systemExample.png"
+            href="./projects/exampleSystem.png"
             isExternal
             px={{ base: 0, sm: 8, md: 4 }}
           >
             <Image
-              src={'./projects/systemExample.png'}
+              src={'./projects/exampleSystem.png'}
               maxW={{ base: '100%', lg: '350px' }}
             />
             <Text>Clique na imagem para ampliar</Text>
@@ -150,7 +150,7 @@ const Projects = () => {
           px={4}
         >
           <Link
-            href="./projects/systemExample.png"
+            href="./projects/exampleSkibiddy.png"
             isExternal
             px={{ base: 0, sm: 8, md: 4 }}
           >
