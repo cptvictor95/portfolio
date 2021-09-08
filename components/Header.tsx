@@ -33,10 +33,14 @@ const Header: React.FC = (props) => {
       w="100%"
       align="center"
       justify="space-between"
+      position={{ base: 'relative', md: 'sticky', lg: 'sticky', xl: 'sticky' }}
+      top={{ md: 0, lg: 0, xl: 0 }}
+      bg="black"
       wrap="wrap"
       mb={12}
       py={4}
       px={8}
+      zIndex="1"
       {...props}
     >
       <Flex align="center">

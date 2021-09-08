@@ -32,7 +32,8 @@ const Skills = () => {
               Front-end
             </Text>
             <Text>
-              Desenvolvimento de aplicações web com HTML, CSS e JavaScript.
+              Desenvolvimento de aplicações web com HTML, CSS, JavaScript e
+              TypeScript.
             </Text>
             <Text>
               Atualmente trabalho com a biblioteca{' '}
@@ -54,7 +55,7 @@ const Skills = () => {
               .
             </Text>
             <Text>
-              Toda a parte gráfica e componentização desenvolvida por mim são
+              Toda a parte gráfica e componentização desenvolvidas por mim são
               realizadas utilizando o princípio Mobile First, com responsividade
               para todos os tamanhos de dispositivos.
             </Text>

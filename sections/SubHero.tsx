@@ -61,19 +61,19 @@ const SubHero: React.FC = () => {
               SQL
             </Text>
             <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              MongoDB
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
               Firebase
             </Text>
+            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
+              MongoDB
+            </Text>
           </Flex>
-          <Flex as="section" alignSelf="flex-end">
+          <Flex as="section" alignSelf="flex-end" pb={{ base: 8 }}>
             <Link
               activeClass="active"
               to="contact"
               spy={true}
               smooth={true}
-              duration={500}
+              duration={1000}
             >
               <Button variant="outline">Ver Contatos</Button>
             </Link>
