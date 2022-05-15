@@ -3,7 +3,7 @@ import { IconButton } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
-const ScrollToTop = () => {
+const ScrollToTop: React.FC = () => {
   const [showScroll, setShowScroll] = useState<boolean>(false);
 
   const checkScrollTop = () => {

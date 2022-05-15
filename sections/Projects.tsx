@@ -2,7 +2,7 @@ import { Stack, Text, Flex, Button, Image, Link } from '@chakra-ui/react';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <Stack as="section" py={16} id="projects" bg="limegreen" color="purple.900">
       <Text

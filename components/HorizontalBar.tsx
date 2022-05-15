@@ -5,7 +5,7 @@ import { FaFacebook } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
-const HorizontalBar = () => {
+const HorizontalBar: React.FC = () => {
   return (
     <Center as="section" py={8} w="100%">
       <Flex

@@ -1,48 +1,40 @@
-import { Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Container, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import HorizontalBar from '../components/HorizontalBar';
 import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
 import Footer from '../components/Footer';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
-    <Stack as="section" id="contact" bg="black">
+    <Stack as="section" id="contact" bg="black" justifyContent="center">
       <Text as="h1" fontSize="5xl" textAlign="center" pt={8} fontWeight="bold">
         Contatos
       </Text>
       <Flex
         as="section"
-        maxW={{ base: 'auto', md: '100%', lg: '100%', xl: '100%' }}
         direction={{ base: 'column', md: 'row' }}
         align="center"
         justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
         py={4}
       >
-        <Flex
-          as="article"
-          maxW={{ base: '80%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-        >
+        <Container as="article" maxW="md" minH="200px">
           <Stack px={8}>
-            <Text as="h2" fontSize="3xl" fontWeight="semibold">
+            <Text as="h3" fontSize="3xl" fontWeight="semibold">
               Freelancer
             </Text>
-            <Text as="h2" fontSize="xl" fontWeight="semibold">
+            <Text as="h4" fontSize="xl" fontWeight="semibold">
               Quer trabalhar comigo?
             </Text>
-            <Text as="h2" fontSize="lg">
+            <Text fontSize="lg">
               Me mande um email com sua proposta e entrarei em contato para
               conversarmos!
             </Text>
           </Stack>
-        </Flex>
-        <Flex
-          as="article"
-          maxW={{ base: '80%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-          py={8}
-        >
+        </Container>
+        <Container as="article" maxW="md" minH="200px">
           <Stack px={8}>
-            <Text as="h2" fontSize="3xl" fontWeight="semibold">
+            <Text as="h3" fontSize="3xl" fontWeight="semibold">
               Contatos adicionais
             </Text>
             <Link href="mailto:cpt.victor@hotmail.com">
@@ -59,7 +51,7 @@ const Contact = () => {
               (11) 94700-6135
             </Link>
           </Stack>
-        </Flex>
+        </Container>
       </Flex>
       <HorizontalBar />
       <Footer />

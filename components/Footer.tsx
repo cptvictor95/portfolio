@@ -1,9 +1,9 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <Flex p={8} bg="green-camo">
+    <Flex as="footer" p={8} bg="green-camo">
       <Text>
         © 2021 Victor Cardoso Pudo Torres - Todos os direitos reservados
       </Text>

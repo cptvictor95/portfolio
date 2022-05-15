@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/layout';
-import { Link, Stack, Text } from '@chakra-ui/react';
+import { Link, Stack, Text, Container } from '@chakra-ui/react';
 import React from 'react';
 
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <Stack as="section" py={16} id="skills">
       <Text
@@ -15,17 +15,12 @@ const Skills = () => {
       </Text>
       <Flex
         as="section"
-        maxW={{ base: '100%', md: '100%', lg: '100%', xl: '100%' }}
         direction={{ base: 'column', md: 'row' }}
-        align="flex-start"
         justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
         px={4}
+        pb={12}
       >
-        <Flex
-          as="article"
-          maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-          pb={8}
-        >
+        <Container as="article" maxW="md">
           <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Front-end
@@ -59,12 +54,8 @@ const Skills = () => {
               para todos os tamanhos de dispositivos.
             </Text>
           </Stack>
-        </Flex>
-        <Flex
-          as="article"
-          maxW={{ base: '100%', sm: '60%', md: '40%', lg: '30%', xl: '30%' }}
-          pb={8}
-        >
+        </Container>
+        <Container as="article" maxW="md">
           <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Back-end
@@ -115,7 +106,7 @@ const Skills = () => {
               .
             </Text>
           </Stack>
-        </Flex>
+        </Container>
       </Flex>
     </Stack>
   );

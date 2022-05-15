@@ -5,7 +5,7 @@ import { FaFacebook } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
-const VerticalBar = () => {
+const VerticalBar: React.FC = () => {
   return (
     <Flex
       as="aside"
