@@ -86,7 +86,7 @@ const Header: React.FC = (props) => {
                 smooth={true}
                 duration={500}
               >
-                <Button size="md" variant="link">
+                <Button size="md" variant="link" title="Ir para Sobre">
                   Sobre
                 </Button>
               </SLink>
@@ -99,7 +99,7 @@ const Header: React.FC = (props) => {
                 smooth={true}
                 duration={500}
               >
-                <Button size="md" variant="link">
+                <Button size="md" variant="link" title="Ir para Projetos">
                   Projetos
                 </Button>
               </SLink>
@@ -112,7 +112,7 @@ const Header: React.FC = (props) => {
                 smooth={true}
                 duration={500}
               >
-                <Button size="md" variant="link">
+                <Button size="md" variant="link" title="Ir para Contato">
                   Contato
                 </Button>
               </SLink>

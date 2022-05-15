@@ -27,7 +27,8 @@ const ScrollToTop = () => {
   return (
     <IconButton
       icon={<TriangleUpIcon />}
-      aria-label="scroll-to-top"
+      aria-label="Botão Voltar para o Topo"
+      title="Voltar para o Topo"
       variant="scrollToTop"
       display={showScroll ? 'flex' : 'none'}
       onClick={scrollTop}

@@ -19,7 +19,8 @@ const HorizontalBar = () => {
         >
           <IconButton
             icon={<TiSocialLinkedinCircular />}
-            aria-label="linkedin"
+            aria-label="Ícone Linkedin"
+            title="Ir para Linkedin"
             variant="socialIcon"
             fontSize={{
               base: '4xl',
@@ -38,7 +39,8 @@ const HorizontalBar = () => {
         >
           <IconButton
             icon={<AiOutlineWhatsApp />}
-            aria-label="whatsapp"
+            aria-label="Ícone Whatsapp"
+            title="Ir para Whatsapp"
             variant="socialIcon"
             fontSize={{
               base: '3xl',
@@ -52,7 +54,8 @@ const HorizontalBar = () => {
         <Link href="https://github.com/cptvictor95/" isExternal>
           <IconButton
             icon={<AiFillGithub />}
-            aria-label="github"
+            aria-label="Ícone Github"
+            title="Ir para Github"
             variant="socialIcon"
             fontSize={{
               base: '3xl',
@@ -69,7 +72,8 @@ const HorizontalBar = () => {
         >
           <IconButton
             icon={<FaFacebook />}
-            aria-label="facebook"
+            aria-label="Ícone Facebook"
+            title="Ir para Facebook"
             variant="socialIcon"
             fontSize={{
               base: '3xl',
@@ -83,7 +87,8 @@ const HorizontalBar = () => {
         <Link href="https://www.instagram.com/v1cardoso/" isExternal>
           <IconButton
             icon={<FiInstagram />}
-            aria-label="instagram"
+            aria-label="Ícone Instagram"
+            title="Ir para Instagram"
             variant="socialIcon"
             fontSize={{
               base: '3xl',
