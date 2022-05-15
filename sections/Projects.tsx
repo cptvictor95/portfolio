@@ -4,8 +4,14 @@ import { AiFillGithub } from 'react-icons/ai';
 
 const Projects = () => {
   return (
-    <Stack as="section" py={12} id="projects" bg="limegreen" color="purple.900">
-      <Text as="h1" fontSize="4xl" fontWeight="semibold" textAlign="center">
+    <Stack as="section" py={16} id="projects" bg="limegreen" color="purple.900">
+      <Text
+        as="h1"
+        fontSize="5xl"
+        py={4}
+        fontWeight="semibold"
+        textAlign="center"
+      >
         Meus Projetos
       </Text>
       <Flex
@@ -20,7 +26,7 @@ const Projects = () => {
           as="aside"
           maxW={{ base: '100%', md: '50%', lg: '50%' }}
           justify="flex-end"
-          px={4}
+          px={8}
         >
           <Link
             href="./projects/exampleBrav.png"
@@ -120,7 +126,7 @@ const Projects = () => {
           as="aside"
           maxW={{ base: '100%', md: '50%', lg: '50%' }}
           justify="flex-start"
-          px={4}
+          px={8}
         >
           <Link
             href="./projects/exampleSystem.png"
@@ -147,7 +153,7 @@ const Projects = () => {
           as="aside"
           maxW={{ base: '100%', md: '50%', lg: '50%' }}
           justify="flex-end"
-          px={4}
+          px={8}
         >
           <Link
             href="./projects/exampleSkibiddy.png"

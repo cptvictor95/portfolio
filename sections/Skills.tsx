@@ -4,15 +4,14 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <Stack as="section" py={8} id="skills">
+    <Stack as="section" py={16} id="skills">
       <Text
         as="h1"
-        fontSize={{ base: '3xl', md: '4xl', lg: '4xl', xl: '4xl' }}
+        fontSize={{ base: '5xl', md: '5xl', lg: '5xl', xl: '5xl' }}
         textAlign="center"
-        pt={8}
-        py={4}
+        py={8}
       >
-        Minhas habilidades
+        Habilidades
       </Text>
       <Flex
         as="section"
@@ -28,7 +27,7 @@ const Skills = () => {
           pb={8}
         >
           <Stack px={8} textAlign="justify">
-            <Text as="h2" fontSize="5xl" fontWeight="semibold">
+            <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Front-end
             </Text>
             <Text>
@@ -67,7 +66,7 @@ const Skills = () => {
           pb={8}
         >
           <Stack px={8} textAlign="justify">
-            <Text as="h2" fontSize="5xl" fontWeight="semibold">
+            <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Back-end
             </Text>
             <Text>

@@ -3,7 +3,6 @@ import { Box, Flex, Text } from '@chakra-ui/layout';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import React from 'react';
 import { Button, IconButton } from '@chakra-ui/button';
-import Link from 'next/link';
 import { Link as SLink } from 'react-scroll';
 
 const Header: React.FC = (props) => {
@@ -62,6 +61,7 @@ const Header: React.FC = (props) => {
             onClick={toggleMenu}
             aria-label="open-menu"
             variant="mobile-menu-btn"
+            fontSize="2xl"
           />
         )}
       </Box>

@@ -13,7 +13,7 @@ const SubHero: React.FC = () => {
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['center', 'space-around', 'space-evenly', 'space-around']}
-      py={8}
+      py={16}
       px={8}
       bg="limegreen"
       color="black"
