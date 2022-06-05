@@ -1,3 +1,4 @@
+import React from 'react';
 import App from 'next/app';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import { theme } from '../theme/theme';

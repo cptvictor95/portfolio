@@ -14,6 +14,7 @@ const Header: React.FC = (props) => {
     children: React.ReactNode;
     to?: string;
     isLast?: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   }> = ({ children, isLast, to = '/', ...rest }) => {
     return (
       <Text

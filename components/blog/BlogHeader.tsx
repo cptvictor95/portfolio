@@ -3,7 +3,6 @@ import { Box, Flex, Text } from '@chakra-ui/layout';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import React from 'react';
 import { Button, IconButton } from '@chakra-ui/react';
-import { Link as SLink } from 'react-scroll';
 import { useRouter } from 'next/dist/client/router';
 
 const BlogHeader: React.FC = (props) => {
@@ -20,10 +19,10 @@ const BlogHeader: React.FC = (props) => {
       top={{ md: 0, lg: 0, xl: 0 }}
       bg="black"
       wrap="wrap"
-      mb={12}
       py={4}
       px={8}
       zIndex="1"
+      maxH="10vh"
       {...props}
     >
       <Flex align="center" flexGrow={1}>

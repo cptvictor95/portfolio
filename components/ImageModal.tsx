@@ -3,11 +3,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalCloseButton,
-  ModalBody,
-  Button,
   Image,
-  useDisclosure,
-  Center,
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -20,7 +16,6 @@ const ImageModal: React.FC<{
   return (
     <>
       <Image
-        onOpen={onOpen}
         onClick={onOpen}
         src={imagePath}
         maxW={{ base: '100%', md: '40%', lg: '350px' }}
