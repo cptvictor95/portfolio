@@ -1,13 +1,14 @@
-import { CloseIcon } from '@chakra-ui/icons';
 import { Box, Flex, Text } from '@chakra-ui/layout';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import React from 'react';
-import { Button, IconButton } from '@chakra-ui/button';
+import { Button, IconButton } from '@chakra-ui/react';
 import { Link as SLink } from 'react-scroll';
+import { useRouter } from 'next/dist/client/router';
 
 const Header: React.FC = (props) => {
   const [show, setShow] = React.useState<boolean>(false);
   const toggleMenu = () => setShow(!show);
+  const router = useRouter();
 
   const MenuItems: React.FC<{
     children: React.ReactNode;
@@ -31,7 +32,6 @@ const Header: React.FC = (props) => {
       as="header"
       w="100%"
       align="center"
-      justify="space-between"
       position={{ base: 'relative', md: 'sticky', lg: 'sticky', xl: 'sticky' }}
       top={{ md: 0, lg: 0, xl: 0 }}
       bg="black"
@@ -42,7 +42,7 @@ const Header: React.FC = (props) => {
       zIndex="1"
       {...props}
     >
-      <Flex align="center">
+      <Flex align="center" flexGrow={1}>
         <Text as="h4" fontSize="2xl">
           Victor
         </Text>
@@ -104,6 +104,7 @@ const Header: React.FC = (props) => {
                 </Button>
               </SLink>
             </MenuItems>
+
             <MenuItems>
               <SLink
                 activeClass="active"
@@ -116,6 +117,16 @@ const Header: React.FC = (props) => {
                   Contato
                 </Button>
               </SLink>
+            </MenuItems>
+            <MenuItems>
+              <Button
+                onClick={() => router.push('/blog')}
+                size="md"
+                variant="link"
+                title="Ir para Artigos"
+              >
+                Artigos
+              </Button>
             </MenuItems>
           </>
         </Flex>

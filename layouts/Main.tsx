@@ -14,7 +14,7 @@ const Main: React.FC<{ title: string; children: React.ReactNode }> = ({
       m="0 auto"
       direction="column"
       maxW={{ base: 'auto' }}
-      minH="70vh"
+      minH="100vh"
       {...mainProps}
     >
       <Head>
