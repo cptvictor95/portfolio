@@ -1,5 +1,6 @@
 import { Image } from '@chakra-ui/image';
 import { Flex, Heading, Stack, Text } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
 import React from 'react';
 import VerticalBar from '../components/VerticalBar';
 
@@ -10,6 +11,8 @@ const Hero: React.FC<{
   return (
     <Flex
       as="section"
+      position="relative"
+      top="10vh"
       minH={{ base: '75vh', md: '70vh' }}
       maxW={{ base: '100%' }}
       direction={{ base: 'column', md: 'row' }}
@@ -29,6 +32,9 @@ const Hero: React.FC<{
       >
         <Stack as="section" ml={{ base: 0, md: 12, lg: 12, xl: 12 }}>
           <Heading
+            as={motion.h1}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             fontSize={{ base: '5xl', md: '5xl', lg: '6xl', xl: '6xl' }}
             letterSpacing={{
               base: '2px',
@@ -46,7 +52,9 @@ const Hero: React.FC<{
             {title}
           </Heading>
           <Text
-            as="h3"
+            as={motion.h2}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.3 } }}
             fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}
             lineHeight={{
               base: '100%',
@@ -67,9 +75,12 @@ const Hero: React.FC<{
         align={{ base: 'center', md: 'center', lg: 'center', xl: 'center' }}
       >
         <Image
+          as={motion.img}
           src={'./heroSVG.svg'}
           maxW={{ base: '250px', sm: '250px', md: '60%', lg: '50%' }}
           alt="Ilustração colorida de um computador e um celular."
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
         />
       </Stack>
     </Flex>

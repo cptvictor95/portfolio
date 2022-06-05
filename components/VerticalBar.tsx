@@ -1,4 +1,5 @@
 import { Flex, IconButton, Link } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { AiOutlineWhatsApp, AiFillGithub } from 'react-icons/ai';
 import { FaFacebook } from 'react-icons/fa';
@@ -6,9 +7,32 @@ import { FiInstagram } from 'react-icons/fi';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const VerticalBar: React.FC = () => {
+  const itemVariants = {
+    closed: { opacity: 0 },
+    open: {
+      opacity: 1,
+    },
+  };
+  const sideVariants = {
+    closed: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+  };
   return (
     <Flex
-      as="aside"
+      as={motion.aside}
+      initial="closed"
+      animate="open"
+      variants={sideVariants}
       direction="column"
       justify="space-evenly"
       h="40vh"
@@ -17,6 +41,8 @@ const VerticalBar: React.FC = () => {
       px={{ base: 4, sm: 4, md: 8, lg: 8, xl: 8 }}
     >
       <Link
+        as={motion.a}
+        variants={itemVariants}
         href="https://www.linkedin.com/in/victorcardosopudotorres/"
         isExternal
       >
@@ -30,7 +56,12 @@ const VerticalBar: React.FC = () => {
           maxW="42px"
         />
       </Link>
-      <Link href="https://api.whatsapp.com/send?phone=5511947006135" isExternal>
+      <Link
+        as={motion.a}
+        variants={itemVariants}
+        href="https://api.whatsapp.com/send?phone=5511947006135"
+        isExternal
+      >
         <IconButton
           icon={<AiOutlineWhatsApp />}
           aria-label="Ícone Whatsapp"
@@ -39,7 +70,12 @@ const VerticalBar: React.FC = () => {
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>
-      <Link href="https://github.com/cptvictor95/" isExternal>
+      <Link
+        as={motion.a}
+        variants={itemVariants}
+        href="https://github.com/cptvictor95/"
+        isExternal
+      >
         <IconButton
           icon={<AiFillGithub />}
           aria-label="Ícone Github"
@@ -49,6 +85,8 @@ const VerticalBar: React.FC = () => {
         />
       </Link>
       <Link
+        as={motion.a}
+        variants={itemVariants}
         href="https://www.facebook.com/victor.cardosopudotorres/"
         isExternal
       >
@@ -60,7 +98,12 @@ const VerticalBar: React.FC = () => {
           fontSize={{ base: '2xl', sm: '4xl', md: '4xl', lg: '4xl', xl: '4xl' }}
         />
       </Link>
-      <Link href="https://www.instagram.com/v1cardoso/" isExternal>
+      <Link
+        as={motion.a}
+        variants={itemVariants}
+        href="https://www.instagram.com/v1cardoso/"
+        isExternal
+      >
         <IconButton
           icon={<FiInstagram />}
           aria-label="Ícone Instagram"

@@ -38,6 +38,7 @@ const Header: React.FC = (props) => {
       w="100%"
       h="10vh"
       align="center"
+      position={{ base: 'fixed', sm: 'fixed' }}
       top={{ md: 0, lg: 0, xl: 0 }}
       bg="rgba(0,0,0, 0.8)"
       wrap="wrap"
@@ -47,7 +48,12 @@ const Header: React.FC = (props) => {
       {...props}
     >
       <Flex align="center" flexGrow={1}>
-        <Text as="h4" fontSize="2xl">
+        <Text
+          as={motion.p}
+          fontSize="2xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           Victor
         </Text>
       </Flex>

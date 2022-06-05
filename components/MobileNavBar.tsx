@@ -53,22 +53,34 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
           xl: 'none',
         }}
       >
-        {open ? (
-          <IconButton
-            icon={<CloseIcon />}
-            onClick={handleCycle}
-            aria-label="close-menu"
-            variant="mobile-menu-btn"
-          />
-        ) : (
-          <IconButton
-            icon={<HamburgerIcon />}
-            onClick={handleCycle}
-            aria-label="open-menu"
-            variant="mobile-menu-btn"
-            fontSize="2xl"
-          />
-        )}
+        <AnimatePresence>
+          {open ? (
+            <IconButton
+              as={motion.button}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              variants={itemVariants}
+              icon={<CloseIcon />}
+              onClick={handleCycle}
+              aria-label="close-menu"
+              variant="mobile-menu-btn"
+            />
+          ) : (
+            <IconButton
+              as={motion.button}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 1 }}
+              variants={itemVariants}
+              icon={<HamburgerIcon />}
+              onClick={handleCycle}
+              aria-label="open-menu"
+              variant="mobile-menu-btn"
+              fontSize="2xl"
+            />
+          )}
+        </AnimatePresence>
       </Box>
       <AnimatePresence>
         {open && (
@@ -96,6 +108,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
               w="100%"
               initial="closed"
               animate="open"
+              exit={{ opacity: 0, transition: { duration: 0.3 } }}
               variants={sideVariants}
               direction="column"
               alignItems="center"

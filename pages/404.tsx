@@ -10,6 +10,9 @@ const Custom404: React.FC = () => {
   const goHome = () => {
     return router.push('/');
   };
+  const goBack = () => {
+    return router.back();
+  };
   return (
     <Main title="Página não encontrada">
       <Center as="article" h="100vh" w="100vw">
@@ -20,9 +23,14 @@ const Custom404: React.FC = () => {
           <Text as="h4" fontSize="xl" py={4}>
             A página que você tentou acessar não existe.
           </Text>
-          <Button variant="solid" onClick={goHome} alignSelf="flex-end">
-            Voltar
-          </Button>
+          <Flex as="nav" gap={5} w="100%" justify="flex-end">
+            <Button variant="link" onClick={goBack} alignSelf="flex-end">
+              Voltar
+            </Button>
+            <Button variant="link" onClick={goHome} alignSelf="flex-end">
+              Página inicial
+            </Button>
+          </Flex>
         </Flex>
       </Center>
     </Main>
