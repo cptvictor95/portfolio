@@ -1,5 +1,4 @@
 import React from 'react';
-import BlogHeader from '../../components/blog/BlogHeader';
 import Footer from '../../components/Footer';
 import Main from '../../layouts/Main';
 import { GraphQLClient, gql } from 'graphql-request';
@@ -7,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
 import { PostType } from '../../interface/PostType';
 import Post from '../../components/blog/Post';
+import Header from '../../components/Header';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -54,7 +54,7 @@ const SLUGLIST = gql`
 const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
   return (
     <Main title="Artigos">
-      <BlogHeader />
+      <Header />
       <BlogBreadcrumbs post={post} />
       <Post post={post} />
       <Footer />

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import BlogHeader from '../../components/blog/BlogHeader';
 import Footer from '../../components/Footer';
 import Main from '../../layouts/Main';
 import { GraphQLClient, gql } from 'graphql-request';
@@ -8,6 +7,7 @@ import { GetStaticProps } from 'next';
 import PostList from '../../components/blog/PostList';
 import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
 import { PostType } from '../../interface/PostType';
+import Header from '../../components/Header';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -46,7 +46,7 @@ const QUERY = gql`
 const Blog: React.FC<{ posts: PostType[] }> = ({ posts }) => {
   return (
     <Main title="Artigos">
-      <BlogHeader />
+      <Header />
       <BlogBreadcrumbs />
       <PostList posts={posts} />
       <Footer />

@@ -1,43 +1,46 @@
 import { Box, Flex, Text } from '@chakra-ui/layout';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import React from 'react';
-import { Button, IconButton } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { Link as SLink } from 'react-scroll';
 import { useRouter } from 'next/dist/client/router';
+import MobileNavBar, { NavLink } from './MobileNavBar';
+import { motion } from 'framer-motion';
 
 const Header: React.FC = (props) => {
-  const [show, setShow] = React.useState<boolean>(false);
-  const toggleMenu = () => setShow(!show);
   const router = useRouter();
+  const isBlog = router.pathname.includes('/blog');
+  let links: NavLink[] = [];
 
-  const MenuItems: React.FC<{
-    children: React.ReactNode;
-    to?: string;
-    isLast?: boolean;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  }> = ({ children, isLast, to = '/', ...rest }) => {
-    return (
-      <Text
-        mb={{ base: isLast ? 0 : 8, sm: 0 }}
-        mr={{ base: 0, sm: isLast ? 0 : 8 }}
-        display="block"
-        {...rest}
-      >
-        {children}
-      </Text>
-    );
+  if (isBlog) {
+    links = [
+      { name: 'home', to: '', id: 5 },
+      { name: 'artigos', to: 'blog', id: 6 },
+    ];
+  } else {
+    links = [
+      { name: 'sobre', to: 'about', id: 1 },
+      { name: 'projetos', to: 'projects', id: 2 },
+      { name: 'contato', to: 'contact', id: 3 },
+      { name: 'artigos', to: 'blog', id: 4 },
+    ];
+  }
+
+  const itemVariants = {
+    closed: { opacity: 0 },
+    open: {
+      opacity: 1,
+    },
   };
 
   return (
     <Flex
       as="header"
       w="100%"
+      h="10vh"
       align="center"
-      position={{ base: 'relative', md: 'sticky', lg: 'sticky', xl: 'sticky' }}
       top={{ md: 0, lg: 0, xl: 0 }}
-      bg="black"
+      bg="rgba(0,0,0, 0.8)"
       wrap="wrap"
-      mb={12}
       py={4}
       px={8}
       zIndex="1"
@@ -48,28 +51,17 @@ const Header: React.FC = (props) => {
           Victor
         </Text>
       </Flex>
-      <Box as="aside" display={{ base: 'block', md: 'none' }}>
-        {show ? (
-          <IconButton
-            icon={<CloseIcon />}
-            onClick={toggleMenu}
-            aria-label="close-menu"
-            variant="mobile-menu-btn"
-          />
-        ) : (
-          <IconButton
-            icon={<HamburgerIcon />}
-            onClick={toggleMenu}
-            aria-label="open-menu"
-            variant="mobile-menu-btn"
-            fontSize="2xl"
-          />
-        )}
-      </Box>
 
+      <MobileNavBar links={links} isBlog={isBlog} />
       <Box
         as="nav"
-        display={{ base: show ? 'block' : 'none', md: 'block' }}
+        display={{
+          base: 'none',
+          sm: 'none',
+          md: 'block',
+          lg: 'block',
+          xl: 'block',
+        }}
         flexBasis={{ base: '100%', md: 'auto' }}
       >
         <Flex
@@ -77,59 +69,53 @@ const Header: React.FC = (props) => {
           w="100%"
           justify={['center', 'space-between', 'flex-end', 'flex-end']}
           direction={['column', 'row', 'row', 'row']}
+          gap={5}
         >
-          <>
-            <MenuItems>
-              <SLink
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                <Button size="md" variant="link" title="Ir para Sobre">
-                  Sobre
+          {links.map((link) => {
+            if (link.name === 'artigos') {
+              return (
+                <Button
+                  onClick={() => router.push('/blog')}
+                  size="md"
+                  variant="link"
+                  title="Ir para Artigos"
+                >
+                  Artigos
                 </Button>
-              </SLink>
-            </MenuItems>
-            <MenuItems>
-              <SLink
-                activeClass="active"
-                to="projects"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                <Button size="md" variant="link" title="Ir para Projetos">
-                  Projetos
+              );
+            } else {
+              return isBlog ? (
+                <Button
+                  as={motion.button}
+                  onClick={() => router.push('/')}
+                  variants={itemVariants}
+                  size="md"
+                  variant="link"
+                  title={`Ir para ${link.name}`}
+                >
+                  {link.name}
                 </Button>
-              </SLink>
-            </MenuItems>
-
-            <MenuItems>
-              <SLink
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                <Button size="md" variant="link" title="Ir para Contato">
-                  Contato
-                </Button>
-              </SLink>
-            </MenuItems>
-            <MenuItems>
-              <Button
-                onClick={() => router.push('/blog')}
-                size="md"
-                variant="link"
-                title="Ir para Artigos"
-              >
-                Artigos
-              </Button>
-            </MenuItems>
-          </>
+              ) : (
+                <SLink
+                  activeClass="active"
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  <Button
+                    as={motion.button}
+                    variants={itemVariants}
+                    size="md"
+                    variant="link"
+                    title={`Ir para ${link.name}`}
+                  >
+                    {link.name}
+                  </Button>
+                </SLink>
+              );
+            }
+          })}
         </Flex>
       </Box>
     </Flex>
