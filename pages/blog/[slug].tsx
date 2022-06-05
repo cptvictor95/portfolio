@@ -1,11 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { Avatar, Box, Container, Flex, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import BlogHeader from '../../components/blog/BlogHeader';
 import Footer from '../../components/Footer';
 import Main from '../../layouts/Main';
 import { GraphQLClient, gql } from 'graphql-request';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
+import { PostType } from '../../interface/PostType';
+import Post from '../../components/blog/Post';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -50,35 +51,12 @@ const SLUGLIST = gql`
   }
 `;
 
-const BlogPost: React.FC<{ post: any }> = ({ post }) => {
+const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
   return (
     <Main title="Artigos">
       <BlogHeader />
-      <Container as="article" maxW="container.md" minH="90vh" p={12}>
-        <Image
-          src={post.coverImage.url}
-          borderRadius={5}
-          boxSize="100%"
-          h="300px"
-          objectFit="cover"
-        />
-        <Flex direction="column" px={3} py={5} gap={5}>
-          <Text as="h3" fontSize="xl" fontWeight="semibold">
-            {post.title}
-          </Text>
-          <Text>Data de publicação: {post.datePublished}</Text>
-
-          <Box dangerouslySetInnerHTML={{ __html: post.content.html }}></Box>
-          <Flex align="center" py={2} w="100%">
-            <Avatar
-              size="md"
-              name={post.author.name}
-              src={post.author.avatar.url}
-            />
-            <Text px={5}>{post.author.name}</Text>
-          </Flex>
-        </Flex>
-      </Container>
+      <BlogBreadcrumbs post={post} />
+      <Post post={post} />
       <Footer />
     </Main>
   );
@@ -88,7 +66,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { posts } = await graphcms.request(SLUGLIST);
 
   return {
-    paths: posts.map((post: any) => ({ params: { slug: post.slug } })),
+    paths: posts.map((post: PostType) => ({ params: { slug: post.slug } })),
     fallback: 'blocking',
   };
 };
@@ -102,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       post,
     },
-    revalidate: 10,
+    revalidate: 5,
   };
 };
 

@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Container } from '@chakra-ui/react';
 import React from 'react';
 import BlogHeader from '../../components/blog/BlogHeader';
 import Footer from '../../components/Footer';
 import Main from '../../layouts/Main';
 import { GraphQLClient, gql } from 'graphql-request';
-import BlogCard from '../../components/blog/BlogCard';
 import { GetStaticProps } from 'next';
+import PostList from '../../components/blog/PostList';
+import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
+import { PostType } from '../../interface/PostType';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -42,15 +43,12 @@ const QUERY = gql`
   }
 `;
 
-const Blog: React.FC<{ posts: any[] }> = ({ posts }) => {
+const Blog: React.FC<{ posts: PostType[] }> = ({ posts }) => {
   return (
     <Main title="Artigos">
       <BlogHeader />
-      <Container as="article" maxW="container.md" minH="90vh" p={12}>
-        {posts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
-      </Container>
+      <BlogBreadcrumbs />
+      <PostList posts={posts} />
       <Footer />
     </Main>
   );
