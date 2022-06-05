@@ -69,6 +69,7 @@ const Hero: React.FC<{
         <Image
           src={'./heroSVG.svg'}
           maxW={{ base: '250px', sm: '250px', md: '60%', lg: '50%' }}
+          alt="Ilustração colorida de um computador e um celular."
         />
       </Stack>
     </Flex>

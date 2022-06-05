@@ -17,6 +17,8 @@
     "@fontsource/inconsolata": "^4.4.2",
     "focus-visible": "^5.2.0",
     "framer-motion": "^4",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",

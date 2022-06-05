@@ -36,6 +36,7 @@ const Projects: React.FC = () => {
             <Image
               src={'./projects/exampleBrav.png'}
               maxW={{ base: '100%', lg: '350px' }}
+              alt="Screenshot do projeto BRAV"
             />
             <Text>Clique na imagem para ampliar</Text>
           </Link>
@@ -136,6 +137,7 @@ const Projects: React.FC = () => {
             <Image
               src={'./projects/exampleSystem.png'}
               maxW={{ base: '100%', lg: '350px' }}
+              alt="Screenshot do projeto Labenu System"
             />
             <Text>Clique na imagem para ampliar</Text>
           </Link>
@@ -163,6 +165,7 @@ const Projects: React.FC = () => {
             <Image
               src={'./projects/exampleSkibiddy.png'}
               maxW={{ base: '100%', lg: '350px' }}
+              alt="Screenshot do projeto Skibiddy"
             />
             <Text>Clique na imagem para ampliar</Text>
           </Link>
