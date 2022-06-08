@@ -37,11 +37,11 @@ const Header: React.FC = (props) => {
       as="header"
       w="100%"
       h="10vh"
+      position="sticky"
+      top="0"
       align="center"
-      position={{ base: 'fixed', sm: 'fixed' }}
-      top={{ md: 0, lg: 0, xl: 0 }}
-      bg="rgba(0,0,0, 0.8)"
       wrap="wrap"
+      bg="rgba(0,0,0, 0.8)"
       py={4}
       px={8}
       zIndex="1"
