@@ -119,6 +119,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                   return (
                     <Button
                       as={motion.button}
+                      key={link.id}
                       w="100%"
                       onClick={() => router.push('/blog')}
                       size="md"
@@ -133,6 +134,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                   return isBlog ? (
                     <Button
                       as={motion.button}
+                      key={link.id}
                       onClick={() => router.push('/')}
                       variants={itemVariants}
                       size="md"

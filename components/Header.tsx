@@ -81,6 +81,7 @@ const Header: React.FC = (props) => {
             if (link.name === 'artigos') {
               return (
                 <Button
+                  key={link.id}
                   onClick={() => router.push('/blog')}
                   size="md"
                   variant="link"
@@ -93,6 +94,7 @@ const Header: React.FC = (props) => {
               return isBlog ? (
                 <Button
                   as={motion.button}
+                  key={link.id}
                   onClick={() => router.push('/')}
                   variants={itemVariants}
                   size="md"
@@ -104,6 +106,7 @@ const Header: React.FC = (props) => {
               ) : (
                 <SLink
                   activeClass="active"
+                  key={link.id}
                   to={link.to}
                   spy={true}
                   smooth={true}
