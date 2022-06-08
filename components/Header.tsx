@@ -1,10 +1,9 @@
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import React from 'react';
 import { Link } from '@chakra-ui/react';
-import { Link as SLink } from 'react-scroll';
 import { useRouter } from 'next/dist/client/router';
 import MobileNavBar, { NavLink } from './MobileNavBar';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Header: React.FC = (props) => {
   const router = useRouter();
@@ -59,67 +58,74 @@ const Header: React.FC = (props) => {
       </Flex>
 
       <MobileNavBar links={links} isBlog={isBlog} />
-      <Box
-        as="nav"
-        display={{
-          base: 'none',
-          sm: 'none',
-          md: 'block',
-          lg: 'block',
-          xl: 'block',
-        }}
-        flexBasis={{ base: '100%', md: 'auto' }}
-      >
-        <Flex
-          align={['center', 'center', 'center', 'center']}
-          w="100%"
-          justify={['center', 'space-between', 'flex-end', 'flex-end']}
-          direction={['column', 'row', 'row', 'row']}
-          gap={5}
+      <AnimatePresence>
+        <Box
+          as={motion.nav}
+          initial="closed"
+          animate="open"
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          display={{
+            base: 'none',
+            sm: 'none',
+            md: 'block',
+            lg: 'block',
+            xl: 'block',
+          }}
+          flexBasis={{ base: '100%', md: 'auto' }}
         >
-          {links.map((link) => {
-            if (link.name === 'artigos') {
-              return (
-                <Link
-                  key={link.id}
-                  href="/blog"
-                  size="md"
-                  variant="nostyle"
-                  title="Ir para artigos"
-                >
-                  Artigos
-                </Link>
-              );
-            } else {
-              return isBlog ? (
-                <Link
-                  as={motion.a}
-                  key={link.id}
-                  href="/"
-                  variants={itemVariants}
-                  size="md"
-                  variant="nostyle"
-                  title={`Ir para ${link.name}`}
-                >
-                  {link.name}
-                </Link>
-              ) : (
-                <SLink
-                  activeClass="active"
-                  key={link.id}
-                  to={link.to}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  title={`Ir para ${link.name}`}
-                >
-                  {link.name}
-                </SLink>
-              );
-            }
-          })}
-        </Flex>
-      </Box>
+          <Flex
+            align={['center', 'center', 'center', 'center']}
+            w="100%"
+            justify={['center', 'space-between', 'flex-end', 'flex-end']}
+            direction={['column', 'row', 'row', 'row']}
+            gap={5}
+          >
+            {links.map((link) => {
+              if (link.name === 'artigos') {
+                return (
+                  <Link
+                    as={motion.a}
+                    key={link.id}
+                    href="/blog"
+                    size="md"
+                    variant="nostyle"
+                    variants={itemVariants}
+                    title="Ir para artigos"
+                  >
+                    Artigos
+                  </Link>
+                );
+              } else {
+                return isBlog ? (
+                  <Link
+                    as={motion.a}
+                    key={link.id}
+                    href="/"
+                    size="md"
+                    variant="nostyle"
+                    variants={itemVariants}
+                    title={`Ir para ${link.name}`}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <Link
+                    as={motion.a}
+                    key={link.id}
+                    href={`#${link.to}`}
+                    size="md"
+                    variant="nostyle"
+                    variants={itemVariants}
+                    title={`Ir para ${link.name}`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              }
+            })}
+          </Flex>
+        </Box>
+      </AnimatePresence>
     </Flex>
   );
 };

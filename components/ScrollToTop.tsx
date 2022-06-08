@@ -1,23 +1,31 @@
 import { TriangleUpIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
+const itemVariants = {
+  closed: { opacity: 0 },
+  open: {
+    opacity: 1,
+  },
+};
+
 const ScrollToTop: React.FC = () => {
-  const [showScroll, setShowScroll] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(false);
 
   const checkScrollTop = () => {
     if (typeof window !== 'undefined') {
-      if (!showScroll && window.pageYOffset > 250) {
-        setShowScroll(true);
-      } else if (showScroll && window.pageYOffset <= 250) {
-        setShowScroll(false);
+      if (!show && window.pageYOffset > 250) {
+        setShow(true);
+      } else if (show && window.pageYOffset <= 250) {
+        setShow(false);
       }
     }
   };
 
   const scrollTop = () => {
-    return scroll.scrollToTop();
+    return scroll.scrollToTop({});
   };
 
   if (typeof window !== 'undefined') {
@@ -25,14 +33,22 @@ const ScrollToTop: React.FC = () => {
   }
 
   return (
-    <IconButton
-      icon={<TriangleUpIcon />}
-      aria-label="Botão Voltar para o Topo"
-      title="Voltar para o Topo"
-      variant="scrollToTop"
-      display={showScroll ? 'flex' : 'none'}
-      onClick={scrollTop}
-    />
+    <AnimatePresence>
+      <IconButton
+        as={motion.a}
+        initial="closed"
+        animate="open"
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        icon={<TriangleUpIcon />}
+        aria-label="Botão Voltar para o Topo"
+        title="Voltar para o Topo"
+        variant="scrollToTop"
+        display={show ? 'grid' : 'none'}
+        placeItems="center"
+        variants={itemVariants}
+        onClick={scrollTop}
+      />
+    </AnimatePresence>
   );
 };
 

@@ -1,9 +1,7 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { Box, IconButton, Center, Flex, Button } from '@chakra-ui/react';
+import { Box, IconButton, Center, Flex, Link } from '@chakra-ui/react';
 import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import router from 'next/router';
 import React from 'react';
-import { Link as SLink } from 'react-scroll';
 
 export type NavLink = {
   name: string;
@@ -32,7 +30,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
     },
     open: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
         staggerDirection: 1,
       },
     },
@@ -41,6 +39,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
   const handleCycle = () => {
     cycleOpen();
   };
+
   return (
     <>
       <Box
@@ -56,7 +55,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
         <AnimatePresence>
           {open ? (
             <IconButton
-              as={motion.button}
+              as={motion.a}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -68,7 +67,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
             />
           ) : (
             <IconButton
-              as={motion.button}
+              as={motion.a}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 1 }}
@@ -117,50 +116,43 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
               {links.map((link) => {
                 if (link.name === 'artigos') {
                   return (
-                    <Button
-                      as={motion.button}
+                    <Link
+                      as={motion.a}
                       key={link.id}
-                      w="100%"
-                      onClick={() => router.push('/blog')}
+                      href="/blog"
                       size="md"
-                      variant="link"
+                      variant="nostyle"
                       variants={itemVariants}
-                      title="Ir para Artigos"
+                      title="Ir para artigos"
                     >
                       Artigos
-                    </Button>
+                    </Link>
                   );
                 } else {
                   return isBlog ? (
-                    <Button
-                      as={motion.button}
+                    <Link
+                      as={motion.a}
                       key={link.id}
-                      onClick={() => router.push('/')}
+                      href="/"
                       variants={itemVariants}
                       size="md"
-                      variant="link"
+                      variant="nostyle"
                       title={`Ir para ${link.name}`}
                     >
                       {link.name}
-                    </Button>
+                    </Link>
                   ) : (
-                    <SLink
-                      activeClass="active"
-                      to={link.to}
-                      spy={true}
-                      smooth={true}
-                      duration={500}
+                    <Link
+                      as={motion.a}
+                      key={link.id}
+                      href={`#${link.to}`}
+                      size="md"
+                      variant="nostyle"
+                      variants={itemVariants}
+                      title={`Ir para ${link.name}`}
                     >
-                      <Button
-                        as={motion.button}
-                        variants={itemVariants}
-                        size="md"
-                        variant="link"
-                        title={`Ir para ${link.name}`}
-                      >
-                        {link.name}
-                      </Button>
-                    </SLink>
+                      {link.name}
+                    </Link>
                   );
                 }
               })}

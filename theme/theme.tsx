@@ -12,6 +12,7 @@ export const theme = extendTheme({
         boxSizing: 'border-box',
         bg: 'black',
         color: 'purple.50',
+        scrollBehavior: 'smooth',
       },
       a: {
         fontFamily: 'Barlow',
