@@ -7,19 +7,34 @@ import Footer from '../components/Footer';
 
 const Contact: React.FC = () => {
   return (
-    <Stack as="section" id="contact" bg="black" justifyContent="center">
+    <Flex
+      as="section"
+      id="contact"
+      bg="black"
+      w="100%"
+      direction="column"
+      align="center"
+      gap={8}
+    >
       <Text as="h1" fontSize="5xl" textAlign="center" pt={8} fontWeight="bold">
-        Contatos
+        Fale comigo!
       </Text>
-      <Flex
+
+      <Container
         as="section"
-        direction={{ base: 'column', md: 'row' }}
-        align="center"
-        justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
-        py={4}
+        maxW="container.md"
+        h="max-content"
+        centerContent
+        px={8}
       >
-        <Container as="article" maxW="md" minH="200px">
-          <Stack px={8}>
+        <Flex
+          w="100%"
+          direction={{ base: 'column', md: 'row' }}
+          gap={{ base: 8 }}
+          justify="space-between"
+          align="center"
+        >
+          <Stack spacing={4} maxW="300px">
             <Text as="h3" fontSize="3xl" fontWeight="semibold">
               Freelancer
             </Text>
@@ -31,31 +46,34 @@ const Contact: React.FC = () => {
               conversarmos!
             </Text>
           </Stack>
-        </Container>
-        <Container as="article" maxW="md" minH="200px">
-          <Stack px={8}>
+          <Stack spacing={4} maxW="300px">
             <Text as="h3" fontSize="3xl" fontWeight="semibold">
               Contatos adicionais
             </Text>
-            <Link href="mailto:cpt.victor@hotmail.com">
+
+            <Flex align="center">
               <Icon
                 as={HiOutlineMail}
                 aria-label="email"
                 fontSize="2xl"
                 mr={2}
+                my="auto"
               />
-              cpt.victor@hotmail.com
-            </Link>
-            <Link href="tel:+5511947006135">
+              <Link href="mailto:cpt.victor@hotmail.com">
+                cpt.victor@hotmail.com
+              </Link>
+            </Flex>
+            <Flex align="center">
               <Icon as={FiPhone} aria-label="phone" fontSize="2xl" mr={2} />
-              (11) 94700-6135
-            </Link>
+              <Link href="tel:+5511947006135">(11) 94700-6135</Link>
+            </Flex>
           </Stack>
-        </Container>
-      </Flex>
+        </Flex>
+      </Container>
+
       <HorizontalBar />
       <Footer />
-    </Stack>
+    </Flex>
   );
 };
 

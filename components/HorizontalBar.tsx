@@ -1,4 +1,4 @@
-import { Center, Flex, IconButton, Link } from '@chakra-ui/react';
+import { Container, Flex, IconButton, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { AiOutlineWhatsApp, AiFillGithub } from 'react-icons/ai';
 import { FaFacebook } from 'react-icons/fa';
@@ -7,7 +7,14 @@ import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const HorizontalBar: React.FC = () => {
   return (
-    <Center as="section" py={8} w="100%">
+    <Flex
+      as="section"
+      direction="column"
+      justify="center"
+      align="center"
+      gap={8}
+      w="100%"
+    >
       <Flex
         as="nav"
         w={{ base: '50vw', sm: '40vw', md: '30vw', lg: '30vw', xl: '25vw' }}
@@ -100,7 +107,28 @@ const HorizontalBar: React.FC = () => {
           />
         </Link>
       </Flex>
-    </Center>
+      <Container as="section" maxW="container.lg.sm" px={8} centerContent>
+        <Text>
+          Project created using{' '}
+          <Link href="https://nextjs.org" isExternal>
+            NextJS
+          </Link>
+          ,{' '}
+          <Link href="https://www.typescriptlang.org" isExternal>
+            Typescript
+          </Link>
+          ,{' '}
+          <Link href="https://chakra-ui.com" isExternal>
+            Chakra-UI
+          </Link>{' '}
+          and{' '}
+          <Link href="https://graphcms.com" isExternal>
+            GraphCMS
+          </Link>
+          .
+        </Text>
+      </Container>
+    </Flex>
   );
 };
 

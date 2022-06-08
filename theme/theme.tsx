@@ -15,9 +15,7 @@ export const theme = extendTheme({
         scrollBehavior: 'smooth',
       },
       a: {
-        fontFamily: 'Barlow',
         cursor: 'pointer',
-        textTransform: 'uppercase',
         textDecoration: 'none',
         color: 'purple.50',
         borderRadius: '0',

@@ -83,22 +83,13 @@ const Skills: React.FC = () => {
               Também possuo conhecimento em{' '}
               <Link href="https://firebase.google.com" isExternal>
                 Firebase
-              </Link>
-              , mais especificamente na stack{' '}
-              <Link href="https://nextjs.org" isExternal>
-                NextJS
               </Link>{' '}
-              +{' '}
-              <Link
-                href="https://firebase.google.com/docs/firestore"
-                isExternal
-              >
-                Firestore
-              </Link>
+              e integração com CMS Headless como <Link>Strapi</Link> e{' '}
+              <Link>GraphCMS</Link>.
             </Text>
             <Text>
               Toda a estrutura de código é realizada utilizando os princípios
-              Clean Code e/ou SOLID. Também possuo conhecimento em testes
+              Clean Code e/ou SOLID. Podendo também ser implementados testes
               automatizados com o framework{' '}
               <Link href="https://jestjs.io/pt-BR/" isExternal>
                 Jest
