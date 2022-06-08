@@ -13,6 +13,25 @@ export const theme = extendTheme({
         bg: 'black',
         color: 'purple.50',
       },
+      a: {
+        fontFamily: 'Barlow',
+        cursor: 'pointer',
+        textTransform: 'uppercase',
+        textDecoration: 'none',
+        color: 'purple.50',
+        borderRadius: '0',
+        transition: 'color 100ms ease-in-out',
+        _hover: {
+          color: 'light-green',
+          textDecoration: 'none',
+        },
+        _focus: {
+          color: 'dark-green',
+        },
+        _active: {
+          color: 'dark-green',
+        },
+      },
     },
   },
   fonts: {

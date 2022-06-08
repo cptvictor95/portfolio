@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import React from 'react';
-import { Button } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 import { Link as SLink } from 'react-scroll';
 import { useRouter } from 'next/dist/client/router';
 import MobileNavBar, { NavLink } from './MobileNavBar';
@@ -80,29 +80,29 @@ const Header: React.FC = (props) => {
           {links.map((link) => {
             if (link.name === 'artigos') {
               return (
-                <Button
+                <Link
                   key={link.id}
-                  onClick={() => router.push('/blog')}
+                  href="/blog"
                   size="md"
-                  variant="link"
-                  title="Ir para Artigos"
+                  variant="nostyle"
+                  title="Ir para artigos"
                 >
                   Artigos
-                </Button>
+                </Link>
               );
             } else {
               return isBlog ? (
-                <Button
-                  as={motion.button}
+                <Link
+                  as={motion.a}
                   key={link.id}
-                  onClick={() => router.push('/')}
+                  href="/"
                   variants={itemVariants}
                   size="md"
-                  variant="link"
+                  variant="nostyle"
                   title={`Ir para ${link.name}`}
                 >
                   {link.name}
-                </Button>
+                </Link>
               ) : (
                 <SLink
                   activeClass="active"
@@ -111,16 +111,9 @@ const Header: React.FC = (props) => {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  title={`Ir para ${link.name}`}
                 >
-                  <Button
-                    as={motion.button}
-                    variants={itemVariants}
-                    size="md"
-                    variant="link"
-                    title={`Ir para ${link.name}`}
-                  >
-                    {link.name}
-                  </Button>
+                  {link.name}
                 </SLink>
               );
             }
