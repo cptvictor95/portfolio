@@ -49,11 +49,13 @@ const Header: React.FC = (props) => {
       <Flex align="center" flexGrow={1}>
         <Text
           as={motion.p}
-          fontSize="2xl"
+          fontSize="3xl"
+          fontFamily="Muli"
+          letterSpacing="wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          Victor
+          v;c+or
         </Text>
       </Flex>
 
@@ -74,10 +76,10 @@ const Header: React.FC = (props) => {
           flexBasis={{ base: '100%', md: 'auto' }}
         >
           <Flex
-            align={['center', 'center', 'center', 'center']}
             w="100%"
-            justify={['center', 'space-between', 'flex-end', 'flex-end']}
             direction={['column', 'row', 'row', 'row']}
+            justify={['center', 'space-between', 'flex-end', 'flex-end']}
+            align="center"
             gap={5}
           >
             {links.map((link) => {

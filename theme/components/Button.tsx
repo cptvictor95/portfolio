@@ -39,6 +39,7 @@ export const Button = {
     },
     outline: {
       borderColor: 'black',
+      color: 'black',
       bg: 'transparent',
       _hover: {
         bg: 'transparent',

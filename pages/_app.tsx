@@ -6,6 +6,9 @@ import 'focus-visible/dist/focus-visible';
 import '@fontsource/inconsolata/400.css';
 import '@fontsource/barlow-condensed';
 import '@fontsource/barlow';
+import '@fontsource/m-plus-2';
+import '@fontsource/martel';
+import '@fontsource/muli';
 
 class MyApp extends App {
   render(): JSX.Element {

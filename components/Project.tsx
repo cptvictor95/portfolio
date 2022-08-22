@@ -73,7 +73,7 @@ const Project: React.FC<{
           <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
             {stackText}
           </Text>
-          <Text maxW="350px" textAlign="justify">
+          <Text maxW="350px" textAlign="justify" pb={3}>
             {content}
           </Text>
           {links?.production && (
@@ -169,7 +169,7 @@ const Project: React.FC<{
         <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
           {stackText}
         </Text>
-        <Text maxW="350px" textAlign="justify">
+        <Text maxW="350px" textAlign="justify" pb={3}>
           {content}
         </Text>
 

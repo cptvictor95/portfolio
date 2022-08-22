@@ -25,7 +25,7 @@ const SubHero: React.FC = () => {
       >
         <Image
           src="avatar.jpeg"
-          maxW={{ base: '250px', sm: '250px', md: '300px' }}
+          maxW={{ base: '250px', md: '300px' }}
           borderRadius="full"
           alt="Foto Avatar Victor Torres."
         />

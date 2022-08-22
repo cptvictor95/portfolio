@@ -12,8 +12,7 @@ const Hero: React.FC<{
     <Flex
       as="section"
       position="relative"
-      top="10vh"
-      minH={{ base: '75vh', md: '70vh' }}
+      minH="90vh"
       maxW={{ base: '100%' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
@@ -42,12 +41,6 @@ const Hero: React.FC<{
               lg: '2.2px',
               xl: '2.2px',
             }}
-            lineHeight={{
-              base: '90%',
-              md: '85%',
-              lg: '90%',
-              xl: '90%',
-            }}
           >
             {title}
           </Heading>
@@ -56,6 +49,7 @@ const Hero: React.FC<{
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.3 } }}
             fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}
+            fontFamily="Muli"
             lineHeight={{
               base: '100%',
               md: '85%',
@@ -67,12 +61,13 @@ const Hero: React.FC<{
           </Text>
         </Stack>
       </Flex>
+
       <Stack
         as="article"
         maxW={{ base: '80%', sm: '60%', md: '40%', lg: '50%' }}
         minW={{ base: '80%', sm: '60%', md: '350px' }}
-        justify={['flex-end', 'flex-end', 'flex-end', 'flex-end']}
-        align={{ base: 'center', md: 'center', lg: 'center', xl: 'center' }}
+        justify="flex-end"
+        align="center"
       >
         <Image
           as={motion.img}

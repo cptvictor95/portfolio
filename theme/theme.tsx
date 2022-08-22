@@ -37,6 +37,7 @@ export const theme = extendTheme({
     heading: 'Barlow Condensed',
     body: 'Inconsolata',
     button: 'Barlow Condensed',
+    logo: 'M Plus 2',
   },
   colors,
   components: {

@@ -1943,6 +1943,21 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inconsolata/-/inconsolata-4.4.2.tgz#7d53991091195b747da9210baef57c89b429d612"
   integrity sha512-Q4e0WZ7PUSW582ma3kwA4mWA679KeNd8arLW19URJAuK+/FemguEMkC9nsjjBheRDtvxdhZRY+oPdclYSZnj4A==
 
+"@fontsource/m-plus-2@4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/m-plus-2/-/m-plus-2-4.5.10.tgz#2afedd25e8db5e3f1cfe24feccb9d604157b2526"
+  integrity sha512-CuBXFJa3rgkGMrTyN2Pqq78utbygMHKB0mvFZeFfN38lJjWbHKTwTlWWhg2pJhegvKQ1mGWHWRxyk33dlEvtmg==
+
+"@fontsource/martel@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/martel/-/martel-4.5.9.tgz#12d4f844825247cbac1eabec8cc7f8b1d2a88d8a"
+  integrity sha512-UlzFF4FHnQ9P1QKudafwbWuGNPVxKT8WIV+/Onsj9wkvVyt09cxdU9P5hHQjMXAUqGkvB+Srj6UxNe0wfMohAg==
+
+"@fontsource/muli@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/muli/-/muli-4.1.0.tgz#8186b7a50be3eb968ded96a3ba471bebbc3e9146"
+  integrity sha512-ObA0efwnRImctfXmQterUw1fJGTS2xGjNljvU3VwUqOU+B53ibpRKIKHjLFSjgD8Fs9r0ecY3qOf6fAnfXsTYg==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
