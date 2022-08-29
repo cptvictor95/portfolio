@@ -3,7 +3,6 @@ import React from 'react';
 import HorizontalBar from '../components/HorizontalBar';
 import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
-import Footer from '../components/Footer';
 
 const Contact: React.FC = () => {
   return (
@@ -15,8 +14,9 @@ const Contact: React.FC = () => {
       direction="column"
       align="center"
       gap={8}
+      py={16}
     >
-      <Text as="h1" fontSize="5xl" textAlign="center" pt={8} fontWeight="bold">
+      <Text as="h1" fontSize="5xl" textAlign="center" fontWeight="bold">
         Fale comigo!
       </Text>
 
@@ -72,7 +72,6 @@ const Contact: React.FC = () => {
       </Container>
 
       <HorizontalBar />
-      <Footer />
     </Flex>
   );
 };

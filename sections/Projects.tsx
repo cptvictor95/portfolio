@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
 
       <Project
         title="Gastura"
-        content="Este projeto foi planejado para ser lançado em versões pequenas, com o intuito de ensinar programação a um amigo meu ao mesmo tempo em que crio uma maneira autêntica de controlar meu dinheiro, podendo criar mais consciência sobre meus próprios gastos e recebimentos mensais, sendo eles fixos ou variantes. A primeira versão foi construída em maioria por mim, e a segunda versão foi planejada para ser entregue ao meu amigo e para que ele consiga desenvolver autonomia e ter responsabilidade sobre um projeto, e que já possui um cliente real. A tech-stack utilizada foi NextJS, Firebase e Firestore e hospedado na plataforma da Vercel."
+        content="Projeto planejado para ser lançado em versões pequenas, com o intuito de ensinar programação a um amigo, ao mesmo tempo em que crio uma maneira autêntica de controlar meu dinheiro utilizando uma ferramenta minha, podendo criar mais consciência sobre meus próprios gastos e recebimentos mensais, sendo eles fixos ou variantes. A primeira versão foi construída em maioria por mim, e a segunda versão foi planejada para ser entregue ao meu amigo e para que ele desenvolvesse autonomia e ter responsabilidade sobre um projeto, e que já possui um cliente real. Tech-stack utilizada:  foi NextJS, Firebase e Firestore e hospedado na  Vercel."
         stack="frontend"
         links={{
           production: 'https://gastura.vercel.app',

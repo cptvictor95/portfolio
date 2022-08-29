@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ScrollToTop from '../components/ScrollToTop';
 import Main from '../layouts/Main';
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
       <ScrollToTop />
     </Main>
   );

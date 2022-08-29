@@ -69,9 +69,13 @@ const Skills: React.FC = () => {
               <Link href="https://www.typescriptlang.org" isExternal>
                 Typescript
               </Link>{' '}
-              e{' '}
+              e bancos de dados com{' '}
               <Link href="https://www.mysql.com" isExternal>
-                MySQL
+                SQL
+              </Link>{' '}
+              ,
+              <Link href="https://graphql.org" isExternal>
+                GraphQL
               </Link>{' '}
               ou{' '}
               <Link href="https://www.mongodb.com" isExternal>
@@ -84,13 +88,21 @@ const Skills: React.FC = () => {
               <Link href="https://firebase.google.com" isExternal>
                 Firebase
               </Link>{' '}
-              e integração com CMS Headless como <Link>Strapi</Link> e{' '}
-              <Link>GraphCMS</Link>.
+              e integração com CMS Headless como{' '}
+              <Link href="https://strapi.io" isExternal>
+                Strapi
+              </Link>{' '}
+              e{' '}
+              <Link href="https://hygraph.com" isExternal>
+                Hygraph
+              </Link>
+              .
             </Text>
             <Text>
-              Toda a estrutura de código é realizada utilizando os princípios
-              Clean Code e/ou SOLID. Podendo também ser implementados testes
-              automatizados com o framework{' '}
+              Toda a estrutura e arquitetura de código é realizada utilizando
+              princípios e padrões como Clean Code, DRY, KISS e/ou SOLID.
+              Podendo também ser implementados testes automatizados com o
+              framework{' '}
               <Link href="https://jestjs.io/pt-BR/" isExternal>
                 Jest
               </Link>
