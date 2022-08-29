@@ -56,14 +56,12 @@ const Project: React.FC<{
         justify="flex-end"
         px={8}
       >
-        <Link href={previewImgUrl} isExternal px={{ base: 0, sm: 8, md: 4 }}>
-          <Image
-            src={previewImgUrl}
-            maxW={{ base: '100%', lg: '350px' }}
-            alt={`Prévia do projeto ${title ? title : ''}`}
-          />
-          <Text>Clique na imagem para ampliar</Text>
-        </Link>
+        <Image
+          src={previewImgUrl}
+          maxW="lg"
+          w="100%"
+          alt={`Prévia do projeto ${title ? title : ''}`}
+        />
       </Flex>
       <Flex as="article" maxW="auto">
         <Stack px={8}>
@@ -73,7 +71,7 @@ const Project: React.FC<{
           <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
             {stackText}
           </Text>
-          <Text maxW="350px" textAlign="justify" pb={3}>
+          <Text maxW="lg" textAlign="justify" pb={3}>
             {content}
           </Text>
           {links?.production && (
@@ -169,7 +167,7 @@ const Project: React.FC<{
         <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
           {stackText}
         </Text>
-        <Text maxW="350px" textAlign="justify" pb={3}>
+        <Text maxW="lg" textAlign="justify" pb={3}>
           {content}
         </Text>
 
@@ -193,14 +191,12 @@ const Project: React.FC<{
         justify="flex-start"
         px={8}
       >
-        <Link href={previewImgUrl} isExternal px={{ base: 0, sm: 8, md: 4 }}>
-          <Image
-            src={previewImgUrl}
-            maxW={{ base: '100%', lg: '350px' }}
-            alt={`Prévia do projeto ${title ? title : ''}`}
-          />
-          <Text>Clique na imagem para ampliar</Text>
-        </Link>
+        <Image
+          src={previewImgUrl}
+          maxW="lg"
+          w="100%"
+          alt={`Prévia do projeto ${title ? title : ''}`}
+        />
       </Flex>
     </Flex>
   );
