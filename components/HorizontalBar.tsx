@@ -1,8 +1,6 @@
 import { Container, Flex, IconButton, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { AiOutlineWhatsApp, AiFillGithub } from 'react-icons/ai';
-import { FaFacebook } from 'react-icons/fa';
-import { FiInstagram } from 'react-icons/fi';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const HorizontalBar: React.FC = () => {
@@ -63,39 +61,6 @@ const HorizontalBar: React.FC = () => {
             icon={<AiFillGithub />}
             aria-label="Ícone Github"
             title="Ir para Github"
-            variant="socialIcon"
-            fontSize={{
-              base: '3xl',
-              sm: '4xl',
-              md: '4xl',
-              lg: '4xl',
-              xl: '4xl',
-            }}
-          />
-        </Link>
-        <Link
-          href="https://www.facebook.com/victor.cardosopudotorres/"
-          isExternal
-        >
-          <IconButton
-            icon={<FaFacebook />}
-            aria-label="Ícone Facebook"
-            title="Ir para Facebook"
-            variant="socialIcon"
-            fontSize={{
-              base: '3xl',
-              sm: '4xl',
-              md: '4xl',
-              lg: '4xl',
-              xl: '4xl',
-            }}
-          />
-        </Link>
-        <Link href="https://www.instagram.com/v1cardoso/" isExternal>
-          <IconButton
-            icon={<FiInstagram />}
-            aria-label="Ícone Instagram"
-            title="Ir para Instagram"
             variant="socialIcon"
             fontSize={{
               base: '3xl',
