@@ -74,7 +74,7 @@ const HorizontalBar: React.FC = () => {
       </Flex>
       <Container as="section" maxW="container.lg.sm" px={8} centerContent>
         <Text>
-          Project created using{' '}
+          Projeto criado com{' '}
           <Link href="https://nextjs.org" isExternal>
             NextJS
           </Link>
@@ -86,7 +86,7 @@ const HorizontalBar: React.FC = () => {
           <Link href="https://chakra-ui.com" isExternal>
             Chakra-UI
           </Link>{' '}
-          and{' '}
+          e{' '}
           <Link href="https://graphcms.com" isExternal>
             GraphCMS
           </Link>
