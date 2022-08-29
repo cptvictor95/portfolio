@@ -4,24 +4,18 @@ import React from 'react';
 
 const Skills: React.FC = () => {
   return (
-    <Stack as="section" py={16} id="skills">
-      <Text
-        as="h1"
-        fontSize={{ base: '5xl', md: '5xl', lg: '5xl', xl: '5xl' }}
-        textAlign="center"
-        py={8}
-      >
+    <Stack as="section" py={20} id="skills">
+      <Text as="h1" fontSize="5xl" textAlign="center">
         Habilidades
       </Text>
       <Flex
         as="section"
         direction={{ base: 'column', md: 'row' }}
-        justify={['center', 'space-evenly', 'space-evenly', 'space-evenly']}
-        px={4}
-        pb={12}
+        justify={{ base: 'center', md: 'space-evenly' }}
+        pt={{ base: 0, md: 12 }}
       >
-        <Container as="article" maxW="md">
-          <Stack px={8} textAlign="justify">
+        <Container as="article" maxW="lg">
+          <Stack px={8} py={{ base: 12, md: 0 }} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Front-end
             </Text>
@@ -55,7 +49,7 @@ const Skills: React.FC = () => {
             </Text>
           </Stack>
         </Container>
-        <Container as="article" maxW="md">
+        <Container as="article" maxW="lg">
           <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
               Back-end
