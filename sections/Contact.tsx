@@ -72,6 +72,27 @@ const Contact: React.FC = () => {
       </Container>
 
       <HorizontalBar />
+      <Container as="section" maxW="container.lg.sm" px={8} centerContent>
+        <Text>
+          Projeto criado com{' '}
+          <Link href="https://nextjs.org" isExternal>
+            NextJS
+          </Link>
+          ,{' '}
+          <Link href="https://www.typescriptlang.org" isExternal>
+            Typescript
+          </Link>
+          ,{' '}
+          <Link href="https://chakra-ui.com" isExternal>
+            Chakra-UI
+          </Link>{' '}
+          e{' '}
+          <Link href="https://graphcms.com" isExternal>
+            Hygraph
+          </Link>
+          .
+        </Text>
+      </Container>
     </Flex>
   );
 };
