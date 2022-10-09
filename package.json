@@ -9,6 +9,7 @@
     "lint": "eslint --ext ts,tsx --cache ."
   },
   "dependencies": {
+    "@bigheads/core": "^0.3.3",
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^2.1.2",
     "@emotion/react": "^11",
