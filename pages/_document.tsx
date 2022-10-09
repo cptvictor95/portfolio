@@ -5,7 +5,10 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="pt-br">
-        <Head />
+        <Head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        </Head>
         <body>
           <Main />
           <NextScript />

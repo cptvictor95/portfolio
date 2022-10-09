@@ -2,11 +2,7 @@ import { Flex, Heading, Stack, Text } from '@chakra-ui/layout';
 import { motion } from 'framer-motion';
 import React from 'react';
 import VerticalBar from '../components/VerticalBar';
-// import Avatar from '../components/Avatar';
-import dynamic from 'next/dynamic';
-const Avatar = dynamic(() => import('../components/Avatar'), {
-  ssr: false,
-});
+import { Image } from '@chakra-ui/react';
 
 const Hero: React.FC<{
   title: string;
@@ -73,15 +69,16 @@ const Hero: React.FC<{
         justify="flex-end"
         align="center"
       >
-        {/* <Image
+        <Image
           as={motion.img}
-          src={'./heroSVG.svg'}
+          src={'./avatarvictor.svg'}
           maxW={{ base: '250px', sm: '250px', md: '60%', lg: '50%' }}
           alt="Ilustração colorida de um computador e um celular."
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
-        /> */}
-        <Avatar />
+          rounded="full"
+        />
+        {/* <Avatar /> */}
       </Stack>
     </Flex>
   );
