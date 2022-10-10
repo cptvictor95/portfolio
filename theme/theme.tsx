@@ -56,6 +56,14 @@ export const theme = extendTheme({
       fontSize: ['24px', '20px'],
       fontWeight: 'semibold',
     },
+    h5: {
+      fontSize: ['22px', '20px'],
+      fontWeight: 'semibold',
+    },
+    h6: {
+      fontSize: ['20px', '18px'],
+      fontWeight: 'semibold',
+    },
   },
   colors,
   components: {
