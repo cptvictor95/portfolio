@@ -1,8 +1,10 @@
-import { Container, Flex, Box, Avatar, Text, Image } from '@chakra-ui/react';
+import { Container, Flex, Avatar, Text, Image } from '@chakra-ui/react';
 import React from 'react';
 import { PostType } from '../../interface/PostType';
+import { formatRawTextStyles } from '../../utils/formatRawTextStyles';
 
 const Post: React.FC<{ post: PostType }> = ({ post }) => {
+  const postContent = post.content.raw.children;
   return (
     <Container as="article" maxW="container.lg" minH="90vh" p={12}>
       <Image
@@ -14,12 +16,16 @@ const Post: React.FC<{ post: PostType }> = ({ post }) => {
         objectFit="cover"
       />
       <Flex direction="column" px={3} py={5} gap={5}>
-        <Text as="h3" fontSize="xl" fontWeight="semibold">
+        <Text as="h1" textStyle="h1">
           {post.title}
         </Text>
         <Text>Data de publicação: {post.datePublished}</Text>
 
-        <Box dangerouslySetInnerHTML={{ __html: post.content.html }}></Box>
+        <Flex as="article" direction="column" gap="2">
+          {postContent.map((raw) => {
+            return formatRawTextStyles(raw);
+          })}
+        </Flex>
         <Flex align="center" py={2} w="100%">
           <Avatar
             size="md"

@@ -11,8 +11,14 @@ export type PostType = {
 export type Content = {
   html: string;
   text: string;
-  raw: string;
+  raw: RawContent;
 };
+
+export type RawContent = {
+  children: RawChildren[];
+};
+export type RawChildren = { type: string; children: { text: string }[] };
+
 export type Author = {
   name: string;
   avatar: {

@@ -1,12 +1,16 @@
-import { Flex } from '@chakra-ui/layout';
-import { Link, Stack, Text, Container } from '@chakra-ui/react';
 import React from 'react';
+import { Flex } from '@chakra-ui/layout';
+import { Stack, Text, Container } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import { skills } from '../locale/skills';
 
 const Skills: React.FC = () => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <Stack as="section" py={20} id="skills">
       <Text as="h1" fontSize="5xl" textAlign="center">
-        Habilidades
+        {locale === 'pt-BR' ? skills.ptBR.heading : skills.enUS.heading}
       </Text>
       <Flex
         as="section"
@@ -17,90 +21,28 @@ const Skills: React.FC = () => {
         <Container as="article" maxW="lg">
           <Stack px={8} py={{ base: 12, md: 0 }} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
-              Front-end
+              {locale === 'pt-BR'
+                ? skills.ptBR.frontend.subheading
+                : skills.enUS.frontend.subheading}
             </Text>
             <Text>
-              Desenvolvimento de aplicações web com HTML, CSS, JavaScript e
-              TypeScript.
-            </Text>
-            <Text>
-              Atualmente trabalho com a biblioteca{' '}
-              <Link href="https://reactjs.org" isExternal>
-                ReactJS
-              </Link>
-              , mais especificamente utilizando o framework{' '}
-              <Link href="https://nextjs.org" isExternal>
-                NextJS
-              </Link>
-              , em conjunto com a linguagem{' '}
-              <Link href="https://www.typescriptlang.org" isExternal>
-                Typescript
-              </Link>{' '}
-              e a biblioteca de componentes{' '}
-              <Link href="https://chakra-ui.com" isExternal>
-                Chakra-UI
-              </Link>
-              .
-            </Text>
-            <Text>
-              Toda a parte gráfica e componentização desenvolvidas por mim são
-              realizadas utilizando o princípio Mobile First, com responsividade
-              para todos os tamanhos de dispositivos.
+              {locale === 'pt-BR'
+                ? skills.ptBR.frontend.content
+                : skills.enUS.frontend.content}
             </Text>
           </Stack>
         </Container>
         <Container as="article" maxW="lg">
           <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
-              Back-end
+              {locale === 'pt-BR'
+                ? skills.ptBR.backend.subheading
+                : skills.enUS.backend.subheading}
             </Text>
             <Text>
-              Desenvolvimento de APIs utilizando{' '}
-              <Link href="https://nodejs.org/en/" isExternal>
-                NodeJS
-              </Link>
-              ,{' '}
-              <Link href="https://www.typescriptlang.org" isExternal>
-                Typescript
-              </Link>{' '}
-              e bancos de dados com{' '}
-              <Link href="https://www.mysql.com" isExternal>
-                SQL
-              </Link>{' '}
-              ,
-              <Link href="https://graphql.org" isExternal>
-                GraphQL
-              </Link>{' '}
-              ou{' '}
-              <Link href="https://www.mongodb.com" isExternal>
-                MongoDB
-              </Link>
-              .
-            </Text>
-            <Text>
-              Também possuo conhecimento em{' '}
-              <Link href="https://firebase.google.com" isExternal>
-                Firebase
-              </Link>{' '}
-              e integração com CMS Headless como{' '}
-              <Link href="https://strapi.io" isExternal>
-                Strapi
-              </Link>{' '}
-              e{' '}
-              <Link href="https://hygraph.com" isExternal>
-                Hygraph
-              </Link>
-              .
-            </Text>
-            <Text>
-              Toda a estrutura e arquitetura de código é realizada utilizando
-              princípios e padrões como Clean Code, DRY, KISS e/ou SOLID.
-              Podendo também ser implementados testes automatizados com o
-              framework{' '}
-              <Link href="https://jestjs.io/pt-BR/" isExternal>
-                Jest
-              </Link>
-              .
+              {locale === 'pt-BR'
+                ? skills.ptBR.backend.content
+                : skills.enUS.backend.content}
             </Text>
           </Stack>
         </Container>

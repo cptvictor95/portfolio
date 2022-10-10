@@ -1,10 +1,15 @@
 import { Image } from '@chakra-ui/image';
 import { Flex, Text } from '@chakra-ui/layout';
 import { Button, Stack } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { Link } from 'react-scroll';
+import TechTag from '../components/TechTag';
+import { subhero } from '../locale/subhero';
 
 const SubHero: React.FC = () => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <Flex
       as="section"
@@ -27,7 +32,9 @@ const SubHero: React.FC = () => {
           src="avatar.jpeg"
           maxW={{ base: '250px', md: '300px' }}
           borderRadius="full"
-          alt="Foto Avatar Victor Torres."
+          alt={
+            locale === 'pt-BR' ? subhero.ptBR.avatarAlt : subhero.enUS.avatarAlt
+          }
         />
       </Flex>
       <Flex
@@ -38,35 +45,18 @@ const SubHero: React.FC = () => {
       >
         <Stack as="article" px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
           <Text as="h2" fontSize="4xl" fontWeight="semibold">
-            Sobre mim
+            {locale === 'pt-BR' ? subhero.ptBR.heading : subhero.enUS.heading}
           </Text>
           <Text pb={6} textAlign="justify">
-            Fascinado pela ideia de mudar o mundo ao meu redor, escolhi a área
-            da tecnologia da informação para contribuir com a evolução da
-            sociedade. Acredito que posso atingir cada vez mais vidas usando a
-            tecnologia ao meu favor, e trazer um pouco mais do meu amor pela
-            vida para outras pessoas. Sou apaixonado por ensinar, e mais ainda
-            por aprender!
+            {locale === 'pt-BR' ? subhero.ptBR.content : subhero.enUS.content}
           </Text>
           <Flex as="section" flexWrap="wrap">
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              NodeJS
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              JavaScript
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              TypeScript
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              SQL
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              Firebase
-            </Text>
-            <Text borderLeft="4px solid" fontSize="lg" pl={2} pr={3} mb={4}>
-              MongoDB
-            </Text>
+            <TechTag title="NodeJS" />
+            <TechTag title="JavaScript" />
+            <TechTag title="TypeScript" />
+            <TechTag title="Firebase" />
+            <TechTag title="SQL" />
+            <TechTag title="GraphQL" />
           </Flex>
           <Flex as="section" alignSelf="flex-end" pb={{ base: 8 }}>
             <Link
@@ -76,7 +66,11 @@ const SubHero: React.FC = () => {
               smooth={true}
               duration={1000}
             >
-              <Button variant="outline">Ver Contatos</Button>
+              <Button variant="outline">
+                {locale === 'pt-BR'
+                  ? subhero.ptBR.buttonText
+                  : subhero.enUS.buttonText}
+              </Button>
             </Link>
           </Flex>
         </Stack>

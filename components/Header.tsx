@@ -1,27 +1,32 @@
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import React from 'react';
-import { Link } from '@chakra-ui/react';
+import { Button, Link } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
 import MobileNavBar, { NavLink } from './MobileNavBar';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ptBR, enUS } from '../locale/header';
 
 const Header: React.FC = (props) => {
   const router = useRouter();
+  const { locale } = router;
   const isBlog = router.pathname.includes('/blog');
   let links: NavLink[] = [];
 
+  const handleToggle = () => {
+    switch (locale) {
+      case 'pt-BR':
+        router.push(router.asPath, router.asPath, { locale: 'en-US' });
+        break;
+      case 'en-US':
+        router.push(router.asPath, router.asPath, { locale: 'pt-BR' });
+        break;
+    }
+  };
+
   if (isBlog) {
-    links = [
-      { name: 'home', to: '', id: 5 },
-      { name: 'artigos', to: 'blog', id: 6 },
-    ];
+    links = locale === 'pt-BR' ? ptBR.blogLinks : enUS.blogLinks;
   } else {
-    links = [
-      { name: 'sobre', to: 'about', id: 1 },
-      { name: 'projetos', to: 'projects', id: 2 },
-      { name: 'contato', to: 'contact', id: 3 },
-      { name: 'artigos', to: 'blog', id: 4 },
-    ];
+    links = locale === 'pt-BR' ? ptBR.homeLinks : enUS.homeLinks;
   }
 
   const itemVariants = {
@@ -59,6 +64,19 @@ const Header: React.FC = (props) => {
         </Text>
       </Flex>
 
+      <Button
+        variant="scrollToTop"
+        onClick={handleToggle}
+        position="absolute"
+        top="20"
+        right="6"
+        textShadow="outline"
+        size="sm"
+        fontSize="sm"
+      >
+        {locale}
+      </Button>
+
       <MobileNavBar links={links} isBlog={isBlog} />
       <AnimatePresence>
         <Box
@@ -77,13 +95,13 @@ const Header: React.FC = (props) => {
         >
           <Flex
             w="100%"
-            direction={['column', 'row', 'row', 'row']}
+            direction={{ base: 'column', sm: 'row' }}
             justify={['center', 'space-between', 'flex-end', 'flex-end']}
             align="center"
             gap={5}
           >
             {links.map((link) => {
-              if (link.name === 'artigos') {
+              if (link.name === 'artigos' || link.name === 'blog') {
                 return (
                   <Link
                     as={motion.a}
@@ -94,7 +112,7 @@ const Header: React.FC = (props) => {
                     variants={itemVariants}
                     title="Ir para artigos"
                   >
-                    Artigos
+                    {link.name}
                   </Link>
                 );
               } else {

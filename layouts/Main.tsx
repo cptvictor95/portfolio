@@ -9,7 +9,6 @@ const Main: React.FC<{ title: string; children: React.ReactNode }> = ({
 }) => {
   return (
     <Flex
-      title={title}
       as="main"
       m="0 auto"
       direction="column"

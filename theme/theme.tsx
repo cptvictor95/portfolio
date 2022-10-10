@@ -39,6 +39,24 @@ export const theme = extendTheme({
     button: 'Barlow Condensed',
     logo: 'M Plus 2',
   },
+  textStyles: {
+    h1: {
+      fontSize: ['52px', '46px'],
+      fontWeight: 'bold',
+    },
+    h2: {
+      fontSize: ['42px', '36px'],
+      fontWeight: 'bold',
+    },
+    h3: {
+      fontSize: ['32px', '28px'],
+      fontWeight: 'semibold',
+    },
+    h4: {
+      fontSize: ['24px', '20px'],
+      fontWeight: 'semibold',
+    },
+  },
   colors,
   components: {
     Button,
