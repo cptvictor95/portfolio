@@ -1,18 +1,16 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Box, IconButton, Center, Flex, Link } from '@chakra-ui/react';
 import { motion, useCycle, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import React from 'react';
-
-export type NavLink = {
-  name: string;
-  to: string;
-  id: number;
-};
+import { NavLink } from '../interface/NavLink';
 
 const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
   links,
   isBlog,
 }) => {
+  const router = useRouter();
+  const { locale } = router;
   const [open, cycleOpen] = useCycle(false, true);
   const itemVariants = {
     closed: { opacity: 0 },
@@ -46,10 +44,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
         as="aside"
         display={{
           base: 'block',
-          sm: 'block',
           md: 'none',
-          lg: 'none',
-          xl: 'none',
         }}
       >
         <AnimatePresence>
@@ -95,10 +90,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
             zIndex="100"
             bg="rgba(0,0,0, 0.8)"
             display={{
-              base: 'block',
               sm: 'block',
-              md: 'none',
-              lg: 'none',
               xl: 'none',
             }}
           >
@@ -123,7 +115,9 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                       size="md"
                       variant="nostyle"
                       variants={itemVariants}
-                      title="Ir para artigos"
+                      title={
+                        locale === 'pt_BR' ? 'Ir para artigos' : 'Go to blog'
+                      }
                     >
                       {link.name}
                     </Link>
@@ -137,7 +131,11 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                       variants={itemVariants}
                       size="md"
                       variant="nostyle"
-                      title={`Ir para ${link.name}`}
+                      title={
+                        locale === 'pt_BR'
+                          ? `Ir para ${link.name}`
+                          : `Go to ${link.name}`
+                      }
                     >
                       {link.name}
                     </Link>
@@ -149,7 +147,11 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                       size="md"
                       variant="nostyle"
                       variants={itemVariants}
-                      title={`Ir para ${link.name}`}
+                      title={
+                        locale === 'pt_BR'
+                          ? `Ir para ${link.name}`
+                          : `Go to ${link.name}`
+                      }
                     >
                       {link.name}
                     </Link>

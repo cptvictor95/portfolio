@@ -2,9 +2,10 @@ import { Box, Flex, Text } from '@chakra-ui/layout';
 import React from 'react';
 import { Button, Link } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
-import MobileNavBar, { NavLink } from './MobileNavBar';
+import MobileNavBar from './MobileNavBar';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ptBR, enUS } from '../locale/header';
+import { NavLink } from '../interface/NavLink';
 
 const Header: React.FC = (props) => {
   const router = useRouter();
@@ -86,10 +87,7 @@ const Header: React.FC = (props) => {
           exit={{ opacity: 0, transition: { duration: 0.3 } }}
           display={{
             base: 'none',
-            sm: 'none',
             md: 'block',
-            lg: 'block',
-            xl: 'block',
           }}
           flexBasis={{ base: '100%', md: 'auto' }}
         >
@@ -110,7 +108,9 @@ const Header: React.FC = (props) => {
                     size="md"
                     variant="nostyle"
                     variants={itemVariants}
-                    title="Ir para artigos"
+                    title={
+                      locale === 'pt_BR' ? 'Ir para artigos' : 'Go to blog'
+                    }
                   >
                     {link.name}
                   </Link>
@@ -124,7 +124,11 @@ const Header: React.FC = (props) => {
                     size="md"
                     variant="nostyle"
                     variants={itemVariants}
-                    title={`Ir para ${link.name}`}
+                    title={
+                      locale === 'pt_BR'
+                        ? `Ir para ${link.name}`
+                        : `Go to ${link.name}`
+                    }
                   >
                     {link.name}
                   </Link>
@@ -136,7 +140,11 @@ const Header: React.FC = (props) => {
                     size="md"
                     variant="nostyle"
                     variants={itemVariants}
-                    title={`Ir para ${link.name}`}
+                    title={
+                      locale === 'pt_BR'
+                        ? `Ir para ${link.name}`
+                        : `Go to ${link.name}`
+                    }
                   >
                     {link.name}
                   </Link>

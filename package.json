@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext ts,tsx --cache ."
+    "lint": "eslint --ext ts,tsx --cache .",
+    "test:tsc": "tsc --noEmit --skipLibCheck --project ./tsconfig.json"
   },
   "dependencies": {
     "@bigheads/core": "^0.3.3",

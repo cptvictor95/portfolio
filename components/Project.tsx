@@ -3,29 +3,7 @@ import { Flex, Stack, Text, Link, Button, Image } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
-
-type ContentDirection = 'left' | 'right';
-type ProjectStack = 'fullstack' | 'frontend' | 'backend';
-type ProjectLinks = {
-  production?: string;
-  github?: {
-    fullStack?: {
-      frontUrl: string;
-      backUrl: string;
-    };
-    frontendUrl?: string;
-    backendUrl?: string;
-  };
-};
-type ProjectProps = {
-  contentDirection?: ContentDirection;
-  title: string;
-  content: string;
-  stack: ProjectStack;
-  links: ProjectLinks;
-  previewImgUrl: string;
-  isOnGithub?: boolean;
-};
+import { ProjectProps } from '../interface/Project';
 
 const Project: React.FC<ProjectProps> = ({
   contentDirection = 'right',
