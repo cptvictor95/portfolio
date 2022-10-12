@@ -41,28 +41,29 @@ export const theme = extendTheme({
   },
   textStyles: {
     h1: {
-      fontSize: ['52px', '46px'],
+      fontSize: ['30px', '42px', '52px'],
       fontWeight: 'bold',
+      lineHeight: '1',
     },
     h2: {
-      fontSize: ['42px', '36px'],
+      fontSize: ['28px', '36px', '42px'],
       fontWeight: 'bold',
+      lineHeight: '1',
     },
     h3: {
-      fontSize: ['32px', '28px'],
+      fontSize: ['24px', '28px', '32px'],
       fontWeight: 'semibold',
+      lineHeight: '1',
     },
     h4: {
-      fontSize: ['24px', '20px'],
+      fontSize: ['20px', '22px', '24px'],
       fontWeight: 'semibold',
+      lineHeight: '1',
     },
     h5: {
-      fontSize: ['22px', '20px'],
+      fontSize: ['18px', '20px', '22px'],
       fontWeight: 'semibold',
-    },
-    h6: {
-      fontSize: ['20px', '18px'],
-      fontWeight: 'semibold',
+      lineHeight: '1',
     },
   },
   colors,

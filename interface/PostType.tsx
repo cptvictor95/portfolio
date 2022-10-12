@@ -6,6 +6,7 @@ export type PostType = {
   content: Content;
   author: Author;
   coverImage: CoverImage;
+  locale: string;
 };
 
 export type Content = {

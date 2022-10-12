@@ -25,11 +25,9 @@ const QUERY = gql`
       title
       datePublished
       slug
+      locale
       content {
-        html
         raw
-        text
-        markdown
       }
       author {
         name
@@ -49,6 +47,7 @@ const SLUGLIST = gql`
   {
     posts {
       slug
+      locale
     }
   }
 `;
@@ -56,6 +55,7 @@ const SLUGLIST = gql`
 const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
   const router = useRouter();
   const { locale } = router;
+
   return (
     <Main title={locale === 'pt_BR' ? 'Artigos' : 'Blog'}>
       <Header />
@@ -70,16 +70,28 @@ const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const { posts } = await graphcms.request(SLUGLIST);
 
+  console.log('POSTS', posts);
+
   return {
-    paths: posts.map((post: PostType) => ({ params: { slug: post.slug } })),
+    paths: posts.map((post: PostType) => ({
+      params: { slug: post.slug, locale: post.locale },
+    })),
     fallback: 'blocking',
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const slug = params?.slug;
-  const data = await graphcms.request(QUERY, { slug });
+  const headers = {
+    'Content-Type': 'application/json',
+    'gcms-locales': locale as string,
+  };
+
+  console.log('HEADERS', headers);
+  const data = await graphcms.request(QUERY, { slug }, headers);
   const post = data.post;
+
+  console.log('POST', post);
 
   return {
     props: {

@@ -71,7 +71,7 @@ const Header: React.FC = (props) => {
         top="12vh"
         right="6"
         textShadow="outline"
-        size="sm"
+        size={{ base: 'xs', md: 'sm' }}
         fontSize="sm"
       >
         {locale === 'pt_BR' ? 'pt-BR' : 'en-US'}
