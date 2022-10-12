@@ -114,7 +114,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
               gap={5}
             >
               {links.map((link) => {
-                if (link.name === 'artigos' || link.name === 'blog') {
+                if (link.to === 'blog') {
                   return (
                     <Link
                       as={motion.a}

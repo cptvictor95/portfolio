@@ -3,8 +3,12 @@ import React from 'react';
 import HorizontalBar from '../components/HorizontalBar';
 import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
+import { contact } from '../locale/contact';
+import { useRouter } from 'next/router';
 
 const Contact: React.FC = () => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <Flex
       as="section"
@@ -17,7 +21,7 @@ const Contact: React.FC = () => {
       py={16}
     >
       <Text as="h1" fontSize="5xl" textAlign="center" fontWeight="bold">
-        Fale comigo!
+        {locale === 'pt-BR' ? contact.ptBR.heading : contact.enUS.heading}
       </Text>
 
       <Container
@@ -39,16 +43,21 @@ const Contact: React.FC = () => {
               Freelancer
             </Text>
             <Text as="h4" fontSize="xl" fontWeight="semibold">
-              Quer trabalhar comigo?
+              {locale === 'pt-BR'
+                ? contact.ptBR.freelance.subheading
+                : contact.enUS.freelance.subheading}
             </Text>
             <Text fontSize="lg">
-              Me mande um email com sua proposta e entrarei em contato para
-              conversarmos!
+              {locale === 'pt-BR'
+                ? contact.ptBR.freelance.content
+                : contact.enUS.freelance.content}
             </Text>
           </Stack>
           <Stack spacing={4} maxW="300px">
             <Text as="h3" fontSize="3xl" fontWeight="semibold">
-              Contatos adicionais
+              {locale === 'pt-BR'
+                ? contact.ptBR.contacts.subheading
+                : contact.enUS.contacts.subheading}
             </Text>
 
             <Flex align="center">
@@ -74,7 +83,9 @@ const Contact: React.FC = () => {
       <HorizontalBar />
       <Container as="section" maxW="container.lg.sm" px={8} centerContent>
         <Text>
-          Projeto criado com{' '}
+          {locale === 'pt-BR'
+            ? contact.ptBR.projectCreated
+            : contact.enUS.projectCreated}
           <Link href="https://nextjs.org" isExternal>
             NextJS
           </Link>
@@ -86,7 +97,7 @@ const Contact: React.FC = () => {
           <Link href="https://chakra-ui.com" isExternal>
             Chakra-UI
           </Link>{' '}
-          e{' '}
+          {locale === 'pt-BR' ? 'e ' : 'and '}
           <Link href="https://graphcms.com" isExternal>
             Hygraph
           </Link>
