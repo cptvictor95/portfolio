@@ -4,10 +4,13 @@ import {
   BreadcrumbLink,
   Container,
 } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { PostType } from '../../interface/PostType';
 
 const BlogBreadcrumbs: React.FC<{ post?: PostType }> = ({ post }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <Container
       as="nav"
@@ -18,7 +21,9 @@ const BlogBreadcrumbs: React.FC<{ post?: PostType }> = ({ post }) => {
     >
       <Breadcrumb>
         <BreadcrumbItem>
-          <BreadcrumbLink href={`/blog`}>Artigos</BreadcrumbLink>
+          <BreadcrumbLink href={`/blog`}>
+            {locale === 'pt_BR' ? 'Artigos' : 'Blog'}
+          </BreadcrumbLink>
         </BreadcrumbItem>
         {post && (
           <BreadcrumbItem>

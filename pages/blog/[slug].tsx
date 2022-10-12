@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Main from '../../layouts/Main';
-import { GraphQLClient, gql } from 'graphql-request';
+import { GraphQLClient } from 'graphql-request';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
 import { PostType } from '../../interface/PostType';
@@ -9,6 +9,8 @@ import Post from '../../components/blog/Post';
 import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 import { useRouter } from 'next/router';
+import { queryPostBySlug } from '../../lib/queryPostBySlug';
+import { queryPostSlugs } from '../../lib/queryPostSlugs';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -17,40 +19,6 @@ if (!graphcmsApiKey) {
 }
 
 const graphcms = new GraphQLClient(graphcmsApiKey);
-
-const QUERY = gql`
-  query Post($slug: String!) {
-    post(where: { slug: $slug }) {
-      id
-      title
-      datePublished
-      slug
-      locale
-      content {
-        raw
-      }
-      author {
-        name
-        avatar {
-          url
-        }
-      }
-      coverImage {
-        id
-        url
-      }
-    }
-  }
-`;
-
-const SLUGLIST = gql`
-  {
-    posts {
-      slug
-      locale
-    }
-  }
-`;
 
 const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
   const router = useRouter();
@@ -68,9 +36,7 @@ const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { posts } = await graphcms.request(SLUGLIST);
-
-  console.log('POSTS', posts);
+  const { posts } = await graphcms.request(queryPostSlugs);
 
   return {
     paths: posts.map((post: PostType) => ({
@@ -87,11 +53,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     'gcms-locales': locale as string,
   };
 
-  console.log('HEADERS', headers);
-  const data = await graphcms.request(QUERY, { slug }, headers);
+  const data = await graphcms.request(queryPostBySlug, { slug }, headers);
   const post = data.post;
-
-  console.log('POST', post);
 
   return {
     props: {
