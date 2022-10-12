@@ -74,7 +74,7 @@ const Header: React.FC = (props) => {
         size="sm"
         fontSize="sm"
       >
-        {locale}
+        {locale === 'pt_BR' ? 'pt-BR' : 'en-US'}
       </Button>
 
       <MobileNavBar links={links} isBlog={isBlog} />
