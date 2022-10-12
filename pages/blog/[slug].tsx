@@ -7,6 +7,8 @@ import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
 import { PostType } from '../../interface/PostType';
 import Post from '../../components/blog/Post';
 import Header from '../../components/Header';
+import ScrollToTop from '../../components/ScrollToTop';
+import { useRouter } from 'next/router';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -52,13 +54,15 @@ const SLUGLIST = gql`
 `;
 
 const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
-  console.log('POST', post);
+  const router = useRouter();
+  const { locale } = router;
   return (
-    <Main title="Artigos">
+    <Main title={locale === 'pt-BR' ? 'Artigos' : 'Blog'}>
       <Header />
       <BlogBreadcrumbs post={post} />
       <Post post={post} />
       <Footer />
+      <ScrollToTop />
     </Main>
   );
 };

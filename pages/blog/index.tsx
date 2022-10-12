@@ -7,6 +7,7 @@ import PostList from '../../components/blog/PostList';
 import BlogBreadcrumbs from '../../components/blog/BlogBreadcrumbs';
 import { PostType } from '../../interface/PostType';
 import Header from '../../components/Header';
+import ScrollToTop from '../../components/ScrollToTop';
 
 const graphcmsApiKey = process.env.NEXT_PUBLIC_GRAPHCMS_API_KEY as string;
 
@@ -49,6 +50,7 @@ const Blog: React.FC<{ posts: PostType[] }> = ({ posts }) => {
       <BlogBreadcrumbs />
       <PostList posts={posts} />
       <Footer />
+      <ScrollToTop />
     </Main>
   );
 };

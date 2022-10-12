@@ -6,7 +6,7 @@ import { formatRawTextStyles } from '../../utils/formatRawTextStyles';
 const Post: React.FC<{ post: PostType }> = ({ post }) => {
   const postContent = post.content.raw.children;
   return (
-    <Container as="article" maxW="container.lg" minH="90vh" p={12}>
+    <Container as="article" maxW="container.lg" minH="70vh" px="12" py="8">
       <Image
         src={post.coverImage.url}
         alt={post.slug}

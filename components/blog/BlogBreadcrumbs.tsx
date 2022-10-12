@@ -9,7 +9,7 @@ import { PostType } from '../../interface/PostType';
 
 const BlogBreadcrumbs: React.FC<{ post?: PostType }> = ({ post }) => {
   return (
-    <Container as="nav" maxW="container.lg" py={8} px={12}>
+    <Container as="nav" maxW="container.lg" py={8} px={12} h="10vh">
       <Breadcrumb>
         <BreadcrumbItem>
           <BreadcrumbLink href={`/blog`}>Artigos</BreadcrumbLink>
