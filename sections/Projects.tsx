@@ -1,9 +1,13 @@
 import { Stack, Text, Button, Link } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import Project from '../components/Project';
+import { assistive, gastura, labenuSystem } from '../locale/projects';
 
 const Projects: React.FC = () => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <Stack as="section" py={16} id="projects" bg="limegreen" color="purple.900">
       <Text
@@ -13,12 +17,14 @@ const Projects: React.FC = () => {
         fontWeight="semibold"
         textAlign="center"
       >
-        Meus Projetos
+        {locale === 'pt_BR' ? 'Meus Projetos' : 'My Projects'}
       </Text>
 
       <Project
         title="Gastura"
-        content="Projeto planejado para ser lançado em versões pequenas, com o intuito de ensinar programação a um amigo, ao mesmo tempo em que crio uma maneira autêntica de controlar meu dinheiro utilizando uma ferramenta minha, podendo criar mais consciência sobre meus próprios gastos e recebimentos mensais, sendo eles fixos ou variantes. A primeira versão foi construída em maioria por mim, e a segunda versão foi planejada para ser entregue ao meu amigo e para que ele desenvolvesse autonomia e ter responsabilidade sobre um projeto, e que já possui um cliente real. Tech-stack utilizada:  foi NextJS, Firebase e Firestore e hospedado na  Vercel."
+        content={
+          locale === 'pt_BR' ? gastura.ptBR.content : gastura.enUS.content
+        }
         stack="frontend"
         links={{
           production: 'https://gastura.vercel.app',
@@ -33,13 +39,11 @@ const Projects: React.FC = () => {
         title="Labenu System"
         stack="backend"
         contentDirection="left"
-        content="Projeto realizado durante o curso Labenu, feito com intuito de treinar
-          lógica de programação e criação de APIs com TypeScript e SQL,
-          utilizando os frameworks ExpressJS e Knex. O projeto foi documentado
-          inteiramente por mim em Markdown Language e padronizado de maneira
-          concisa levando em conta a complexidade necessária para atingir os
-          requisitos mínimos de entrega do projeto. Ao todo foram criados 16
-          endpoints ao longo do projeto."
+        content={
+          locale === 'pt_BR'
+            ? labenuSystem.ptBR.content
+            : labenuSystem.enUS.content
+        }
         links={{
           github: {
             backendUrl:
@@ -53,7 +57,9 @@ const Projects: React.FC = () => {
         title="Assistive"
         stack="frontend"
         contentDirection="right"
-        content="Projeto freelance realizado para a empresa Assistive, feito com WordPress utilizando o tema Enfold. Este projeto foi realizado com o intuito de conhecer melhor a plataforma WordPress e aprofundar meus conhecimentos em SEO e acessibilidade."
+        content={
+          locale === 'pt_BR' ? assistive.ptBR.content : assistive.enUS.content
+        }
         links={{
           production: 'https://assistive.com.br',
         }}
@@ -67,7 +73,9 @@ const Projects: React.FC = () => {
         fontWeight="semibold"
         textAlign="center"
       >
-        Se interessou e quer ver mais?
+        {locale === 'pt_BR'
+          ? 'Quer ver mais projetos?'
+          : 'Want to see more projects?'}
       </Text>
 
       <Button
@@ -80,7 +88,7 @@ const Projects: React.FC = () => {
         alignSelf="center"
         leftIcon={<AiFillGithub />}
       >
-        Ir para github
+        {locale === 'pt_BR' ? 'Ir para ' : 'Go to'} github
       </Button>
     </Stack>
   );

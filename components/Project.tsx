@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Flex, Stack, Text, Link, Button, Image } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 
@@ -16,8 +17,7 @@ type ProjectLinks = {
     backendUrl?: string;
   };
 };
-
-const Project: React.FC<{
+type ProjectProps = {
   contentDirection?: ContentDirection;
   title: string;
   content: string;
@@ -25,7 +25,9 @@ const Project: React.FC<{
   links: ProjectLinks;
   previewImgUrl: string;
   isOnGithub?: boolean;
-}> = ({
+};
+
+const Project: React.FC<ProjectProps> = ({
   contentDirection = 'right',
   title,
   content,
@@ -40,6 +42,8 @@ const Project: React.FC<{
       : stack === 'frontend'
       ? 'Front-end'
       : 'Back-end';
+  const router = useRouter();
+  const { locale } = router;
 
   return contentDirection === 'right' ? (
     <Flex
@@ -81,7 +85,7 @@ const Project: React.FC<{
                 w="max-content"
                 rightIcon={<ChevronRightIcon fontSize="x-large" />}
               >
-                Ir para o projeto
+                {locale === 'pt_BR' ? 'Ir para o projeto' : 'Go to project'}
               </Button>
             </Link>
           )}
@@ -95,7 +99,9 @@ const Project: React.FC<{
                     variant="nostyle"
                   >
                     <Button variant="outline" leftIcon={<AiFillGithub />}>
-                      Ver Frontend no github
+                      {locale === 'pt_BR'
+                        ? 'Ver frontend no github'
+                        : 'See frontend on github'}
                     </Button>
                   </Link>
                   <Link
@@ -104,7 +110,9 @@ const Project: React.FC<{
                     variant="nostyle"
                   >
                     <Button variant="outline" leftIcon={<AiFillGithub />}>
-                      Ver Backend no github
+                      {locale === 'pt_BR'
+                        ? 'Ver backend no github'
+                        : 'See backend on github'}
                     </Button>
                   </Link>
                 </Flex>
@@ -120,7 +128,9 @@ const Project: React.FC<{
                     alignSelf="flex-end"
                     leftIcon={<AiFillGithub />}
                   >
-                    Ver frontend no Github
+                    {locale === 'pt_BR'
+                      ? 'Ver frontend no github'
+                      : 'See frontend on github'}
                   </Button>
                 </Link>
               )}
@@ -135,7 +145,9 @@ const Project: React.FC<{
                     alignSelf="flex-end"
                     leftIcon={<AiFillGithub />}
                   >
-                    Ver backend no Github
+                    {locale === 'pt_BR'
+                      ? 'Ver backend no github'
+                      : 'See backend on github'}
                   </Button>
                 </Link>
               )}
@@ -181,7 +193,7 @@ const Project: React.FC<{
             alignSelf="flex-end"
             leftIcon={<AiFillGithub />}
           >
-            Ver projeto no github
+            {locale === 'pt_BR' ? 'Ir para github' : 'Go to github'}
           </Button>
         </Link>
       </Stack>
