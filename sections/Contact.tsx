@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
       py={16}
     >
       <Text as="h1" fontSize="5xl" textAlign="center" fontWeight="bold">
-        {locale === 'pt-BR' ? contact.ptBR.heading : contact.enUS.heading}
+        {locale === 'pt_BR' ? contact.ptBR.heading : contact.enUS.heading}
       </Text>
 
       <Container
@@ -43,19 +43,19 @@ const Contact: React.FC = () => {
               Freelancer
             </Text>
             <Text as="h4" fontSize="xl" fontWeight="semibold">
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? contact.ptBR.freelance.subheading
                 : contact.enUS.freelance.subheading}
             </Text>
             <Text fontSize="lg">
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? contact.ptBR.freelance.content
                 : contact.enUS.freelance.content}
             </Text>
           </Stack>
           <Stack spacing={4} maxW="300px">
             <Text as="h3" fontSize="3xl" fontWeight="semibold">
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? contact.ptBR.contacts.subheading
                 : contact.enUS.contacts.subheading}
             </Text>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
       <HorizontalBar />
       <Container as="section" maxW="container.lg.sm" px={8} centerContent>
         <Text>
-          {locale === 'pt-BR'
+          {locale === 'pt_BR'
             ? contact.ptBR.projectCreated
             : contact.enUS.projectCreated}
           <Link href="https://nextjs.org" isExternal>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
           <Link href="https://chakra-ui.com" isExternal>
             Chakra-UI
           </Link>{' '}
-          {locale === 'pt-BR' ? 'e ' : 'and '}
+          {locale === 'pt_BR' ? 'e ' : 'and '}
           <Link href="https://graphcms.com" isExternal>
             Hygraph
           </Link>

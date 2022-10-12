@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <Header />
       <Hero
         title="Victor Torres"
-        subtitle={locale === 'pt-BR' ? hero.ptBR.subtitle : hero.enUS.subtitle}
+        subtitle={locale === 'pt_BR' ? hero.ptBR.subtitle : hero.enUS.subtitle}
       />
 
       <SubHero />

@@ -33,7 +33,7 @@ const SubHero: React.FC = () => {
           maxW={{ base: '250px', md: '300px' }}
           borderRadius="full"
           alt={
-            locale === 'pt-BR' ? subhero.ptBR.avatarAlt : subhero.enUS.avatarAlt
+            locale === 'pt_BR' ? subhero.ptBR.avatarAlt : subhero.enUS.avatarAlt
           }
         />
       </Flex>
@@ -45,10 +45,10 @@ const SubHero: React.FC = () => {
       >
         <Stack as="article" px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
           <Text as="h2" fontSize="4xl" fontWeight="semibold">
-            {locale === 'pt-BR' ? subhero.ptBR.heading : subhero.enUS.heading}
+            {locale === 'pt_BR' ? subhero.ptBR.heading : subhero.enUS.heading}
           </Text>
           <Text pb={6} textAlign="justify">
-            {locale === 'pt-BR' ? subhero.ptBR.content : subhero.enUS.content}
+            {locale === 'pt_BR' ? subhero.ptBR.content : subhero.enUS.content}
           </Text>
           <Flex as="section" flexWrap="wrap">
             <TechTag title="NodeJS" />
@@ -67,7 +67,7 @@ const SubHero: React.FC = () => {
               duration={1000}
             >
               <Button variant="outline">
-                {locale === 'pt-BR'
+                {locale === 'pt_BR'
                   ? subhero.ptBR.buttonText
                   : subhero.enUS.buttonText}
               </Button>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const MyDocument: React.FC<Document> = () => {
   return (
-    <Html lang="pt-BR">
+    <Html lang="pt_BR">
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

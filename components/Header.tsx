@@ -14,19 +14,19 @@ const Header: React.FC = (props) => {
 
   const handleToggle = () => {
     switch (locale) {
-      case 'pt-BR':
-        router.push(router.asPath, router.asPath, { locale: 'en-US' });
+      case 'pt_BR':
+        router.push(router.asPath, router.asPath, { locale: 'en_US' });
         break;
-      case 'en-US':
-        router.push(router.asPath, router.asPath, { locale: 'pt-BR' });
+      case 'en_US':
+        router.push(router.asPath, router.asPath, { locale: 'pt_BR' });
         break;
     }
   };
 
   if (isBlog) {
-    links = locale === 'pt-BR' ? ptBR.blogLinks : enUS.blogLinks;
+    links = locale === 'pt_BR' ? ptBR.blogLinks : enUS.blogLinks;
   } else {
-    links = locale === 'pt-BR' ? ptBR.homeLinks : enUS.homeLinks;
+    links = locale === 'pt_BR' ? ptBR.homeLinks : enUS.homeLinks;
   }
 
   const itemVariants = {

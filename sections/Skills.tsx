@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
   return (
     <Stack as="section" py={20} id="skills">
       <Text as="h1" fontSize="5xl" textAlign="center">
-        {locale === 'pt-BR' ? skills.ptBR.heading : skills.enUS.heading}
+        {locale === 'pt_BR' ? skills.ptBR.heading : skills.enUS.heading}
       </Text>
       <Flex
         as="section"
@@ -21,12 +21,12 @@ const Skills: React.FC = () => {
         <Container as="article" maxW="lg">
           <Stack px={8} py={{ base: 12, md: 0 }} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? skills.ptBR.frontend.subheading
                 : skills.enUS.frontend.subheading}
             </Text>
             <Text>
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? skills.ptBR.frontend.content
                 : skills.enUS.frontend.content}
             </Text>
@@ -35,12 +35,12 @@ const Skills: React.FC = () => {
         <Container as="article" maxW="lg">
           <Stack px={8} textAlign="justify">
             <Text as="h2" fontSize="4xl" fontWeight="semibold">
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? skills.ptBR.backend.subheading
                 : skills.enUS.backend.subheading}
             </Text>
             <Text>
-              {locale === 'pt-BR'
+              {locale === 'pt_BR'
                 ? skills.ptBR.backend.content
                 : skills.enUS.backend.content}
             </Text>

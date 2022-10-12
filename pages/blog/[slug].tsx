@@ -57,7 +57,7 @@ const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <Main title={locale === 'pt-BR' ? 'Artigos' : 'Blog'}>
+    <Main title={locale === 'pt_BR' ? 'Artigos' : 'Blog'}>
       <Header />
       <BlogBreadcrumbs post={post} />
       <Post post={post} />

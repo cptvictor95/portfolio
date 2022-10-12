@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     <Flex as="footer" p={8} bg="green-camo" w="100%" h="10vh">
       <Text>
         © {currentYear} Victor Cardoso Pudo Torres -{' '}
-        {locale === 'pt-BR'
+        {locale === 'pt_BR'
           ? 'Todos os direitos reservados'
           : 'All rights reserved'}
       </Text>
