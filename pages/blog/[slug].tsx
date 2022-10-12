@@ -52,6 +52,7 @@ const SLUGLIST = gql`
 `;
 
 const BlogPost: React.FC<{ post: PostType }> = ({ post }) => {
+  console.log('POST', post);
   return (
     <Main title="Artigos">
       <Header />

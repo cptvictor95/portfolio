@@ -114,7 +114,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
               gap={5}
             >
               {links.map((link) => {
-                if (link.name === 'artigos') {
+                if (link.name === 'artigos' || link.name === 'blog') {
                   return (
                     <Link
                       as={motion.a}
@@ -125,7 +125,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                       variants={itemVariants}
                       title="Ir para artigos"
                     >
-                      Artigos
+                      {link.name}
                     </Link>
                   );
                 } else {

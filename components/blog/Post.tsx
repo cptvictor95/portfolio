@@ -1,5 +1,5 @@
-import { Container, Flex, Avatar, Text, Image } from '@chakra-ui/react';
 import React from 'react';
+import { Container, Flex, Avatar, Text, Image } from '@chakra-ui/react';
 import { PostType } from '../../interface/PostType';
 import { formatRawTextStyles } from '../../utils/formatRawTextStyles';
 
