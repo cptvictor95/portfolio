@@ -68,7 +68,7 @@ const Header: React.FC = (props) => {
         variant="scrollToTop"
         onClick={handleToggle}
         position="absolute"
-        top="20"
+        top="12vh"
         right="6"
         textShadow="outline"
         size="sm"

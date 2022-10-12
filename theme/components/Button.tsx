@@ -43,18 +43,21 @@ export const Button = {
       bg: 'transparent',
       _hover: {
         bg: 'transparent',
-        color: 'green-camo',
+        color: 'black',
         borderColor: 'green-camo',
+        boxShadow: 'md',
       },
       _focus: {
         bg: 'transparent',
-        color: 'green-camo',
+        color: 'black',
         borderColor: 'green-camo',
+        boxShadow: 'md',
       },
       _active: {
         bg: 'transparent',
-        color: 'green-camo',
+        color: 'black',
         borderColor: 'green-camo',
+        boxShadow: 'md',
       },
     },
     scrollToTop: {
@@ -68,20 +71,24 @@ export const Button = {
       fontWeight: 'bold',
       border: '1px solid',
       borderColor: 'green-camo',
+      boxShadow: 'lg',
       _hover: {
         borderColor: 'dark-green',
-        color: 'dark-green',
-        bg: 'light-green',
+        color: 'green-camo',
+        bg: 'green.200',
+        boxShadow: 'md',
       },
       _focus: {
         borderColor: 'dark-green',
         color: 'dark-green',
-        bg: 'light-green',
+        bg: 'green.200',
+        boxShadow: 'md',
       },
       _active: {
         borderColor: 'dark-green',
         color: 'dark-green',
-        bg: 'light-green',
+        bg: 'green.200',
+        boxShadow: 'md',
       },
     },
     socialIcon: {
