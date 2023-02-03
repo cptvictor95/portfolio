@@ -39,10 +39,10 @@ const Contact: React.FC = () => {
           align="center"
         >
           <Stack spacing={4} maxW="300px">
-            <Text as="h3" fontSize="3xl" fontWeight="semibold">
+            <Text as="h2" fontSize="3xl" fontWeight="semibold">
               Freelancer
             </Text>
-            <Text as="h4" fontSize="xl" fontWeight="semibold">
+            <Text as="h3" fontSize="xl" fontWeight="semibold">
               {locale === 'pt_BR'
                 ? contact.ptBR.freelance.subheading
                 : contact.enUS.freelance.subheading}
