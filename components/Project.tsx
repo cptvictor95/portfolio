@@ -50,7 +50,7 @@ const Project: React.FC<ProjectProps> = ({
           <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
             {title}
           </Text>
-          <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
+          <Text as="h3" fontSize="2xl" m={0} fontWeight="semibold">
             {stackText}
           </Text>
           <Text maxW="lg" textAlign="justify" pb={3}>
@@ -154,7 +154,7 @@ const Project: React.FC<ProjectProps> = ({
         <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
           {title}
         </Text>
-        <Text as="h4" fontSize="2xl" m={0} fontWeight="semibold">
+        <Text as="h3" fontSize="2xl" m={0} fontWeight="semibold">
           {stackText}
         </Text>
         <Text maxW="lg" textAlign="justify" pb={3}>
