@@ -36,6 +36,7 @@ const ScrollToTop: React.FC = () => {
     <AnimatePresence>
       <IconButton
         as={motion.a}
+        href="#"
         initial="closed"
         animate="open"
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
