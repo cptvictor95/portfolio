@@ -2,7 +2,8 @@ import { Flex, Heading, Stack, Text } from '@chakra-ui/layout';
 import { motion } from 'framer-motion';
 import React from 'react';
 import VerticalBar from '../components/VerticalBar';
-import { Image } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
 
 const Hero: React.FC<{
   title: string;
@@ -63,22 +64,26 @@ const Hero: React.FC<{
       </Flex>
 
       <Stack
-        as="article"
+        as={motion.article}
         maxW={{ base: '80%', sm: '60%', md: '40%', lg: '50%' }}
         minW={{ base: '80%', sm: '60%', md: '350px' }}
         justify="flex-end"
         align="center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
       >
-        <Image
-          as={motion.img}
-          src={'./avatarvictor.svg'}
+        <Box
           maxW={{ base: '250px', sm: '250px', md: '60%', lg: '50%' }}
-          alt="Ilustração colorida de um computador e um celular."
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
-          rounded="full"
-        />
-        {/* <Avatar /> */}
+          maxHeight="250px"
+        >
+          <Image
+            src="/avatarvictor.svg"
+            width={250}
+            height={250}
+            alt="Ilustração colorida de um computador e um celular."
+            style={{ borderRadius: '50%' }}
+          />
+        </Box>
       </Stack>
     </Flex>
   );
