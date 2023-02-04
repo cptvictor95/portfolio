@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Flex, Stack, Text, Link, Button } from '@chakra-ui/react';
+import { Flex, Stack, Text, Link, Button, Box } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -39,11 +39,19 @@ const Project: React.FC<ProjectProps> = ({
         justify="flex-end"
         px={8}
       >
-        <Image
-          src={previewImgUrl}
-          alt={`Prévia do projeto ${title ? title : ''}`}
-          style={{ maxWidth: '100%', width: '100%' }}
-        />
+        <Box maxWidth="lg" width="100%" maxHeight="250px">
+          <Image
+            src={previewImgUrl}
+            width={500}
+            height={300}
+            alt={`Prévia do projeto ${title ? title : ''}`}
+            style={{
+              maxWidth: '32rem',
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </Box>
       </Flex>
       <Flex as="article" maxW="auto">
         <Stack px={8}>
@@ -181,11 +189,19 @@ const Project: React.FC<ProjectProps> = ({
         justify="flex-start"
         px={8}
       >
-        <Image
-          src={previewImgUrl}
-          alt={`Prévia do projeto ${title ? title : ''}`}
-          style={{ maxWidth: '100%', width: '100%' }}
-        />
+        <Box maxW="lg" width="100%" maxHeight="250px">
+          <Image
+            src={previewImgUrl}
+            width={500}
+            height={300}
+            alt={`Prévia do projeto ${title ? title : ''}`}
+            style={{
+              maxWidth: '32rem',
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </Box>
       </Flex>
     </Flex>
   );
