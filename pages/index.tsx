@@ -1,16 +1,14 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { hero } from '../locale/hero';
-import dynamic from 'next/dynamic';
-
 import Main from '../layouts/Main';
+import { hero } from '../locale/hero';
 import Header from '../components/Header';
 import Hero from '../sections/Hero';
 import SubHero from '../sections/SubHero';
-const Skills = dynamic(() => import('../sections/Skills'));
-const Projects = dynamic(() => import('../sections/Projects'));
-const Contact = dynamic(() => import('../sections/Contact'));
-const Footer = dynamic(() => import('../components/Footer'));
+import Skills from '../sections/Skills';
+import Projects from '../sections/Projects';
+import Contact from '../sections/Contact';
+import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Home: React.FC = () => {
