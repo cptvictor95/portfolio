@@ -1,9 +1,10 @@
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
-import { Flex, Text } from '@chakra-ui/layout';
+import { Flex, Text, Link } from '@chakra-ui/layout';
 import { Button, Stack } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { Link } from 'react-scroll';
 import TechTag from '../components/TechTag';
 import { subhero } from '../locale/subhero';
 
@@ -59,14 +60,11 @@ const SubHero: React.FC = () => {
             <TechTag title="GraphQL" />
           </Flex>
           <Flex as="section" alignSelf="flex-end" pb={{ base: 8 }}>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              <Button variant="outline">
+            <Link as={motion.a} href="#contact" variant="nostyle">
+              <Button
+                variant="outline"
+                rightIcon={<ChevronDownIcon fontSize="x-large" />}
+              >
                 {locale === 'pt_BR'
                   ? subhero.ptBR.buttonText
                   : subhero.enUS.buttonText}
