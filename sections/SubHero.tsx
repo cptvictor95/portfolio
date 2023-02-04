@@ -1,8 +1,8 @@
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Image } from '@chakra-ui/image';
 import { Flex, Text, Link } from '@chakra-ui/layout';
 import { Button, Stack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import TechTag from '../components/TechTag';
@@ -30,9 +30,10 @@ const SubHero: React.FC = () => {
         py={4}
       >
         <Image
-          src="avatar.jpeg"
-          maxW={{ base: '250px', md: '300px' }}
-          borderRadius="full"
+          src="/avatar.jpeg"
+          width={250}
+          height={250}
+          style={{ borderRadius: '50%' }}
           alt={
             locale === 'pt_BR' ? subhero.ptBR.avatarAlt : subhero.enUS.avatarAlt
           }

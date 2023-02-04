@@ -4,11 +4,14 @@ import React from 'react';
 import VerticalBar from '../components/VerticalBar';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { subhero } from '../locale/subhero';
 
 const Hero: React.FC<{
   title: string;
   subtitle: string;
 }> = ({ title, subtitle }) => {
+  const { locale } = useRouter();
   return (
     <Flex
       as="section"
@@ -80,8 +83,12 @@ const Hero: React.FC<{
             src="/avatarvictor.svg"
             width={250}
             height={250}
-            alt="Ilustração colorida de um computador e um celular."
             style={{ borderRadius: '50%' }}
+            alt={
+              locale === 'pt_BR'
+                ? subhero.ptBR.avatarAlt
+                : subhero.enUS.avatarAlt
+            }
           />
         </Box>
       </Stack>
