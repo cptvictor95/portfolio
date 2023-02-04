@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Flex, Stack, Text, Link, Button, Image } from '@chakra-ui/react';
+import { Flex, Stack, Text, Link, Button } from '@chakra-ui/react';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
@@ -40,9 +41,8 @@ const Project: React.FC<ProjectProps> = ({
       >
         <Image
           src={previewImgUrl}
-          maxW="lg"
-          w="100%"
           alt={`Prévia do projeto ${title ? title : ''}`}
+          style={{ maxWidth: '100%', width: '100%' }}
         />
       </Flex>
       <Flex as="article" maxW="auto">
@@ -183,9 +183,8 @@ const Project: React.FC<ProjectProps> = ({
       >
         <Image
           src={previewImgUrl}
-          maxW="lg"
-          w="100%"
           alt={`Prévia do projeto ${title ? title : ''}`}
+          style={{ maxWidth: '100%', width: '100%' }}
         />
       </Flex>
     </Flex>

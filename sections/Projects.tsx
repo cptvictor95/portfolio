@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
             frontendUrl: 'https://github.com/cptvictor95/gastura',
           },
         }}
-        previewImgUrl="./projects/exampleGastura.png"
+        previewImgUrl="/projects/exampleGastura.png"
       />
 
       <Project
@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
               'https://github.com/future4code/Victor-Cardoso/tree/master/semana17/labenu-system',
           },
         }}
-        previewImgUrl="./projects/exampleSystem.png"
+        previewImgUrl="/projects/exampleSystem.png"
       />
 
       <Project
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
         links={{
           production: 'https://assistive.com.br',
         }}
-        previewImgUrl="./projects/exampleAssistive.png"
+        previewImgUrl="/projects/exampleAssistive.png"
       />
 
       <Text
