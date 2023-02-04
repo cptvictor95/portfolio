@@ -50,7 +50,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
         <AnimatePresence>
           {open ? (
             <IconButton
-              as={motion.a}
+              as={motion.button}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -62,7 +62,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
             />
           ) : (
             <IconButton
-              as={motion.a}
+              as={motion.button}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 1 }}
