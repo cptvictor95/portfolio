@@ -8,19 +8,18 @@ const Skills: React.FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <Stack as="section" id="skills">
-      <Text as="h1" fontSize="5xl" textAlign="center">
+    <Stack as="section" id="skills" gap="12">
+      <Text as="h2" textStyle="h2" textAlign="center">
         {locale === 'pt_BR' ? skills.ptBR.heading : skills.enUS.heading}
       </Text>
       <Flex
         as="section"
         direction={{ base: 'column', md: 'row' }}
         justify={{ base: 'center', md: 'space-evenly' }}
-        pt={{ base: 0, md: 12 }}
       >
         <Container as="article" maxW="lg">
-          <Stack px={8} py={{ base: 12, md: 0 }} textAlign="justify">
-            <Text as="h2" fontSize="4xl" fontWeight="semibold">
+          <Stack px={8} py={{ base: 12, md: 0 }} textAlign="justify" gap="4">
+            <Text as="h3" textStyle="h3">
               {locale === 'pt_BR'
                 ? skills.ptBR.frontend.subheading
                 : skills.enUS.frontend.subheading}
@@ -33,8 +32,8 @@ const Skills: React.FC = () => {
           </Stack>
         </Container>
         <Container as="article" maxW="lg">
-          <Stack px={8} textAlign="justify">
-            <Text as="h2" fontSize="4xl" fontWeight="semibold">
+          <Stack px={8} textAlign="justify" gap="4">
+            <Text as="h3" textStyle="h3">
               {locale === 'pt_BR'
                 ? skills.ptBR.backend.subheading
                 : skills.enUS.backend.subheading}

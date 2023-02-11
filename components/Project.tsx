@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Flex, Stack, Text, Link, Button, Box } from '@chakra-ui/react';
+import { Flex, Stack, Text, Link, Button, Box, Tag } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -53,13 +53,15 @@ const Project: React.FC<ProjectProps> = ({
         </Box>
       </Flex>
       <Flex as="article" maxW="auto">
-        <Stack px={8}>
-          <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
+        <Stack px={8} gap="2">
+          <Text as="h3" textStyle="h3" pt={4}>
             {title}
           </Text>
-          <Text as="h3" fontSize="2xl" m={0} fontWeight="semibold">
+
+          <Tag w="max-content" colorScheme="green" color="black">
             {stackText}
-          </Text>
+          </Tag>
+
           <Text maxW="lg" textAlign="justify" pb={3}>
             {content}
           </Text>
@@ -158,12 +160,14 @@ const Project: React.FC<ProjectProps> = ({
       py={4}
     >
       <Stack px={8} align={{ base: 'flex-start', md: 'flex-end' }}>
-        <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
+        <Text as="h3" textStyle="h3" pt={4}>
           {title}
         </Text>
-        <Text as="h3" fontSize="2xl" m={0} fontWeight="semibold">
+
+        <Tag w="max-content" colorScheme="green" color="black">
           {stackText}
-        </Text>
+        </Tag>
+
         <Text maxW="lg" textAlign="justify" pb={3}>
           {content}
         </Text>

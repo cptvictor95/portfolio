@@ -43,7 +43,7 @@ const SubHero: React.FC = () => {
         align={['center', 'center', 'space-between', 'space-between']}
       >
         <Stack as="article" px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
-          <Text as="h2" fontSize="4xl" fontWeight="semibold">
+          <Text as={motion.h2} textStyle="h2">
             {locale === 'pt_BR' ? subhero.ptBR.heading : subhero.enUS.heading}
           </Text>
           <Text pb={6} textAlign="justify">

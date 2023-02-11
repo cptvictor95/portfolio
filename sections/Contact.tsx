@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
       align="center"
       gap={8}
     >
-      <Text as="h1" fontSize="5xl" textAlign="center" fontWeight="bold">
+      <Text as="h2" textStyle="h2" textAlign="center">
         {locale === 'pt_BR' ? contact.ptBR.heading : contact.enUS.heading}
       </Text>
 
@@ -37,11 +37,8 @@ const Contact: React.FC = () => {
           justify="space-between"
           align="center"
         >
-          <Stack spacing={4} maxW="300px">
-            <Text as="h2" fontSize="3xl" fontWeight="semibold">
-              Freelancer
-            </Text>
-            <Text as="h3" fontSize="xl" fontWeight="semibold">
+          <Stack spacing={4} maxW="350px">
+            <Text as="h3" textStyle="h3">
               {locale === 'pt_BR'
                 ? contact.ptBR.freelance.subheading
                 : contact.enUS.freelance.subheading}
@@ -52,8 +49,8 @@ const Contact: React.FC = () => {
                 : contact.enUS.freelance.content}
             </Text>
           </Stack>
-          <Stack spacing={4} maxW="300px">
-            <Text as="h3" fontSize="3xl" fontWeight="semibold">
+          <Stack spacing={4} maxW="350px">
+            <Text as="h3" textStyle="h3">
               {locale === 'pt_BR'
                 ? contact.ptBR.contacts.subheading
                 : contact.enUS.contacts.subheading}

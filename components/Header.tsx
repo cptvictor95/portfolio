@@ -54,12 +54,14 @@ const Header: React.FC = (props) => {
     >
       <Flex align="center" flexGrow={1}>
         <Text
-          as={motion.p}
-          fontSize="3xl"
+          as={motion.a}
+          textStyle="h3"
           fontFamily="Barlow"
+          fontWeight="regular"
           letterSpacing="wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          href="https://www.cptvictor.dev"
         >
           PUDO
         </Text>

@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
   const { locale } = router;
   return (
     <Stack as="section" id="projects" gap={8}>
-      <Text as="h1" fontSize="5xl" fontWeight="semibold" textAlign="center">
+      <Text as="h2" textStyle="h2" textAlign="center">
         {locale === 'pt_BR' ? 'Meus Projetos' : 'My Projects'}
       </Text>
 

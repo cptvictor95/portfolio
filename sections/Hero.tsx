@@ -52,10 +52,10 @@ const Hero: React.FC<{
             {title}
           </Heading>
           <Text
-            as={motion.h2}
+            as={motion.p}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.3 } }}
-            fontSize={{ base: 'lg', lg: '2xl', xl: '2xl' }}
+            textStyle="h5"
             fontFamily="Muli"
             lineHeight={{
               base: '100%',
