@@ -31,7 +31,6 @@ const Project: React.FC<ProjectProps> = ({
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify="center"
-      py={8}
     >
       <Flex
         as="aside"
@@ -43,7 +42,7 @@ const Project: React.FC<ProjectProps> = ({
           <Image
             src={previewImgUrl}
             width={500}
-            height={300}
+            height={250}
             alt={`Prévia do projeto ${title ? title : ''}`}
             style={{
               maxWidth: '32rem',
@@ -158,7 +157,7 @@ const Project: React.FC<ProjectProps> = ({
       justify="center"
       py={4}
     >
-      <Stack px={8} align="flex-end">
+      <Stack px={8} align={{ base: 'flex-start', md: 'flex-end' }}>
         <Text as="h2" fontSize="4xl" fontWeight="bold" pt={4}>
           {title}
         </Text>
@@ -193,7 +192,7 @@ const Project: React.FC<ProjectProps> = ({
           <Image
             src={previewImgUrl}
             width={500}
-            height={300}
+            height={250}
             alt={`Prévia do projeto ${title ? title : ''}`}
             style={{
               maxWidth: '32rem',

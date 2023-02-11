@@ -11,13 +11,13 @@ export const theme = extendTheme({
         margin: 0,
         boxSizing: 'border-box',
         bg: 'black',
-        color: 'purple.50',
+        color: 'white',
         scrollBehavior: 'smooth',
       },
       a: {
         cursor: 'pointer',
         textDecoration: 'none',
-        color: 'purple.50',
+        color: 'white',
         borderRadius: '0',
         transition: 'color 100ms ease-in-out',
         _hover: {
@@ -34,10 +34,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    heading: 'Barlow Condensed',
+    heading: 'Barlow',
     body: 'Inconsolata',
-    button: 'Barlow Condensed',
-    logo: 'M Plus 2',
   },
   textStyles: {
     h1: {

@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <Stack as="section" py={20} id="skills">
+    <Stack as="section" id="skills">
       <Text as="h1" fontSize="5xl" textAlign="center">
         {locale === 'pt_BR' ? skills.ptBR.heading : skills.enUS.heading}
       </Text>

@@ -16,10 +16,10 @@ const Home: React.FC = () => {
   const { locale } = router;
 
   return (
-    <Main title="Victor Torres">
+    <Main title="Victor Pudo">
       <Header />
       <Hero
-        title="Victor Torres"
+        title="VICTOR PUDO"
         subtitle={locale === 'pt_BR' ? hero.ptBR.subtitle : hero.enUS.subtitle}
       />
 

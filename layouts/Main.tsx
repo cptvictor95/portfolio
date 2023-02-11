@@ -14,6 +14,7 @@ const Main: React.FC<{ title: string; children: React.ReactNode }> = ({
       direction="column"
       maxW="auto"
       minH="100vh"
+      gap={20}
       {...mainProps}
     >
       <Head>

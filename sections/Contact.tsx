@@ -18,7 +18,6 @@ const Contact: React.FC = () => {
       direction="column"
       align="center"
       gap={8}
-      py={16}
     >
       <Text as="h1" fontSize="5xl" textAlign="center" fontWeight="bold">
         {locale === 'pt_BR' ? contact.ptBR.heading : contact.enUS.heading}

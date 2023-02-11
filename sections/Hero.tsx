@@ -21,24 +21,27 @@ const Hero: React.FC<{
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['space-evenly', 'space-around', 'space-around', 'space-evenly']}
-      pb={8}
       pl={{ base: 16, sm: 16, md: 16, lg: 8, xl: 8 }}
       pr={{ base: 8, sm: 8, md: 8, lg: 4, xl: 8 }}
-      mb={24}
     >
       <VerticalBar />
       <Flex
         as="article"
-        maxW={{ base: '100%' }}
-        justify={['flex-end']}
+        maxW="100%"
+        justify="center"
         align={['flex-start', 'flex-end', 'center', 'center']}
       >
-        <Stack as="section" ml={{ base: 0, md: 12, lg: 12, xl: 12 }}>
+        <Stack
+          as="section"
+          ml={{ base: 0, md: 12, lg: 12, xl: 12 }}
+          justifyContent={{ base: 'center', md: 'flex-start' }}
+        >
           <Heading
             as={motion.h1}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            fontSize={{ base: '5xl', md: '5xl', lg: '6xl', xl: '6xl' }}
+            fontSize={{ base: '4xl', md: '5xl', lg: '6xl', xl: '8xl' }}
+            fontFamily="Barlow"
             letterSpacing={{
               base: '2px',
               md: '2.5px',
@@ -52,7 +55,7 @@ const Hero: React.FC<{
             as={motion.h2}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.3 } }}
-            fontSize={{ base: 'xl', lg: '2xl', xl: '2xl' }}
+            fontSize={{ base: 'lg', lg: '2xl', xl: '2xl' }}
             fontFamily="Muli"
             lineHeight={{
               base: '100%',

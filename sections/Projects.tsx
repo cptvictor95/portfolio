@@ -1,7 +1,6 @@
-import { Stack, Text, Button, Link } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { AiFillGithub } from 'react-icons/ai';
 import Project from '../components/Project';
 import { assistive, gastura, labenuSystem } from '../locale/projects';
 
@@ -9,14 +8,8 @@ const Projects: React.FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <Stack as="section" py={16} id="projects" bg="limegreen" color="purple.900">
-      <Text
-        as="h1"
-        fontSize="5xl"
-        py={4}
-        fontWeight="semibold"
-        textAlign="center"
-      >
+    <Stack as="section" id="projects" gap={8}>
+      <Text as="h1" fontSize="5xl" fontWeight="semibold" textAlign="center">
         {locale === 'pt_BR' ? 'Meus Projetos' : 'My Projects'}
       </Text>
 
@@ -65,31 +58,6 @@ const Projects: React.FC = () => {
         }}
         previewImgUrl="/projects/exampleAssistive.png"
       />
-
-      <Text
-        as="h1"
-        fontSize="3xl"
-        py={4}
-        fontWeight="semibold"
-        textAlign="center"
-      >
-        {locale === 'pt_BR'
-          ? 'Quer ver mais projetos?'
-          : 'Want to see more projects?'}
-      </Text>
-
-      <Button
-        as={Link}
-        href="https://github.com/cptvictor95?tab=repositories"
-        isExternal
-        mt={16}
-        size="lg"
-        textTransform="uppercase"
-        alignSelf="center"
-        leftIcon={<AiFillGithub />}
-      >
-        {locale === 'pt_BR' ? 'Ir para ' : 'Go to'} github
-      </Button>
     </Stack>
   );
 };

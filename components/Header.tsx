@@ -46,7 +46,7 @@ const Header: React.FC = (props) => {
       top="0"
       align="center"
       wrap="wrap"
-      bg="rgba(0,0,0, 0.8)"
+      bg="black"
       py={4}
       px={8}
       zIndex="1"
@@ -56,12 +56,12 @@ const Header: React.FC = (props) => {
         <Text
           as={motion.p}
           fontSize="3xl"
-          fontFamily="Muli"
+          fontFamily="Barlow"
           letterSpacing="wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          v;c+or
+          PUDO
         </Text>
       </Flex>
 

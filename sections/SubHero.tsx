@@ -15,19 +15,17 @@ const SubHero: React.FC = () => {
     <Flex
       as="section"
       id="about"
-      maxW={{ base: 'auto', md: '100%', lg: '100%' }}
+      maxW={{ base: 'auto', md: '100%' }}
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify={['center', 'space-around', 'space-evenly', 'space-around']}
-      py={16}
       px={8}
-      bg="limegreen"
-      color="black"
     >
       <Flex
         as="article"
         justify={['center', 'center', 'center', 'flex-start']}
         py={4}
+        display={{ base: 'none', md: 'inherit' }}
       >
         <Image
           src="/avatar.jpeg"
@@ -42,7 +40,6 @@ const SubHero: React.FC = () => {
       <Flex
         as="aside"
         maxW={{ base: '100%', sm: '70%', md: '40%', lg: '40%', xl: '40%' }}
-        pt={4}
         align={['center', 'center', 'space-between', 'space-between']}
       >
         <Stack as="article" px={{ base: 4, md: 8, lg: 8, xl: 8 }}>
@@ -60,7 +57,7 @@ const SubHero: React.FC = () => {
             <TechTag title="SQL" />
             <TechTag title="GraphQL" />
           </Flex>
-          <Flex as="section" alignSelf="flex-end" pb={{ base: 8 }}>
+          <Flex as="section" alignSelf="flex-end">
             <Link as={motion.a} href="#contact" variant="nostyle">
               <Button
                 variant="outline"
