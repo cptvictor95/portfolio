@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import App, { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import { theme } from '../theme/theme';
 import 'focus-visible/dist/focus-visible';
