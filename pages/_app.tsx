@@ -1,5 +1,5 @@
-import React from 'react';
-import App from 'next/app';
+import React, { useEffect } from 'react';
+import App, { AppProps } from 'next/app';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import { theme } from '../theme/theme';
 import 'focus-visible/dist/focus-visible';
@@ -9,18 +9,19 @@ import '@fontsource/barlow';
 import '@fontsource/m-plus-2';
 import '@fontsource/martel';
 import '@fontsource/muli';
+import { hotjar } from 'react-hotjar';
 
-class MyApp extends App {
-  render(): JSX.Element {
-    const { Component, pageProps } = this.props;
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  useEffect(() => {
+    hotjar.initialize(3442319, 1);
+  }, []);
 
-    return (
-      <ChakraProvider theme={theme}>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ChakraProvider>
-    );
-  }
-}
+  return (
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
+};
 
 export default MyApp;
