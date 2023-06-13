@@ -9,7 +9,7 @@ const MyDocument: React.FC<Document> = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
-          content="Victor Pudo's full stack web developer portfolio website and blog."
+          content="Victor Pudo's full stack web developer website and blog."
         />
       </Head>
       <body>

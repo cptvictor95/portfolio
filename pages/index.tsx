@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Hero from '../sections/Hero';
 import SubHero from '../sections/SubHero';
 import Skills from '../sections/Skills';
-import Projects from '../sections/Projects';
 import Contact from '../sections/Contact';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -29,7 +28,7 @@ const Home: React.FC = () => {
 
         <SubHero />
         <Skills />
-        <Projects />
+        {/* <Projects /> */}
         <Contact />
         <Footer />
       </Flex>

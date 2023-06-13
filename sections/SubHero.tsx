@@ -50,12 +50,14 @@ const SubHero: React.FC = () => {
             {locale === 'pt_BR' ? subhero.ptBR.content : subhero.enUS.content}
           </Text>
           <Flex as="section" flexWrap="wrap">
-            <TechTag title="NodeJS" />
-            <TechTag title="JavaScript" />
+            <TechTag title="NextJS" />
             <TechTag title="TypeScript" />
             <TechTag title="Firebase" />
+            <TechTag title="NodeJS" />
+            <TechTag title="Golang" />
             <TechTag title="SQL" />
-            <TechTag title="GraphQL" />
+            <TechTag title="GCP" />
+            <TechTag title="AWS" />
           </Flex>
           <Flex as="section" alignSelf="flex-end">
             <Link as={motion.a} href="#contact" variant="nostyle">
