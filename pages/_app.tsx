@@ -10,13 +10,13 @@ import '@fontsource/m-plus-2';
 import '@fontsource/martel';
 import '@fontsource/muli';
 import { hotjar } from 'react-hotjar';
-import * as gtag from '../lib/gtag';
 import { useRouter } from 'next/router';
 
-const googleTrackingId = process.env.NEXT_PUBLIC_GOOGLE_TRACKING_ID as string;
+const googleTrackingId = process.env.NEXT_PUBLIC_GA_ID as string;
 const hotjarId = process.env.NEXT_PUBLIC_HOTJAR_ID as string;
 const hotjarSnippetVersion = process.env
   .NEXT_PUBLIC_HOTJAR_SNIPPET_VERSION as string;
+const isProd = process.env.NODE_ENV === 'production';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();
@@ -27,14 +27,17 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      gtag.pageview(url, googleTrackingId);
+      if (isProd) {
+        window.gtag('config', googleTrackingId, {
+          page_path: url,
+        });
+      }
+    };
 
-      router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('routeChangeComplete', handleRouteChange);
 
-      return () => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        router.events.off('routeChangeComplete', handleRouteChange);
-      };
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
 
