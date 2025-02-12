@@ -1,5 +1,5 @@
 import { type Config } from "tailwindcss";
-import { themesPlugin } from "./src/lib/themes/tailwind-plugin";
+import { themesPlugin } from "./src/lib/themes/plugin";
 
 export default {
   darkMode: "class",

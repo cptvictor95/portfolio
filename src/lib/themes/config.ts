@@ -15,9 +15,9 @@ export const themeOptions: ThemeOption[] = [
     icon: "✨",
   },
   {
-    id: "windows98",
+    id: "retropc",
     name: "Retro PC",
-    description: "90s operating system aesthetic",
+    description: "90s operating system aesthetics",
     icon: "🖥️",
   },
   {

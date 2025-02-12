@@ -65,7 +65,7 @@ body {
   }
 
   /* Windows 98 Theme - Light */
-  [data-theme-variant="windows98"]:root {
+  [data-theme-variant="retropc"]:root {
     /* Windows 98 light theme variables */
     --background: 0 0% 92%;
     --foreground: 0 0% 0%;
@@ -98,7 +98,7 @@ body {
   }
 
   /* Windows 98 Theme - Dark */
-  [data-theme-variant="windows98"].dark {
+  [data-theme-variant="retropc"].dark {
     /* Windows 98 dark theme variables */
     --background: 0 0% 12%;
     --foreground: 0 0% 90%;
