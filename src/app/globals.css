@@ -8,6 +8,7 @@ body {
 
 @layer base {
   :root {
+    /* Default theme variables */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -36,6 +37,7 @@ body {
   }
 
   .dark {
+    /* Dark theme variables */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -64,49 +66,67 @@ body {
 
   /* Windows 98 Theme - Light */
   [data-theme-variant="windows98"]:root {
-    --background: 0 0% 94%;
+    /* Windows 98 light theme variables */
+    --background: 0 0% 92%;
     --foreground: 0 0% 0%;
-    --card: 0 0% 92%;
+
+    /* Card and container colors */
+    --card: 0 0% 82%; /* Lighter gray from your design */
     --card-foreground: 0 0% 0%;
-    --popover: 0 0% 92%;
+    --popover: 0 0% 82%;
     --popover-foreground: 0 0% 0%;
-    --primary: 0 0% 85%;
+
+    /* Interactive elements - Changed to match your design */
+    --primary: 0 0% 82%; /* Gray instead of purple */
     --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 82%;
     --secondary-foreground: 0 0% 0%;
+
+    /* System colors */
     --muted: 0 0% 82%;
     --muted-foreground: 0 0% 40%;
     --accent: 0 0% 82%;
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 75%;
-    --input: 0 0% 75%;
-    --ring: 0 0% 75%;
+
+    /* Borders and inputs */
+    --border: 0 0% 0%;
+    --input: 0 0% 82%;
+    --ring: 0 0% 0%;
     --radius: 0rem;
   }
 
   /* Windows 98 Theme - Dark */
   [data-theme-variant="windows98"].dark {
-    --background: 0 0% 15%;
+    /* Windows 98 dark theme variables */
+    --background: 0 0% 12%;
     --foreground: 0 0% 90%;
-    --card: 0 0% 20%;
+
+    /* Card and container colors */
+    --card: 0 0% 15%;
     --card-foreground: 0 0% 90%;
-    --popover: 0 0% 20%;
+    --popover: 0 0% 15%;
     --popover-foreground: 0 0% 90%;
-    --primary: 0 0% 25%;
-    --primary-foreground: 0 0% 90%;
-    --secondary: 0 0% 30%;
+
+    /* Interactive elements */
+    --primary: 267 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 25%;
     --secondary-foreground: 0 0% 90%;
-    --muted: 0 0% 30%;
+
+    /* System colors */
+    --muted: 0 0% 25%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 30%;
-    --accent-foreground: 0 0% 90%;
+    --accent: 267 70% 65%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 90%;
-    --border: 0 0% 35%;
-    --input: 0 0% 35%;
-    --ring: 0 0% 35%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 0 0% 40%;
+    --input: 0 0% 25%;
+    --ring: 267 70% 65%;
     --radius: 0rem;
   }
 }

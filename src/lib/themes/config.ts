@@ -10,14 +10,14 @@ interface ThemeOption {
 export const themeOptions: ThemeOption[] = [
   {
     id: "default",
-    name: "Default",
-    description: "The classic modern look",
-    icon: "🎨",
+    name: "Modern",
+    description: "Clean and minimal design",
+    icon: "✨",
   },
   {
     id: "windows98",
-    name: "Windows 98",
-    description: "Retro computing vibes",
+    name: "Retro PC",
+    description: "90s operating system aesthetic",
     icon: "🖥️",
   },
 ];
