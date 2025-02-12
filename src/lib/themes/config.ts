@@ -20,4 +20,10 @@ export const themeOptions: ThemeOption[] = [
     description: "90s operating system aesthetic",
     icon: "🖥️",
   },
+  {
+    id: "typewriter",
+    name: "Typewriter",
+    description: "Elegant monospace aesthetic",
+    icon: "⌨️",
+  },
 ];

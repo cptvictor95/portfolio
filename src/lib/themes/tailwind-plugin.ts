@@ -49,6 +49,32 @@ export const themesPlugin = plugin(
           "@apply after:w-full after:h-full after:-z-10": {},
           "@apply after:shadow-[4px_4px_0_0_#000]": {},
         },
+
+      // Typewriter Theme Components
+      '[data-theme-variant="typewriter"] .btn': {
+        "@apply bg-white border-2 border-black font-mono relative px-4 py-2 text-black dark:bg-zinc-900 dark:border-white dark:text-white":
+          {},
+        "@apply hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black":
+          {},
+        "@apply active:translate-y-[1px]": {},
+        "@apply transition-colors duration-200": {},
+        "& svg, & svg *": {
+          "@apply h-4 w-4": {},
+          "@apply text-current": {},
+        },
+      },
+
+      '[data-theme-variant="typewriter"] [role="menuitem"]': {
+        "@apply relative cursor-default select-none px-2 py-1.5 font-mono": {},
+        "@apply hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black":
+          {},
+        "@apply outline-none transition-colors": {},
+      },
+
+      '[data-theme-variant="typewriter"] .card': {
+        "@apply bg-white border-2 border-black font-mono p-6 dark:bg-zinc-900 dark:border-white":
+          {},
+      },
     });
   },
   {
@@ -64,6 +90,12 @@ export const themesPlugin = plugin(
             border: "#000000",
             innerBorderLight: "#FFFFFF",
             innerBorderDark: "#888888",
+          },
+          typewriter: {
+            bg: "#FFFFFF",
+            bgDark: "#18181B", // zinc-900
+            text: "#000000",
+            textDark: "#FFFFFF",
           },
         },
       },
