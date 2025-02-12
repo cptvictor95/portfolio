@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Todos
+
+- Move the config.ts themeOption objects to each theme folder
+- Create a script that we can run in the terminal to set a new theme with all it's base settings, files and folders
+- Improve the documentation to explain how to create new themes
+- Find a way to fully customize the dropdown menu component from shadcn/ui
+- Improve the extendability of the components customization so we can fully customize all of shadcn/ui components using our themes
