@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
-import { useTheme } from "@/lib/themes/ThemeContext";
+import { useTheme } from "@/lib/themes/components/theme-context";
 import { themeOptions } from "@/lib/themes/config";
 
 export function ThemeToggle() {

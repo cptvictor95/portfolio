@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { ColorMode, ThemeConfig, ThemeVariant } from "./types";
+import { ColorMode, ThemeConfig, ThemeVariant } from "../types";
 
 interface ThemeContextType {
   theme: ThemeConfig;

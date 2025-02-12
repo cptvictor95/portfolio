@@ -4,7 +4,7 @@ import "./globals.css";
 import "../lib/themes/variants/retropc/font.css";
 import "../lib/themes/variants/typewriter/font.css";
 import "../lib/themes/variants/modern/font.css";
-import { ThemeProvider } from "@/lib/themes/ThemeContext";
+import { ThemeProvider } from "@/lib/themes/components/theme-context";
 import { themeInitScript } from "@/lib/themes/theme-script";
 
 const dmSans = DM_Sans({
