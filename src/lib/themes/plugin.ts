@@ -1,97 +1,29 @@
 import plugin from "tailwindcss/plugin";
-
-// RetroPC Theme Component Styles
-const retropcStyles = {
-  // Button styles
-  '[data-theme-variant="retropc"] .btn, [data-theme-variant="retropc"] .button, [data-theme-variant="retropc"] button[class*="button"], [data-theme-variant="retropc"] [class*="Button"]':
-    {
-      "@apply bg-[#DBDBDB] border-[2px] border-black relative px-4 py-2 dark:bg-[#424242]":
-        {},
-      "@apply before:absolute before:content-[''] before:inset-0": {},
-      "@apply before:border-t-[1px] before:border-l-[1px] before:border-white dark:before:border-[#626262]":
-        {},
-      "@apply before:border-r-[1px] before:border-b-[1px] before:border-[#888888] dark:before:border-[#2B2B2B]":
-        {},
-      "@apply after:absolute after:content-[''] after:top-0 after:left-0": {},
-      "@apply after:w-full after:h-full after:-z-10": {},
-      "@apply after:shadow-[4px_4px_0_0_#000000]": {},
-      "@apply active:bg-[#CCCCCC] dark:active:bg-[#2B2B2B]": {},
-      "@apply active:after:shadow-[2px_2px_0_0_#000000]": {},
-      "@apply active:translate-x-[2px] active:translate-y-[2px]": {},
-      "@apply transition-all duration-75": {},
-      "& svg, & svg *": {
-        "@apply h-4 w-4": {},
-        "@apply !text-black dark:!text-white": {},
-      },
-    },
-
-  // Dropdown menu items
-  '[data-theme-variant="retropc"] [role="menuitem"]': {
-    "@apply relative cursor-default select-none px-2 py-1.5": {},
-    "@apply hover:bg-[#000080] hover:text-white focus:bg-[#000080] focus:text-white":
-      {},
-    "@apply outline-none transition-colors": {},
-  },
-
-  // Card styles
-  '[data-theme-variant="retropc"] .card, [data-theme-variant="retropc"] [class*="card"], [data-theme-variant="retropc"] [class*="Card"]':
-    {
-      "@apply bg-[#DBDBDB] border-[1px] border-black relative": {},
-      "@apply before:absolute before:content-[''] before:inset-0": {},
-      "@apply before:border-t-[1px] before:border-l-[1px] before:border-white":
-        {},
-      "@apply before:border-r-[1px] before:border-b-[1px] before:border-[#888888]":
-        {},
-      "@apply after:absolute after:content-[''] after:top-0 after:left-0": {},
-      "@apply after:w-full after:h-full after:-z-10": {},
-      "@apply after:shadow-[4px_4px_0_0_#000]": {},
-    },
-};
-
-// Typewriter Theme Component Styles
-const typewriterStyles = {
-  // Button styles
-  '[data-theme-variant="typewriter"] .btn': {
-    "@apply bg-white border-2 border-black font-mono relative px-4 py-2 text-black dark:bg-zinc-900 dark:border-white dark:text-white":
-      {},
-    "@apply hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black":
-      {},
-    "@apply active:translate-y-[1px]": {},
-    "@apply transition-colors duration-200": {},
-    "& svg, & svg *": {
-      "@apply h-4 w-4": {},
-      "@apply text-current": {},
-    },
-  },
-
-  // Dropdown menu items
-  '[data-theme-variant="typewriter"] [role="menuitem"]': {
-    "@apply relative cursor-default select-none px-2 py-1.5 font-mono": {},
-    "@apply hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black":
-      {},
-    "@apply outline-none transition-colors": {},
-  },
-
-  // Card styles
-  '[data-theme-variant="typewriter"] .card': {
-    "@apply bg-white border-2 border-black font-mono p-6 dark:bg-zinc-900 dark:border-white":
-      {},
-  },
-};
+import { retropcStyles } from "./variants/retropc/components";
+import { typewriterStyles } from "./variants/typewriter/components";
+import { modernStyles } from "./variants/modern/components";
 
 // Combine all theme styles
 const componentStyles = {
+  ...modernStyles,
   ...retropcStyles,
   ...typewriterStyles,
 };
 
 export const themesPlugin = plugin(
-  function ({ addComponents, addBase }) {
-    addComponents(componentStyles);
+  function ({ addComponents }) {
+    addComponents({
+      ...componentStyles,
+    });
   },
   {
     theme: {
       extend: {
+        fontFamily: {
+          "ibm-plex-sans": ["var(--font-ibm-plex-sans)"],
+          "dm-mono": ["var(--font-dm-mono)"],
+          "dm-sans": ["var(--font-dm-sans)"],
+        },
         // Theme-specific color palettes
         colors: {
           retropc: {

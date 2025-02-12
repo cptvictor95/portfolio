@@ -4,7 +4,7 @@ interface ThemeOption {
   id: ThemeVariant;
   name: string;
   description: string;
-  icon: string; // We'll use emoji for now, could be replaced with proper icons later
+  icon: string;
 }
 
 export const themeOptions: ThemeOption[] = [

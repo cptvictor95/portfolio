@@ -6,6 +6,11 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-dm-sans)"],
+        mono: ["var(--font-dm-mono)"],
+        ibmPlexSans: ["var(--font-ibm-plex-sans)"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

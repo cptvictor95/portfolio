@@ -1,0 +1,3 @@
+[data-theme-variant="typewriter"] * {
+  @apply font-dm-mono;
+}

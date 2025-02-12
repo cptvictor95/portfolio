@@ -18,11 +18,28 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    // Apply theme classes to document
-    const doc = document.documentElement;
-    doc.classList.remove("light", "dark");
-    doc.classList.add(theme.colorMode);
-    doc.setAttribute("data-theme-variant", theme.variant);
+    // Load theme from localStorage on mount
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(JSON.parse(savedTheme));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save theme to localStorage whenever it changes
+    localStorage.setItem("theme", JSON.stringify(theme));
+
+    // Update data attributes and classes
+    const root = document.documentElement;
+    root.setAttribute("data-theme-variant", theme.variant);
+    root.setAttribute("data-theme-color-mode", theme.colorMode);
+
+    // Toggle dark mode class
+    if (theme.colorMode === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
   }, [theme]);
 
   const setColorMode = (mode: ColorMode) => {
