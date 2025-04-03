@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Flex, Text, Link } from '@chakra-ui/layout';
+import { Flex, Text, Link } from '@chakra-ui/react';
 import { Button, Stack } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';

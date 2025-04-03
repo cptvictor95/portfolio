@@ -1,5 +1,4 @@
-import { Center, Flex, Text } from '@chakra-ui/layout';
-import { Button } from '@chakra-ui/react';
+import { Button, Center, Flex, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import Main from '../layouts/Main';

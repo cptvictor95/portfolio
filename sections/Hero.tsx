@@ -1,5 +1,5 @@
-import { Flex, Heading, Stack, Text } from '@chakra-ui/layout';
-import { motion } from 'framer-motion';
+import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import { motion } from 'motion/react';
 import React from 'react';
 import VerticalBar from '../components/VerticalBar';
 import { Box } from '@chakra-ui/react';

@@ -1,6 +1,6 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Box, IconButton, Center, Flex, Link } from '@chakra-ui/react';
-import { motion, useCycle, AnimatePresence } from 'framer-motion';
+import { motion, useCycle, AnimatePresence } from 'motion/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { NavLink } from '../interface/NavLink';
@@ -143,7 +143,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                     <Link
                       as={motion.a}
                       key={link.id}
-                      href={`#${link.to}`}
+                      href={link.to === 'resume' ? '/resume' : `#${link.to}`}
                       size="md"
                       variant="nostyle"
                       variants={itemVariants}
