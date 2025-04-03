@@ -1,5 +1,5 @@
 import { Flex, IconButton, Link } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import React from 'react';
 import { AiOutlineWhatsApp, AiFillGithub } from 'react-icons/ai';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';

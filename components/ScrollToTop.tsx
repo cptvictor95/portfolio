@@ -1,6 +1,6 @@
 import { TriangleUpIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 

@@ -1,6 +1,6 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Box, IconButton, Center, Flex, Link } from '@chakra-ui/react';
-import { motion, useCycle, AnimatePresence } from 'framer-motion';
+import { motion, useCycle, AnimatePresence } from 'motion/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { NavLink } from '../interface/NavLink';
