@@ -11,6 +11,7 @@ const Header: React.FC = (props) => {
   const router = useRouter();
   const { locale } = router;
   const isBlog = router.pathname.includes('/blog');
+  const isResume = router.pathname.includes('/resume');
   let links: NavLink[] = [];
 
   const handleToggle = () => {
@@ -154,7 +155,7 @@ const Header: React.FC = (props) => {
                   <Link
                     as={motion.a}
                     key={link.id}
-                    href={`#${link.to}`}
+                    href={isResume ? `/#${link.to}` : `#${link.to}`}
                     size="md"
                     variant="nostyle"
                     variants={itemVariants}
