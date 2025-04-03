@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/layout';
+import { Flex } from '@chakra-ui/react';
 import { Stack, Text, Container } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { skills } from '../locale/skills';

@@ -143,7 +143,7 @@ const MobileNavBar: React.FC<{ links: NavLink[]; isBlog: boolean }> = ({
                     <Link
                       as={motion.a}
                       key={link.id}
-                      href={`#${link.to}`}
+                      href={link.to === 'resume' ? '/resume' : `#${link.to}`}
                       size="md"
                       variant="nostyle"
                       variants={itemVariants}

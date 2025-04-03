@@ -7,6 +7,7 @@ export const ptBR = {
     { name: 'sobre', to: 'about', id: 1 },
     { name: 'contato', to: 'contact', id: 2 },
     { name: 'artigos', to: 'blog', id: 3 },
+    { name: 'curriculo', to: 'resume', id: 4 },
   ],
 };
 
@@ -19,5 +20,6 @@ export const enUS = {
     { name: 'about', to: 'about', id: 1 },
     { name: 'contact', to: 'contact', id: 2 },
     { name: 'blog', to: 'blog', id: 3 },
+    { name: 'resume', to: 'resume', id: 4 },
   ],
 };

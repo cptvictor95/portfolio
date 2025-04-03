@@ -1,9 +1,9 @@
-import { Box, Flex, Text } from '@chakra-ui/layout';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Button, Link } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
 import MobileNavBar from './MobileNavBar';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { ptBR, enUS } from '../locale/header';
 import { NavLink } from '../interface/NavLink';
 
@@ -112,6 +112,22 @@ const Header: React.FC = (props) => {
                     variants={itemVariants}
                     title={
                       locale === 'pt_BR' ? 'Ir para artigos' : 'Go to blog'
+                    }
+                  >
+                    {link.name}
+                  </Link>
+                );
+              } else if (link.to === 'resume') {
+                return (
+                  <Link
+                    as={motion.a}
+                    key={link.id}
+                    href="/resume"
+                    size="md"
+                    variant="nostyle"
+                    variants={itemVariants}
+                    title={
+                      locale === 'pt_BR' ? 'Ir para currículo' : 'Go to resume'
                     }
                   >
                     {link.name}
