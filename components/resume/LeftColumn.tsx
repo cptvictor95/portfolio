@@ -1,8 +1,14 @@
 import React from 'react';
 import { Box, Heading, Text, HStack } from '@chakra-ui/react';
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
+import { useRouter } from 'next/router';
+import { ptBR, enUS } from '../../locale/resume';
 
 export const LeftColumn = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'pt_BR' ? ptBR : enUS;
+
   return (
     <Box
       w={{
@@ -41,11 +47,11 @@ export const LeftColumn = () => {
           mb={2}
           color="light-green"
         >
-          FullStack Web Developer
+          {t.jobTitle}
         </Heading>
       </Box>
 
-      <Box>
+      <Box mt={16}>
         <Heading
           as="h3"
           fontSize="2xl"
@@ -53,12 +59,10 @@ export const LeftColumn = () => {
           mb={6}
           color="light-green"
         >
-          Profile
+          {t.profile.title}
         </Heading>
         <Text fontSize="sm" lineHeight="relaxed" color="white">
-          I'm curious by nature, as well as very meticulous and pragmatic. I
-          have great passion about good communication, productive human behavior
-          and learning techniques (didactics).
+          {t.profile.description}
         </Text>
       </Box>
 
@@ -70,7 +74,7 @@ export const LeftColumn = () => {
           mb={6}
           color="light-green"
         >
-          Contact
+          {t.contact.title}
         </Heading>
         <HStack mb={3}>
           <Text w={6} mr={3} color="light-green">
