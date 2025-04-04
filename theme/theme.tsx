@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import { colors } from './colors';
 import { Button } from './components/Button';
 import { Link } from './components/Link';
+import { Toast } from './components/Toast';
 
 export const theme = extendTheme({
   styles: {
@@ -68,5 +69,6 @@ export const theme = extendTheme({
   components: {
     Button,
     Link,
+    Toast,
   },
 });

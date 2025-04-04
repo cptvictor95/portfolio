@@ -1,10 +1,14 @@
 import React from 'react';
-import { Box, Heading, Text, HStack } from '@chakra-ui/react';
-import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
+import { Box, Heading, Text, HStack, Button } from '@chakra-ui/react';
+import { EmailIcon, PhoneIcon, DownloadIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
 import { ptBR, enUS } from '../../locale/resume';
 
-export const LeftColumn = () => {
+export interface LeftColumnProps {
+  onDownloadPDF?: () => void;
+}
+
+export const LeftColumn = ({ onDownloadPDF }: LeftColumnProps) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'pt_BR' ? ptBR : enUS;
@@ -126,6 +130,19 @@ export const LeftColumn = () => {
             </a>
           </Text>
         </HStack>
+
+        {onDownloadPDF && (
+          <Button
+            leftIcon={<DownloadIcon />}
+            onClick={onDownloadPDF}
+            colorScheme="green"
+            mt={6}
+            w="full"
+            size="md"
+          >
+            {locale === 'pt_BR' ? 'Baixar PDF' : 'Download PDF'}
+          </Button>
+        )}
       </Box>
     </Box>
   );
