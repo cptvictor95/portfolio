@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { ptBR, enUS } from '../../locale/resume';
+import Main from '../../layouts/Main';
 
 const ResumePage = () => {
   const router = useRouter();
@@ -303,7 +304,7 @@ const ResumePage = () => {
   };
 
   return (
-    <>
+    <Main title={locale === 'pt_BR' ? 'Currículo' : 'Resume'}>
       <Header />
       <Flex
         w="full"
@@ -336,7 +337,7 @@ const ResumePage = () => {
         <LeftColumn onDownloadPDF={handleDownloadPDF} />
         <RightColumn />
       </Flex>
-    </>
+    </Main>
   );
 };
 
