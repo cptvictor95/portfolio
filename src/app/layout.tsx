@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { LocaleProvider } from "@/components/LocaleProvider";
+import { LocaleProvider } from "@/providers";
+import { Navigation, LanguageSwitcher } from "@/components/navigation";
+import { ViewTransitions } from "next-view-transitions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,12 +42,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
-        <LocaleProvider>{children}</LocaleProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className="dark">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground overflow-x-hidden`}
+        >
+          <LocaleProvider>
+            {/* Global Navigation - persists across routes */}
+            <Navigation />
+
+            {/* Global Language Switcher - persists across routes */}
+            <div className="fixed top-6 right-6 z-50">
+              <LanguageSwitcher />
+            </div>
+
+            {/* Page Transitions - persists across routes */}
+            {children}
+          </LocaleProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

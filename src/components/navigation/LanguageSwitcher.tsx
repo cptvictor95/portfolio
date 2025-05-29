@@ -1,7 +1,7 @@
 "use client";
 
-import { useLocale } from "./LocaleProvider";
 import { locales, type Locale } from "@/i18n/request";
+import { useLocale } from "@/providers/LocaleProvider";
 
 // Pure function to get language display names
 const getLanguageDisplayName = (locale: Locale): string => {
