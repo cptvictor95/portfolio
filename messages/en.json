@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "home": "Home",
+    "resume": "Resume",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Victor Pudo",
+    "title": "Software Engineer",
+    "description": "Experienced full-stack developer specializing in React, Node.js, and cloud technologies. Available for freelance projects."
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "Complete professional background",
+    "downloadPdf": "Download PDF",
+    "downloadDocx": "Download DOCX",
+    "jobTitle": "FullStack Web Developer",
+    "profile": {
+      "title": "Profile",
+      "description": "I am naturally curious, highly meticulous, and pragmatic. I have a great passion for good communication, productive human behavior, and learning techniques (didactics)."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "skills": {
+      "title": "Skills",
+      "technical": "Technical",
+      "soft": "Soft Skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "development": "Development",
+      "infrastructure": "Infrastructure",
+      "database": "Database",
+      "testing": "Testing & Monitoring",
+      "versioning": "Version Control & Methodologies",
+      "languages": "Languages",
+      "api": "API Technologies"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate software engineer with expertise in modern web technologies. I enjoy building scalable applications and solving complex problems. When I'm not coding, I'm exploring new technologies and contributing to open source projects."
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Available for freelance projects and collaboration",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  }
+}

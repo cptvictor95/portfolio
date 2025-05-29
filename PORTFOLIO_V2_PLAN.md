@@ -2,52 +2,113 @@
 
 ## 🎯 Project Overview
 
-Transform the current portfolio website into a modern, single-page application focused on the resume/curriculum while maintaining professional appeal and downloadable resume functionality.
+Transform the portfolio into a **modern, single-page application** focused on the resume/curriculum with a **no-scroll, full-screen design** and **custom color themes**.
 
-### Current State Analysis
+### ✅ Current State (COMPLETED)
 
-- **Framework**: Next.js 12.3.1 (outdated)
-- **UI Library**: Chakra UI + Emotion
-- **Styling**: No Tailwind CSS
-- **Current Issues**:
-  - Large PDF file sizes (using html2canvas + jsPDF)
-  - DOCX functionality missing/broken
-  - Outdated Next.js version
-  - Blog page exists but will be removed
-  - Resume page works but needs modernization
+- [x] **Fresh Next.js 15.3.2 setup** with App Router
+- [x] **React 19** and TypeScript 5
+- [x] **Tailwind CSS v4** pre-configured
+- [x] **Old version archived** in `old-version/` folder for reference
+- [x] **Clean project structure** ready for implementation
 
-## 🚀 Phase 1: Foundation Upgrade (Priority: High)
+### 🎨 New Design Requirements (Updated from Notepad)
 
-### 1.1 Technology Stack Modernization
+- **Single page, no scroll, no navigation pages**
+- **Custom UI themes** (using Factree platform color palettes)
+- **Dark mode as default** with neutral colors initially
+- **Simple sections**: Resume + About + Contact + Links
+- **Page transitions** between themes/states
+- **No complex typography** - use Next.js base font
 
-- [ ] **Upgrade Next.js**: 12.3.1 → Latest stable (14.x)
-- [ ] **Add Tailwind CSS**: Replace/complement Chakra UI styling
-- [ ] **Update dependencies**: React 18.x, TypeScript latest
-- [ ] **Modern bundling**: Ensure optimal build performance
+### Current Issues from Old Version (Reference Only)
 
-### 1.2 Project Structure Refactoring
+- Large PDF file sizes (using html2canvas + jsPDF)
+- DOCX functionality missing/broken
+- Resume data available in `old-version/locale/` folder
 
-- [ ] **Remove blog functionality**: Clean up blog pages and components
-- [ ] **Restructure pages**: Focus on single-page with resume as main content
-- [ ] **Component cleanup**: Remove unused blog components
-- [ ] **Update routing**: Simplify navigation structure
+## 🚀 Phase 1: Foundation & Clean Setup (Priority: High) ✅ IN PROGRESS
 
-## 🎨 Phase 2: Design & UX Enhancement (Priority: High)
+### 1.1 ✅ Technology Stack Modernization (COMPLETED)
 
-### 2.1 Single Page Layout Design
+- [x] **Next.js 15.3.2**: Latest with App Router
+- [x] **Tailwind CSS v4**: Pre-configured and ready
+- [x] **React 19 & TypeScript 5**: Modern stack
+- [x] **Clean project structure**: Fresh start
 
-- [ ] **Hero Section**: Professional introduction with personal branding
-- [ ] **Resume Section**: Prominent, well-designed resume display
-- [ ] **About Section**: Extended personal information beyond resume
-- [ ] **Skills Showcase**: Interactive or visually appealing skills display
-- [ ] **Contact Section**: Clear call-to-action for potential employers
+### 1.2 Clean Starter Files & Basic Structure (✅ COMPLETED)
 
-### 2.2 Responsive Design with Tailwind
+- [x] **Remove default Next.js content**: Clean page.tsx and globals.css
+- [x] **Setup basic single-page layout**: No scroll, full-screen sections
+- [x] **Copy resume data**: Transfer from old-version/locale
+- [x] **Create component structure**: Simple, functional components
+- [x] **Basic dark theme**: Neutral colors with Tailwind
 
-- [ ] **Mobile-first approach**: Ensure excellent mobile experience
-- [ ] **Tablet optimization**: Perfect display on medium devices
-- [ ] **Desktop enhancement**: Full utilization of larger screens
-- [ ] **Print optimization**: Resume section prints beautifully
+### ✅ What We Just Implemented:
+
+- **Clean single-page layout** with 4 sections (Hero, Resume, About, Contact)
+- **No-scroll design** with full viewport height sections
+- **Functional components** following SOLID principles
+- **Type-safe navigation** using TypeScript enums
+- **Dark theme** with neutral color gradients
+- **Smooth transitions** between sections
+- **Professional metadata** in layout.tsx
+- **Resume data structure** copied from old version
+- **🌐 Complete i18n system** with next-intl integration
+- **🔄 Client-side locale switching** without routing
+- **🎯 Type-safe translations** with custom hooks
+- **💾 Locale persistence** in localStorage
+- **🎨 Language switcher UI** with smooth transitions
+
+### ✅ i18n Implementation Details:
+
+- **✅ next-intl integration**: UPDATED - Now using official "without i18n routing" pattern
+- **✅ Proper file structure**: messages/ folder in root, src/i18n/request.ts configuration
+- **✅ NextIntlClientProvider**: Official provider integration with our custom locale management
+- **✅ useTranslations hook**: Using official next-intl hooks instead of custom implementation
+- **Dynamic locale switching**: Instant language changes with smooth UX
+- **Type safety**: Full TypeScript support for locales and translations
+- **Fallback system**: Graceful handling of missing translations
+- **Browser detection**: Automatic locale detection from browser preferences
+- **Persistence**: User language preference saved in localStorage
+- **Accessible UI**: Language switcher with proper ARIA labels
+- **Clean architecture**: Separation of concerns with custom hooks and providers
+
+### 🔄 Latest Updates:
+
+- **Fixed next-intl implementation** to follow official documentation
+- **Cleaned up old files** - removed custom useMessages hook and old i18n config
+- **Updated file structure** to match official pattern:
+  ```
+  ├── messages/
+  │   ├── en.json
+  │   └── pt.json
+  ├── next.config.ts (with createNextIntlPlugin)
+  └── src/
+      ├── i18n/
+      │   └── request.ts
+      └── app/
+          ├── layout.tsx
+          └── page.tsx
+  ```
+
+## 🎨 Phase 2: Single-Page Layout Design (Priority: High)
+
+### 2.1 Full-Screen Section Layout (Updated Requirements)
+
+- [ ] **Hero Section**: Professional intro + photo (full screen)
+- [ ] **Resume Section**: Complete resume display (full screen)
+- [ ] **About Section**: Short personal description (full screen)
+- [ ] **Contact Section**: Freelance contact + GitHub + LinkedIn (full screen)
+- [ ] **Navigation**: Smooth transitions between sections (no scroll)
+
+### 2.2 Theme System Implementation
+
+- [ ] **Dark mode base**: Neutral colors as starting point
+- [ ] **Theme architecture**: Prepare for Factree color palettes
+- [ ] **Smooth transitions**: Page transitions between themes
+- [ ] **Responsive design**: Perfect on all devices
+- [ ] **Typography**: Clean, simple, Next.js default font
 
 ## 📄 Phase 3: Resume Download System Overhaul (Priority: High)
 
@@ -111,34 +172,36 @@ Transform the current portfolio website into a modern, single-page application f
 - [ ] **Social media integration**: Professional links showcase
 - [ ] **Analytics**: Track resume downloads and page engagement
 
-## 🛠️ Implementation Strategy
+## 🛠️ Updated Implementation Strategy
 
-### Week 1: Foundation Setup
+### 🔄 CURRENT WEEK: Foundation & Layout
 
-1. **Backup current project**: Create v1-backup branch
-2. **Upgrade Next.js**: Test and fix breaking changes
-3. **Install Tailwind CSS**: Configure alongside Chakra UI
-4. **Clean up dependencies**: Remove unused packages
+1. ✅ **Project setup**: Fresh Next.js 15 (COMPLETED)
+2. 🔄 **Clean starter files**: Remove default content (IN PROGRESS)
+3. **Transfer resume data**: Copy from old-version
+4. **Basic single-page layout**: Full-screen sections
+5. **Dark theme setup**: Neutral colors with Tailwind
 
-### Week 2: Structure & Content
+### Week 2: Content & Sections
 
-1. **Remove blog functionality**: Clean deletion of blog-related code
-2. **Redesign main page**: Implement single-page layout
-3. **Content organization**: Restructure resume data and sections
+1. **Implement all sections**: Hero, Resume, About, Contact
+2. **Navigation system**: Smooth section transitions
+3. **Resume data integration**: Display professional information
+4. **Responsive optimization**: Perfect mobile experience
 
 ### Week 3: Resume Download System
 
-1. **Research PDF solutions**: Test Puppeteer vs PDFKit vs react-pdf
-2. **Implement new PDF generation**: Replace current system
-3. **Add DOCX functionality**: Implement Word document generation
-4. **Testing**: Ensure cross-browser and cross-platform compatibility
+1. **Research modern PDF solutions**: Better than html2canvas approach
+2. **Implement PDF generation**: Lightweight, professional output
+3. **Add DOCX functionality**: Complete Word document export
+4. **Download UX**: Clean interface and loading states
 
-### Week 4: Polish & Enhancement
+### Week 4: Polish & Themes
 
-1. **Animation implementation**: Add smooth transitions and interactions
-2. **Mobile optimization**: Perfect responsive design
-3. **Performance optimization**: Bundle size, loading times
-4. **Testing & deployment**: Comprehensive testing and production deployment
+1. **Custom theme system**: Factree platform color palettes
+2. **Theme transitions**: Smooth color scheme switching
+3. **Final optimizations**: Performance and accessibility
+4. **Testing & deployment**: Cross-browser compatibility
 
 ## 📊 Success Metrics
 
@@ -176,23 +239,25 @@ Transform the current portfolio website into a modern, single-page application f
 - **Three.js**: For future 3D features
 - **GSAP**: Alternative for complex animations
 
-## 🚀 Quick Start Checklist
+## 🚀 Updated Quick Start Checklist
 
-- [ ] Create project backup
-- [ ] Setup development environment
-- [ ] Install Tailwind CSS
-- [ ] Research PDF/DOCX libraries
-- [ ] Create new page structure mockup
-- [ ] Begin Next.js upgrade process
+- [x] Create fresh Next.js 15 project
+- [x] Archive old version for reference
+- [ ] Clean default Next.js starter content
+- [ ] Copy resume data from old-version
+- [ ] Setup basic single-page layout structure
+- [ ] Implement dark theme with neutral colors
+- [ ] Create section navigation system
 
 ---
 
-## 📝 Notes for Implementation
+## 📝 Updated Notes for Implementation
 
-1. **Maintain current resume data structure**: The locale system and content structure work well
-2. **Progressive enhancement**: Ensure basic functionality works before adding advanced features
-3. **Performance first**: Every new feature should be evaluated for performance impact
-4. **Professional focus**: All enhancements should maintain professional appearance
-5. **Testing strategy**: Test resume downloads on multiple devices and browsers
+1. **Single-page, no-scroll design**: Each section takes full viewport height
+2. **Theme-first approach**: Build with theme switching in mind from start
+3. **Functional programming**: Use DRY, KISS, SOLID principles
+4. **Progressive enhancement**: Start simple, add features incrementally
+5. **Reference old-version**: Resume data and component ideas available
+6. **Performance focus**: Fast transitions, optimized bundle size
 
-This plan provides a clear roadmap while allowing flexibility for creative enhancements and iterations based on development discoveries.
+**Next Immediate Steps**: Clean starter files and setup basic layout structure.
