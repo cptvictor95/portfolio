@@ -21,6 +21,27 @@ export const metadata: Metadata = {
     description:
       "Experienced Software Engineer specializing in React, Node.js, and cloud technologies. Available for freelance projects.",
     type: "website",
+    images: [
+      {
+        url: "/avatar.jpg",
+        width: 800,
+        height: 600,
+        alt: "Victor Pudo - Software Engineer",
+      },
+    ],
+    siteName: "Victor Pudo Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Victor Pudo | Software Engineer",
+    description:
+      "Experienced Software Engineer specializing in React, Node.js, and cloud technologies. Available for freelance projects.",
+    images: ["/avatar.jpg"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/avatar.jpg",
   },
 };
 
