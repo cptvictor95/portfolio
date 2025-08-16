@@ -1,9 +1,7 @@
 {
   "navigation": {
     "home": "VICTOR.INTRO",
-    "resume": "RESUME.FILE",
-    "about": "About",
-    "contact": "Contact"
+    "resume": "RESUME.FILE"
   },
   "hero": {
     "name": "Victor Pudo",
@@ -64,13 +62,6 @@
   "about": {
     "title": "About Me",
     "description": "I'm a passionate software engineer with expertise in modern web technologies. I enjoy building scalable applications and solving complex problems. When I'm not coding, I'm exploring new technologies and contributing to open source projects."
-  },
-  "contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Available for freelance projects and collaboration",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "email": "Email"
   },
   "common": {
     "loading": "Loading...",

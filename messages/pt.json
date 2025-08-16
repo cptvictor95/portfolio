@@ -1,9 +1,7 @@
 {
   "navigation": {
     "home": "VICTOR.INTRO",
-    "resume": "CURRICULO.ARQUIVO",
-    "about": "Sobre",
-    "contact": "Contato"
+    "resume": "CURRICULO.ARQUIVO"
   },
   "hero": {
     "name": "Victor Pudo",
@@ -64,13 +62,6 @@
   "about": {
     "title": "Sobre Mim",
     "description": "Sou um engenheiro de software apaixonado com expertise em tecnologias web modernas. Gosto de construir aplicações escaláveis e resolver problemas complexos. Quando não estou programando, estou explorando novas tecnologias e contribuindo para projetos open source."
-  },
-  "contact": {
-    "title": "Vamos Trabalhar Juntos",
-    "subtitle": "Disponível para projetos freelance e colaboração",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "email": "Email"
   },
   "common": {
     "loading": "Carregando...",

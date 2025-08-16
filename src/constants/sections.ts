@@ -5,13 +5,3 @@ export const getNavItems = (t: (key: string) => string): NavItem[] => [
   { route: Route.HOME, label: t("home"), index: 0 },
   { route: Route.RESUME, label: t("resume"), index: 1 },
 ];
-
-// Pure constant for route order - immutable configuration (contact removed for MVP)
-export const ROUTE_ORDER = [Route.HOME, Route.RESUME] as const;
-
-// Animation constants for page transitions - simplified
-export const TRANSITION_CONFIG = {
-  duration: 400,
-  ease: "ease-out",
-  direction: "bottom-to-top",
-} as const;
