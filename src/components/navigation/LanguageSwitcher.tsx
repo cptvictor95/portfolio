@@ -1,6 +1,6 @@
 "use client";
 
-import { locales, type Locale } from "@/i18n/request";
+import { locales, type Locale } from "@/shared/locales";
 import { useLocale } from "@/providers/LocaleProvider";
 
 // Pure function to get language display names

@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 import { FileDown } from "lucide-react";
-import { getSafeLocale } from "@/i18n/request";
+import { getSafeLocale } from "@/shared/locales";
 
 // Resume Page Component - Minimalist typewriter aesthetic
 export default function ResumePage() {

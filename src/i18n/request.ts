@@ -1,31 +1,25 @@
 import { getRequestConfig } from "next-intl/server";
+import { cookies } from "next/headers";
+import { getSafeLocale, defaultLocale } from "@/shared/locales";
 
-// Define our supported locales - single source of truth
-export const locales = ["en", "pt"] as const;
-export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
-
-// Pure function to validate locale
-export const isValidLocale = (locale: string): locale is Locale => {
-  return locales.includes(locale as Locale);
-};
-
-// Pure function to get safe locale with fallback
-export const getSafeLocale = (locale?: string): Locale => {
-  if (!locale || !isValidLocale(locale)) {
-    return defaultLocale;
-  }
-  return locale;
-};
-
-// Main next-intl configuration
+// Main next-intl configuration - reads locale from cookies
 export default getRequestConfig(async () => {
-  // For now, we'll use a static locale
-  // Later we can integrate with cookies/headers for SSR
-  const locale = defaultLocale;
+  // Read locale directly from cookies in server component context
+  let locale = defaultLocale;
+  
+  try {
+    const cookieStore = await cookies();
+    const cookieLocale = cookieStore.get('preferred-locale')?.value;
+    locale = getSafeLocale(cookieLocale);
+  } catch {
+    // Fallback to default if cookies can't be read
+    console.log('Using default locale due to cookie access limitation');
+    locale = defaultLocale;
+  }
 
   return {
     locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
+    timeZone: 'UTC', // Global default timezone to prevent hydration mismatches
   };
 });

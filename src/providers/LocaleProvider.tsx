@@ -1,28 +1,24 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { type Locale, defaultLocale, getSafeLocale } from "@/i18n/request";
+import { type Locale, defaultLocale } from "@/shared/locales";
 
-// Locale context type - clean interface
+// Import messages directly for client-side loading
+import enMessages from "../../messages/en.json";
+import ptMessages from "../../messages/pt.json";
+
+// Simple locale context for language switching only
 interface LocaleContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
 }
 
-// Create context with default values
 const LocaleContext = createContext<LocaleContextType>({
   locale: defaultLocale,
   setLocale: () => {},
 });
 
-// Pure function - custom hook for accessing locale context
 export const useLocale = (): LocaleContextType => {
   const context = useContext(LocaleContext);
   if (!context) {
@@ -31,100 +27,38 @@ export const useLocale = (): LocaleContextType => {
   return context;
 };
 
-// Pure function - get initial locale from browser/storage
-export const getInitialLocale = (): Locale => {
-  if (typeof window === "undefined") {
-    return defaultLocale;
-  }
-
-  // Check localStorage first
-  const stored = localStorage.getItem("preferred-locale");
-  if (stored && getSafeLocale(stored) === stored) {
-    return stored as Locale;
-  }
-
-  // Fallback to browser language
-  const browserLocale = navigator.language.split("-")[0];
-  return getSafeLocale(browserLocale);
-};
-
-// Pure function to load messages for a locale
-const loadMessages = async (locale: Locale) => {
-  const safeLocale = getSafeLocale(locale);
-  try {
-    const messages = await import(`../../messages/${safeLocale}.json`);
-
-    return messages.default;
-  } catch (error) {
-    console.error(`Failed to load messages for locale: ${safeLocale}`, error);
-    const fallback = await import(`../../messages/en.json`);
-    
-    return fallback.default;
-  }
-};
-
-// Provider component - integrates with next-intl
 interface LocaleProviderProps {
   children: ReactNode;
+  initialLocale: Locale; // Received from server wrapper
 }
 
-export const LocaleProvider = ({ children }: LocaleProviderProps) => {
-  const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-  const [messages, setMessages] = useState<Record<string, unknown> | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export const LocaleProvider = ({ children, initialLocale }: LocaleProviderProps) => {
+  // Initialize with server-provided locale (no hydration mismatch!)
+  const [locale] = useState<Locale>(initialLocale);
 
-  // Initialize locale on client-side
-  useEffect(() => {
-    const initLocale = getInitialLocale();
-    setLocaleState(initLocale);
-  }, []);
-
-  // Load messages when locale changes
-  useEffect(() => {
-    const loadLocaleMessages = async () => {
-      setIsLoading(true);
-      try {
-        const newMessages = await loadMessages(locale);
-        setMessages(newMessages);
-      } catch (error) {
-        console.error("Error loading messages:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadLocaleMessages();
-  }, [locale]);
-
-  // Pure function wrapper for locale setting
-  const handleSetLocale = (newLocale: Locale) => {
-    setLocaleState(newLocale);
-    // Persist to localStorage for better UX
-    if (typeof window !== "undefined") {
-      localStorage.setItem("preferred-locale", newLocale);
-    }
+  // Handle locale change with cookie persistence and page reload
+  const setLocale = (newLocale: Locale) => {
+    // Set cookie with 1 year expiration
+    document.cookie = `preferred-locale=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    // Reload page to let server wrapper pick up new locale
+    window.location.reload();
   };
+
+  // Get messages for current locale
+  const messages = locale === "en" ? enMessages : ptMessages;
 
   const contextValue: LocaleContextType = {
     locale,
-    setLocale: handleSetLocale,
+    setLocale,
   };
-
-  // Show loading state while messages are loading
-  if (isLoading || !messages) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-neutral-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-          <p className="text-neutral-400">Loading...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <LocaleContext.Provider value={contextValue}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
+      <NextIntlClientProvider 
+        locale={locale} 
+        messages={messages}
+        timeZone="UTC"
+      >
         {children}
       </NextIntlClientProvider>
     </LocaleContext.Provider>

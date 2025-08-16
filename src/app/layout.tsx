@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { LocaleProvider } from "@/providers";
+import { ServerLocaleWrapper } from "@/providers/ServerLocaleWrapper";
 import { Navigation, LanguageSwitcher } from "@/components/navigation";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="antialiased text-white bg-primary overflow-x-hidden font-mono">
-        <LocaleProvider>
+        <ServerLocaleWrapper>
           <section className="w-full h-screen relative flex overflow-hidden">
             {/* Sidebar */}
             <aside className="flex flex-col justify-start w-64 min-w-[16rem] max-w-xs h-full p-8">
@@ -57,7 +57,7 @@ export default function RootLayout({
               </div>
             </main>
           </section>
-        </LocaleProvider>
+        </ServerLocaleWrapper>
       </body>
     </html>
   );
