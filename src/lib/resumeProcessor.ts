@@ -111,7 +111,11 @@ export async function getResumeMetadata(language: ResumeLanguage, format: Resume
     return {
       fileName,
       size: stats.length,
-      lastModified: new Date(),
+    const stats = await stat(filePath);
+    return {
+      fileName,
+      size: stats.size,
+      lastModified: stats.mtime,
       available: true,
     };
   } catch {
