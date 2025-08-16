@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "VICTOR.INTRO",
+    "resume": "CURRICULO.ARQUIVO"
+  },
+  "hero": {
+    "name": "Victor Pudo",
+    "title": "Engenheiro de Software",
+    "description": "Desenvolvedor full-stack experiente especializado em React, Node.js e tecnologias em nuvem. Disponível para projetos freelance."
+  },
+  "resume": {
+    "title": "Currículo",
+    "subtitle": "Baixe meu currículo profissional no formato e idioma de sua preferência.",
+    "downloadOptions": "Opções de Download",
+    "currentLanguage": "Idioma Atual",
+    "otherLanguages": "Outros Idiomas",
+    "downloadPdf": "Baixar PDF",
+    "downloadDocx": "Baixar DOCX",
+    "resumeSubtitle": "Quer ver meu currículo? Você pode baixá-lo abaixo.",
+    "note": "Nota",
+    "noteDescription": "Baixe meu currículo em formato PDF ou DOCX, disponível em português ou inglês.",
+    "fileLabel": "ARQUIVO.CURRICULO",
+    "downloadButton": "Baixar",
+    "downloadError": "Falha ao baixar currículo. Tente novamente.",
+    "formatPdf": "PDF",
+    "formatDocx": "DOCX",
+    "langEnUs": "EN-US",
+    "langPtBr": "PT-BR",
+    "jobTitle": "Desenvolvedor Web FullStack",
+    "profile": {
+      "title": "Perfil",
+      "description": "Sou curioso por natureza, além de muito meticuloso e pragmático. Tenho grande paixão por boa comunicação, comportamento humano produtivo e técnicas de aprendizado (didática)."
+    },
+    "contact": {
+      "title": "Contato",
+      "email": "Email",
+      "phone": "Telefone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "experience": {
+      "title": "Experiência"
+    },
+    "education": {
+      "title": "Educação"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "technical": "Técnicas",
+      "soft": "Interpessoais",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "development": "Desenvolvimento",
+      "infrastructure": "Infraestrutura",
+      "database": "Banco de dados",
+      "testing": "Testes e monitoramento",
+      "versioning": "Versionamento e metodologias",
+      "languages": "Idiomas",
+      "api": "Tecnologias de API"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um engenheiro de software apaixonado com expertise em tecnologias web modernas. Gosto de construir aplicações escaláveis e resolver problemas complexos. Quando não estou programando, estou explorando novas tecnologias e contribuindo para projetos open source."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar novamente"
+  }
+}

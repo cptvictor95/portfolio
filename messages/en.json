@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "VICTOR.INTRO",
+    "resume": "RESUME.FILE"
+  },
+  "hero": {
+    "name": "Victor Pudo",
+    "title": "Software Engineer",
+    "description": "Experienced full-stack developer specializing in React, Node.js, and cloud technologies. Available for freelance projects."
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "Download my professional resume in your preferred format and language.",
+    "downloadOptions": "Download Options",
+    "currentLanguage": "Current Language",
+    "otherLanguages": "Other Languages",
+    "downloadPdf": "Download PDF",
+    "downloadDocx": "Download DOCX",
+    "resumeSubtitle": "Wanna see my resume? You can download it below.",
+    "note": "Note",
+    "noteDescription": "Download my resume in PDF or DOCX format, available in English or Portuguese.",
+    "fileLabel": "RESUME.FILE",
+    "downloadButton": "Download",
+    "downloadError": "Failed to download resume. Please try again.",
+    "formatPdf": "PDF",
+    "formatDocx": "DOCX",
+    "langEnUs": "EN-US",
+    "langPtBr": "PT-BR",
+    "jobTitle": "FullStack Web Developer",
+    "profile": {
+      "title": "Profile",
+      "description": "I am naturally curious, highly meticulous, and pragmatic. I have a great passion for good communication, productive human behavior, and learning techniques (didactics)."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "skills": {
+      "title": "Skills",
+      "technical": "Technical",
+      "soft": "Soft Skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "development": "Development",
+      "infrastructure": "Infrastructure",
+      "database": "Database",
+      "testing": "Testing & Monitoring",
+      "versioning": "Version Control & Methodologies",
+      "languages": "Languages",
+      "api": "API Technologies"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate software engineer with expertise in modern web technologies. I enjoy building scalable applications and solving complex problems. When I'm not coding, I'm exploring new technologies and contributing to open source projects."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  }
+}
