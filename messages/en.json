@@ -13,8 +13,14 @@
   "resume": {
     "title": "Resume",
     "subtitle": "Download my professional resume in your preferred format and language.",
+    "downloadOptions": "Download Options",
+    "currentLanguage": "Current Language",
+    "otherLanguages": "Other Languages",
     "downloadPdf": "Download PDF",
     "downloadDocx": "Download DOCX",
+    "resumeSubtitle": "Wanna see my resume? You can download it above.",
+    "note": "Note",
+    "noteDescription": "PDF files are optimized for viewing and printing. DOCX files are editable and compatible with Microsoft Word and similar applications.",
     "jobTitle": "FullStack Web Developer",
     "profile": {
       "title": "Profile",
