@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { Navigation, LanguageSwitcher } from "@/components/navigation";
 import { PageTransition } from "@/components/transitions";
 import { BaseComponentProps } from "@/types";
@@ -14,12 +13,11 @@ export const PortfolioLayout = ({
   children,
   className = "",
 }: PortfolioLayoutProps) => {
-  const pathname = usePathname();
 
   return (
     <div className={`min-h-screen relative ${className}`}>
       {/* Navigation with rolling transitions */}
-      <Navigation currentRoute={pathname} />
+      <Navigation />
 
       {/* Language switcher */}
       <div className="fixed top-6 right-6 z-50">

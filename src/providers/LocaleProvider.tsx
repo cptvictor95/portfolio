@@ -68,7 +68,7 @@ interface LocaleProviderProps {
 
 export const LocaleProvider = ({ children }: LocaleProviderProps) => {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-  const [messages, setMessages] = useState<any>(null);
+  const [messages, setMessages] = useState<Record<string, unknown> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   // Initialize locale on client-side

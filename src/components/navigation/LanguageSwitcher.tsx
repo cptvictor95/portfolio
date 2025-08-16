@@ -34,7 +34,7 @@ export const LanguageSwitcher = () => {
 
   return (
     <div
-      className="flex gap-1 bg-black/20 backdrop-blur-sm rounded-full p-1"
+      className="flex gap-1 bg-black/20 backdrop-blur-sm rounded-full p-1 w-fit"
       role="radiogroup"
       aria-label="Language selection"
     >

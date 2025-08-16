@@ -16,7 +16,7 @@ export interface NavItem {
 
 // Navigation component props - simplified with no parameters needed
 export interface NavigationProps {
-  // No props needed for simplified navigation
+  className?: string;
 }
 
 // Page transition types
