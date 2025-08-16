@@ -50,13 +50,15 @@ export const getInitialLocale = (): Locale => {
 
 // Pure function to load messages for a locale
 const loadMessages = async (locale: Locale) => {
+  const safeLocale = getSafeLocale(locale);
   try {
-    const messages = await import(`../../messages/${locale}.json`);
+    const messages = await import(`../../messages/${safeLocale}.json`);
+
     return messages.default;
   } catch (error) {
-    console.error(`Failed to load messages for locale: ${locale}`, error);
-    // Fallback to English
+    console.error(`Failed to load messages for locale: ${safeLocale}`, error);
     const fallback = await import(`../../messages/en.json`);
+    
     return fallback.default;
   }
 };

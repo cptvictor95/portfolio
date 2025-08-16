@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/providers";
 import { Navigation, LanguageSwitcher } from "@/components/navigation";
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Victor Pudo | Software Engineer",
@@ -43,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1a1a1a] text-white overflow-x-hidden font-mono`}
-      >
+      <body className="antialiased text-white bg-primary overflow-x-hidden font-mono">
         <LocaleProvider>
           <section className="w-full h-screen relative flex overflow-hidden">
             {/* Sidebar */}
