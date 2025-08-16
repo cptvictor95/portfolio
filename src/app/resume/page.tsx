@@ -9,12 +9,13 @@ import {
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 import { FileDown } from "lucide-react";
+import { getSafeLocale } from "@/i18n/request";
 
 // Resume Page Component - Minimalist typewriter aesthetic
 export default function ResumePage() {
   const t = useTranslations("resume");
   const tNav = useTranslations("navigation");
-  const locale = useLocale() as "en" | "pt";
+  const locale = getSafeLocale(useLocale());
 
   const handleDownload = async (format: "pdf" | "docx", language?: "en" | "pt") => {
     // Use current locale if no specific language provided
