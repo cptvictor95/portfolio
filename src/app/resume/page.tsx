@@ -13,6 +13,7 @@ import { FileDown } from "lucide-react";
 // Resume Page Component - Minimalist typewriter aesthetic
 export default function ResumePage() {
   const t = useTranslations("resume");
+  const tNav = useTranslations("navigation");
   const locale = useLocale() as "en" | "pt";
 
   const handleDownload = async (format: "pdf" | "docx", language?: "en" | "pt") => {
@@ -41,19 +42,23 @@ export default function ResumePage() {
     <div className="min-h-screen p-16 font-mono flex items-center justify-center">
       {/* Single resume card */}
       <div className="border-2 border-white bg-neutral-800 p-8 max-w-md w-full shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-      {/* Subtitle */}
-      <p className="text-neutral-300 text-sm mb-8 leading-relaxed">
-          {t("resumeSubtitle")}
-        </p>
-        {/* Title and button on same line */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="text-sm text-neutral-200 font-mono uppercase tracking-wider">
-            {t("fileLabel")}
-          </div>
-          
+        {/* Dialog Title */}
+        <div className="text-sm text-white font-mono uppercase tracking-wider mb-6">
+          {tNav("resume")}
+        </div>
+        
+        {/* Helper text about formats */}
+        <div className="mb-8">
+          <p className="text-sm text-neutral-300 font-mono leading-relaxed">
+            {t("noteDescription")}
+          </p>
+        </div>
+
+        {/* Download button - bottom right */}
+        <div className="flex justify-end">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="border-2 border-white bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 px-6 py-3 font-mono text-sm uppercase tracking-wide shadow-[2px_2px_0px_0px_rgba(255,255,255,0.7)]">
+              <button className="border-2 border-white bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 px-6 py-3 font-mono text-sm uppercase tracking-wide shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                 <FileDown className="w-4 h-4 mr-2 inline" />
                 {t("downloadButton")}
               </button>
@@ -109,15 +114,6 @@ export default function ResumePage() {
               )}
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
-
-        
-
-        {/* Helper text inside card */}
-        <div className="border-t border-neutral-600 pt-6">
-          <p className="text-xs text-neutral-500 font-mono leading-relaxed">
-            {t("noteDescription")}
-          </p>
         </div>
       </div>
     </div>

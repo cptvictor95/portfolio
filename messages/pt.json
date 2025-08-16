@@ -1,7 +1,7 @@
 {
   "navigation": {
-    "home": "Início",
-    "resume": "Currículo",
+    "home": "VICTOR.INTRO",
+    "resume": "CURRICULO.ARQUIVO",
     "about": "Sobre",
     "contact": "Contato"
   },
@@ -20,7 +20,7 @@
     "downloadDocx": "Baixar DOCX",
     "resumeSubtitle": "Quer ver meu currículo? Você pode baixá-lo abaixo.",
     "note": "Nota",
-    "noteDescription": "Os arquivos PDF são otimizados para visualização e impressão. Os arquivos DOCX são editáveis e compatíveis com Microsoft Word e aplicativos similares.",
+    "noteDescription": "Baixe meu currículo em formato PDF ou DOCX, disponível em português ou inglês.",
     "fileLabel": "ARQUIVO.CURRICULO",
     "downloadButton": "Baixar",
     "downloadError": "Falha ao baixar currículo. Tente novamente.",

@@ -44,8 +44,8 @@ export const LanguageSwitcher = () => {
           onClick={() => handleLocaleChange(locale)}
           className={`px-3 py-2 border-2 text-sm font-mono font-medium transition-all duration-200 uppercase tracking-wide ${
             currentLocale === locale
-              ? "bg-white text-neutral-900 border-white shadow-[2px_2px_0px_0px_rgba(255,255,255,0.3)]"
-              : "bg-transparent text-white border-white hover:bg-white hover:text-neutral-900 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.5)]"
+              ? "bg-transparent text-white border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+              : "bg-transparent text-white border-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
           }`}
           role="radio"
           aria-checked={currentLocale === locale}

@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="min-h-screen p-16 font-mono flex items-center justify-center">
       <div className="border-2 border-white bg-neutral-800 p-8 max-w-md w-full shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
         <div className="text-sm text-white font-mono uppercase tracking-wider mb-6">
-          VICTOR.INFO
+          VICTOR.INTRO
         </div>
         
         {/* Avatar and Bio Section */}

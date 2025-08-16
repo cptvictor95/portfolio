@@ -1,7 +1,7 @@
 {
   "navigation": {
-    "home": "Home",
-    "resume": "Resume",
+    "home": "VICTOR.INTRO",
+    "resume": "RESUME.FILE",
     "about": "About",
     "contact": "Contact"
   },
@@ -20,7 +20,7 @@
     "downloadDocx": "Download DOCX",
     "resumeSubtitle": "Wanna see my resume? You can download it below.",
     "note": "Note",
-    "noteDescription": "PDF files are optimized for viewing and printing. DOCX files are editable and compatible with Microsoft Word and similar applications.",
+    "noteDescription": "Download my resume in PDF or DOCX format, available in English or Portuguese.",
     "fileLabel": "RESUME.FILE",
     "downloadButton": "Download",
     "downloadError": "Failed to download resume. Please try again.",
