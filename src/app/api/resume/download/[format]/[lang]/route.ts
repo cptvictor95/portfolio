@@ -40,7 +40,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         : "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
       // Create response with file
-      const response = new NextResponse(fileBuffer, {
+      const response = new NextResponse(new Uint8Array(fileBuffer), {
         status: 200,
         headers: {
           "Content-Type": contentType,
