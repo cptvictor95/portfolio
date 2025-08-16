@@ -34,7 +34,7 @@ export const LanguageSwitcher = () => {
 
   return (
     <div
-      className="flex gap-1 bg-black/20 backdrop-blur-sm rounded-full p-1 w-fit"
+      className="flex gap-2 w-fit"
       role="radiogroup"
       aria-label="Language selection"
     >
@@ -42,10 +42,10 @@ export const LanguageSwitcher = () => {
         <button
           key={locale}
           onClick={() => handleLocaleChange(locale)}
-          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+          className={`px-3 py-2 border-2 text-sm font-mono font-medium transition-all duration-200 uppercase tracking-wide ${
             currentLocale === locale
-              ? "bg-white text-black shadow-sm"
-              : "text-white/70 hover:text-white hover:bg-white/10"
+              ? "bg-white text-neutral-900 border-white shadow-[2px_2px_0px_0px_rgba(255,255,255,0.3)]"
+              : "bg-transparent text-white border-white hover:bg-white hover:text-neutral-900 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.5)]"
           }`}
           role="radio"
           aria-checked={currentLocale === locale}

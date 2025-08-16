@@ -4,7 +4,6 @@ import "./globals.css";
 import { LocaleProvider } from "@/providers";
 import { Navigation, LanguageSwitcher } from "@/components/navigation";
 
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,47 +44,33 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1a1a1a] text-white overflow-x-hidden font-mono`}
       >
         <LocaleProvider>
-          <BackgroundGradientAnimation
-            gradientBackgroundStart="rgb(2, 8, 2)"
-            gradientBackgroundEnd="rgb(5, 15, 5)"
-            firstColor="3, 12, 3"
-            secondColor="8, 18, 8"
-            thirdColor="5, 20, 5"
-            fourthColor="10, 25, 10"
-            fifthColor="15, 30, 15"
-            pointerColor="20, 35, 20"
-            size="100%"
-            blendingValue="hard-light"
-            interactive={false}
-          >
-            <section className="w-full h-screen relative flex overflow-hidden">
-              {/* Sidebar */}
-              <aside className="flex flex-col justify-start w-64 min-w-[16rem] max-w-xs h-full p-8">
-                <Navigation />
-                <div className="mt-auto pt-8 space-y-4">
-                  <LanguageSwitcher />
-                  <div>
-                    <h1 className="text-2xl font-light tracking-tight leading-none text-white">
-                      Victor Pudo
-                    </h1>
-                    <div className="text-sm text-white/70 mt-1">
-                      Software Engineer
-                    </div>
+          <section className="w-full h-screen relative flex overflow-hidden">
+            {/* Sidebar */}
+            <aside className="flex flex-col justify-start w-64 min-w-[16rem] max-w-xs h-full p-8">
+              <Navigation />
+              <div className="mt-auto pt-8 space-y-4">
+                <LanguageSwitcher />
+                <div>
+                  <h1 className="text-2xl font-mono font-bold tracking-tight leading-none text-white">
+                    Victor Pudo
+                  </h1>
+                  <div className="text-sm text-neutral-300 mt-1 font-mono">
+                    Software Engineer
                   </div>
                 </div>
-              </aside>
+              </div>
+            </aside>
 
-              {/* Content Area */}
-              <main className="flex-1 h-full flex flex-col justify-end items-end p-8">
-                <div className="w-full h-full flex flex-col justify-end items-end">
-                  {children}
-                </div>
-              </main>
-            </section>
-          </BackgroundGradientAnimation>
+            {/* Content Area */}
+            <main className="flex-1 h-full flex flex-col justify-end items-end p-8">
+              <div className="w-full h-full flex flex-col justify-end items-end">
+                {children}
+              </div>
+            </main>
+          </section>
         </LocaleProvider>
       </body>
     </html>

@@ -1,7 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useLocale } from "@/providers/LocaleProvider";
+import { useTranslations, useLocale } from "next-intl";
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -14,16 +13,11 @@ import { FileDown } from "lucide-react";
 // Resume Page Component - Minimalist typewriter aesthetic
 export default function ResumePage() {
   const t = useTranslations("resume");
-  const { locale } = useLocale();
-
-  // Map locale to language code
-  const getCurrentLanguage = (): "en" | "pt" => {
-    return locale === "pt" ? "pt" : "en";
-  };
+  const locale = useLocale() as "en" | "pt";
 
   const handleDownload = async (format: "pdf" | "docx", language?: "en" | "pt") => {
     // Use current locale if no specific language provided
-    const downloadLang = language || getCurrentLanguage();
+    const downloadLang = language || locale;
     try {
       const response = await fetch(`/api/resume/download/${format}/${downloadLang}`);
       if (!response.ok) throw new Error("Download failed");
@@ -39,73 +33,77 @@ export default function ResumePage() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("Download error:", error);
-      alert("Failed to download resume. Please try again.");
+      alert(t("downloadError"));
     }
   };
 
   return (
     <div className="min-h-screen p-16 font-mono flex items-center justify-center">
       {/* Single resume card */}
-      <div className="border-2 border-neutral-400 bg-neutral-800 p-8 max-w-md w-full">
+      <div className="border-2 border-white bg-neutral-800 p-8 max-w-md w-full shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+      {/* Subtitle */}
+      <p className="text-neutral-300 text-sm mb-8 leading-relaxed">
+          {t("resumeSubtitle")}
+        </p>
         {/* Title and button on same line */}
         <div className="flex items-center justify-between mb-8">
           <div className="text-sm text-neutral-200 font-mono uppercase tracking-wider">
-            RESUME.FILE
+            {t("fileLabel")}
           </div>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="border-2 border-neutral-400 bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:border-neutral-300 transition-colors duration-200 px-6 py-3 font-mono text-sm uppercase tracking-wide">
+              <button className="border-2 border-white bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 px-6 py-3 font-mono text-sm uppercase tracking-wide shadow-[2px_2px_0px_0px_rgba(255,255,255,0.7)]">
                 <FileDown className="w-4 h-4 mr-2 inline" />
-                Download
+                {t("downloadButton")}
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent 
               align="end" 
-              className="font-mono border-2 border-neutral-400 bg-neutral-800 text-neutral-200 rounded-none"
+              className="font-mono border-2 border-white bg-neutral-800 text-neutral-200 rounded-none shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
             >
               <DropdownMenuItem 
                 onClick={() => handleDownload("pdf")}
                 className="text-xs uppercase tracking-wide hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
               >
-                PDF - {getCurrentLanguage() === "en" ? "EN-US" : "PT-BR"}
+                {t("formatPdf")} - {locale === "en" ? t("langEnUs") : t("langPtBr")}
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={() => handleDownload("docx")}
                 className="text-xs uppercase tracking-wide hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
               >
-                DOCX - {getCurrentLanguage() === "en" ? "EN-US" : "PT-BR"}
+                {t("formatDocx")} - {locale === "en" ? t("langEnUs") : t("langPtBr")}
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-neutral-600" />
-              {getCurrentLanguage() !== "en" && (
+              {locale !== "en" && (
                 <>
                   <DropdownMenuItem 
                     onClick={() => handleDownload("pdf", "en")}
                     className="text-xs uppercase tracking-wide text-neutral-400 hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
                   >
-                    PDF - EN-US
+                    {t("formatPdf")} - {t("langEnUs")}
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => handleDownload("docx", "en")}
                     className="text-xs uppercase tracking-wide text-neutral-400 hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
                   >
-                    DOCX - EN-US
+                    {t("formatDocx")} - {t("langEnUs")}
                   </DropdownMenuItem>
                 </>
               )}
-              {getCurrentLanguage() !== "pt" && (
+              {locale !== "pt" && (
                 <>
                   <DropdownMenuItem 
                     onClick={() => handleDownload("pdf", "pt")}
                     className="text-xs uppercase tracking-wide text-neutral-400 hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
                   >
-                    PDF - PT-BR
+                    {t("formatPdf")} - {t("langPtBr")}
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => handleDownload("docx", "pt")}
                     className="text-xs uppercase tracking-wide text-neutral-400 hover:bg-neutral-700 focus:bg-neutral-700 rounded-none"
                   >
-                    DOCX - PT-BR
+                    {t("formatDocx")} - {t("langPtBr")}
                   </DropdownMenuItem>
                 </>
               )}
@@ -113,10 +111,7 @@ export default function ResumePage() {
           </DropdownMenu>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-neutral-300 text-sm mb-8 leading-relaxed">
-          {t("resumeSubtitle")}
-        </p>
+        
 
         {/* Helper text inside card */}
         <div className="border-t border-neutral-600 pt-6">
