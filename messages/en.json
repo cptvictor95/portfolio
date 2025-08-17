@@ -3,6 +3,11 @@
     "home": "VICTOR.INTRO",
     "resume": "RESUME.FILE"
   },
+  "home": {
+    "title": "VICTOR.INTRO",
+    "bio": "Victor Pudo, 30, software engineer, entrepreneur, educator and music enthusiast.",
+    "builtWith": "Built with Next.js, TypeScript, Tailwind CSS, and Golang."
+  },
   "hero": {
     "name": "Victor Pudo",
     "title": "Software Engineer",

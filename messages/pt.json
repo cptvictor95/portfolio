@@ -3,6 +3,11 @@
     "home": "VICTOR.INTRO",
     "resume": "CURRICULO.ARQUIVO"
   },
+  "home": {
+    "title": "VICTOR.INTRO",
+    "bio": "Victor Pudo, 30 anos, engenheiro de software, empreendedor, educador e entusiasta da música.",
+    "builtWith": "Construído com Next.js, TypeScript, Tailwind CSS e Golang."
+  },
   "hero": {
     "name": "Victor Pudo",
     "title": "Engenheiro de Software",
