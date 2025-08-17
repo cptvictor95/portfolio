@@ -40,26 +40,26 @@ export default function ResumePage() {
   };
 
   return (
-    <div className="min-h-screen p-16 font-mono flex items-center justify-center">
+    <div className="w-full flex items-center justify-center px-2 lg:p-16">
       {/* Single resume card */}
-      <div className="border-2 border-white bg-neutral-800 p-8 max-w-md w-full shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+      <div className="border-2 border-white bg-neutral-800 p-4 lg:p-8 max-w-sm lg:max-w-md w-full shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] lg:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
         {/* Dialog Title */}
         <div className="text-sm text-white font-mono uppercase tracking-wider mb-6">
           {tNav("resume")}
         </div>
         
         {/* Helper text about formats */}
-        <div className="mb-8">
+        <div className="mb-6 lg:mb-8">
           <p className="text-sm text-neutral-300 font-mono leading-relaxed">
             {t("noteDescription")}
           </p>
         </div>
 
-        {/* Download button - bottom right */}
-        <div className="flex justify-end">
+        {/* Download button - center on mobile, right on desktop */}
+        <div className="flex justify-center lg:justify-end">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="border-2 border-white bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 px-6 py-3 font-mono text-sm uppercase tracking-wide shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+              <button className="border-2 border-white bg-neutral-700 text-neutral-200 hover:bg-neutral-600 hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] lg:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 px-4 lg:px-6 py-2 lg:py-3 font-mono text-xs lg:text-sm uppercase tracking-wide shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] lg:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                 <FileDown className="w-4 h-4 mr-2 inline" />
                 {t("downloadButton")}
               </button>
